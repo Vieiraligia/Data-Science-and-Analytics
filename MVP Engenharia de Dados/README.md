@@ -12,7 +12,7 @@ O objetivo é criar um pipeline de dados na plataforma Databricks, contemplando 
 A proposta é desenvolver um pipeline funcional e automatizado, aplicando boas práticas de engenharia de dados e utilizando 
 recursos do ecossistema Databricks. <br> <br>
 Em atendimento ao objetivo deste MVP foi utilizado a temática Cybersegurança - violação de dados, onde é apresentado a partir das 
-análises, as respostas dos questionamentos abaixo:
+análises, as respostas aos questionamentos abaixo:
 <br>
 1.	Quais são os tipos de ataques mais comuns?
 2.	Porque os ataques aos dados das empresas estão aumentando?
