@@ -2,15 +2,15 @@
 
 Este primeiro MVP está associado à disciplina de Engenharia de Dados. <br>
 O objetivo é criar um pipeline de dados na plataforma Databricks, contemplando as seguintes etapas:
-
-🔍 Busca dos dados
-📥 Coleta / ingestão
-🧱 Modelagem
-📦 Carga dos dados processados
-📊 Análise exploratória e validação
-
+<br>
+🔍 Busca dos dados<br>
+📥 Coleta / ingestão<br>
+🧱 Modelagem<br>
+📦 Carga dos dados processados<br>
+📊 Análise exploratória e validação<br>
+<br>
 A proposta é desenvolver um pipeline funcional e automatizado, aplicando boas práticas de engenharia de dados e utilizando 
-recursos do ecossistema Databricks. <br> 
+recursos do ecossistema Databricks. <br> <br>
 Em atendimento ao objetivo deste MVP foi utilizado a temática Cybersegurança - violação de dados, onde é apresentado a partir das 
 análises, as respostas dos questionamentos abaixo:
 <br>
