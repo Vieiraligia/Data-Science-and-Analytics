@@ -2,7 +2,7 @@
 
 Este primeiro MVP está associado à disciplina de Engenharia de Dados. <br>
 O objetivo é criar um pipeline de dados na plataforma Databricks, contemplando as seguintes etapas:
-<br>
+<br><br>
 🔍 Busca dos dados<br>
 📥 Coleta / ingestão<br>
 🧱 Modelagem<br>
