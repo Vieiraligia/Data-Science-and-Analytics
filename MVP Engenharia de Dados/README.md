@@ -42,7 +42,15 @@ Arquivo utilizado:
 
 ## Modelagem
 
+Para a construção do pipeline de dados foi escolhido o modelo Medallion Architecture. Essa arquitetura foi desenvolvida pela própria Databricks para padronizar a organização dos dados no Data Lakehouse. 
 
+ - A camada bronze apresenta os dados 'crus'
+ - A camada silver apresenta dados limpos e refinados
+ - A camada Gold apresenta dados prontos para análises, BI e machine learning
+
+Ou seja, cada camada acrescenta um nível de qualidade dos dados.
+
+ 
 ## Carga dos dados processados
 
 
