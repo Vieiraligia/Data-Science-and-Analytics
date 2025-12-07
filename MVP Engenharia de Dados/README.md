@@ -63,13 +63,15 @@ Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze r
 | records              | Quantidade de registros expostos ou comprometidos |<br>
 | organization_type    | Tipo da organização (ex.: Government, Healthcare, etc.)|<br>
 | method               | Método do ataque (ex.: Hacking, Insider, Loss, etc.) |<br>
-| sources              | Fonte de onde a informação foi obtida |<br><br>
-| Unnamed: 0           | Coluna técnica presente no arquivo original |<br>
-
+| sources              | Fonte de onde a informação foi obtida |<br>
+| Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
 
 
 <img width="1352" height="616" alt="Databricks_bronze_cyber_breaches" src="https://github.com/user-attachments/assets/348e181d-6007-46b4-b4d7-ac4676ecb94b" />
+*Evidência da ingestão arquivo RAW - Camada Bronze*
+
+
 
 #### Camada Silver
 
