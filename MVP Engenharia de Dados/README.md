@@ -6,7 +6,7 @@ A proposta é desenvolver um pipeline de dados aplicando boas práticas de engen
 recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> 
 <br>O pipeline deve contemplar as seguintes etapas:
 <br><br>
-🔍 Busca dos dados<br>
+
 📥 Coleta / ingestão<br>
 🧱 Modelagem<br>
 📦 Carga dos dados processados<br>
@@ -28,7 +28,7 @@ O principal objetivo é identificar tendências e padrões relacionados ao aumen
 
 Ao concluir este projeto, espera-se que as análises ofereçam insights confiáveis sobre as tendências em segurança cibernética, apoiando ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados.
 
-# Busca dos dados
+# Coleta
 
 Os dados utilizados foram extraídos de fontes públicas e governamentais obtidos por meio do site [Opendatabay](https://www.opendatabay.com/data/government/45f61e06-1d21-44f5-a159-92d4ae086f65). Esse Dataset também encontra-se disponível no compilado de datasets da [Kaggle](https://www.kaggle.com/datasets/thedevastator/data-breaches-a-comprehensive-list).
 
@@ -40,7 +40,6 @@ Arquivo utilizado:
 
  <br><br>
 
-# Coleta
 
 
 # Modelagem
