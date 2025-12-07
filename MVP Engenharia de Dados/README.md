@@ -67,9 +67,8 @@ Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze r
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
 
-
-<img width="1352" height="616" alt="Databricks_bronze_cyber_breaches" src="https://github.com/user-attachments/assets/348e181d-6007-46b4-b4d7-ac4676ecb94b" />
-<p align="center"><em>Evidência da ingestão arquivo RAW - Camada Bronze</em></p>
+<img width="1357" height="610" alt="image" src="https://github.com/user-attachments/assets/9ad25c4c-05e9-4353-8132-8790f3c2b009" />
+<p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
 
 
 #### Camada Silver
