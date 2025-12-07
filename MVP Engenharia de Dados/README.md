@@ -1,7 +1,10 @@
 🚀 **MVP 1 — Engenharia de Dados**
 
 Este primeiro MVP está associado à disciplina de Engenharia de Dados. <br>
-O objetivo é criar um pipeline de dados na plataforma Databricks, contemplando as seguintes etapas:
+
+A proposta é desenvolver um pipeline de dados aplicando boas práticas de engenharia de dados e utilizando os
+recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> 
+<br>O pipeline deve contemplar as seguintes etapas:
 <br><br>
 🔍 Busca dos dados<br>
 📥 Coleta / ingestão<br>
@@ -9,29 +12,19 @@ O objetivo é criar um pipeline de dados na plataforma Databricks, contemplando 
 📦 Carga dos dados processados<br>
 📊 Análise exploratória e validação<br>
 <br>
-A proposta é desenvolver um pipeline funcional e automatizado, aplicando boas práticas de engenharia de dados e utilizando 
-recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> <br>
+
 
 # Objetivo
 
-Este MVP tem a finalidade de criar um pipeline de dados sobre Cybersegurança – violação de dados. As fases do pipeline de dados compreendem em buscar, coletar, modelar, realizar a carga e analisar os dados com o objetivo de trazer percepções sobre a segurança cibernéticas de diversos tipos de empresas mais vulneráveis.
-O cerne da problemática que este MVP busca elucidar, a partir das análises, é identificar as tendências e padrões dos crescentes ataques à violação de dados. Diante deste contexto, deverão ser respondidas as perguntas a seguir: 
+Este MVP aborda o tema cibersegurança, com foco em violação de dados. A partir das análises realizadas, busca-se identificar percepções sobre a segurança cibernética e entender quais tipos de empresas são mais vulneráveis.
+
+O principal objetivo é identificar tendências e padrões relacionados ao aumento dos ataques de violação de dados, respondendo às seguintes questões: 
  
 1.	Quais são os tipos de ataques mais comuns?
-2.	Porque os ataques aos dados das empresas estão aumentando?
-3.	Quais são os tipos de empresas alvos dos ataques?
-4.	A partir da identificação do tipo de ataque, qual é o meio de prevenção eficiente?
-5.	Diante das análises, seria possível prever o futuro cenário da segurança cibernética? Quais seriam as perspectivas?
+2.	Por que os ataques às empresas estão aumentando?
+3.	Quais tipos de empresas são mais visadas de ataques?
+4.	Para cada tipo de ataque, qual é a forma mais eficiente de prevenção?
+5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?
 
-Ao concluir este projeto, espera-se que com a confiabilidade das análises traga visões de tendências sobre a segurança cibernética para possíveis tratativas de prevenções e planos de ações após eventuais incidentes de ataques aos dados das empresas.
+Ao concluir este projeto, espera-se que as análises ofereçam insights confiáveis sobre as tendências em segurança cibernética, apoiando ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados.
 
-
-
-Em atendimento ao objetivo deste MVP foi utilizado a temática Cybersegurança - violação de dados, onde é apresentado a partir das 
-análises, as respostas aos questionamentos abaixo:
-<br>
-1.	Quais são os tipos de ataques mais comuns?
-2.	Porque os ataques aos dados das empresas estão aumentando?
-3.	Quais são os tipos de empresas alvos dos ataques?
-4.	A partir da identificação do tipo de ataque, qual é o meio de prevenção eficiente?
-5.	Diante das análises, seria possível prever o futuro cenário da segurança cibernética? Quais seriam as perspectivas?
