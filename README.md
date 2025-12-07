@@ -10,4 +10,5 @@ Os projetos acadêmicos estão divididos em um MVP para cada sprint.
 🚀 <b>MVP 1 — Engenharia de Dados </b>
 
 Este primeiro MVP está associado à disciplina de Engenharia de Dados.
-O objetivo é criar um pipeline de dados na plataforma Databricks
+O objetivo é criar um pipeline de dados na plataforma Databricks https://[exemplo.com](https://www.databricks.com/)
+
