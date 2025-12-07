@@ -65,6 +65,16 @@ Como mencionado anteriormente, esse conjunto de dados contém informações púb
 | method              | STRING  | Método da violação. |<br>
 | sources             | STRING  | Fontes públicas do incidente. |<br><br>
 
+bronze_cyber_breaches
+├── Unnamed: 0
+├── Entity
+├── Year
+├── Records
+├── Organization type
+├── Method
+└── Sources
+
+
 #### Camada Silver
 
 
