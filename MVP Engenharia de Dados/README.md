@@ -28,7 +28,7 @@ O principal objetivo é identificar tendências e padrões relacionados ao aumen
 
 Ao concluir este projeto, espera-se que as análises ofereçam insights confiáveis sobre as tendências em segurança cibernética, apoiando ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados.
 
-# Coleta
+## Coleta
 
 Os dados utilizados foram extraídos de fontes públicas e governamentais obtidos por meio do site [Opendatabay](https://www.opendatabay.com/data/government/45f61e06-1d21-44f5-a159-92d4ae086f65). Esse Dataset também encontra-se disponível no compilado de datasets da [Kaggle](https://www.kaggle.com/datasets/thedevastator/data-breaches-a-comprehensive-list).
 
@@ -42,10 +42,10 @@ Arquivo utilizado:
 
 
 
-# Modelagem
+## Modelagem
 
 
-# Carga dos dados processados
+## Carga dos dados processados
 
 
-# Análise e validação
+## Análise e validação
