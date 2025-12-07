@@ -69,7 +69,7 @@ Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze r
 
 
 <img width="1352" height="616" alt="Databricks_bronze_cyber_breaches" src="https://github.com/user-attachments/assets/348e181d-6007-46b4-b4d7-ac4676ecb94b" />
-<p>*Evidência da ingestão arquivo RAW - Camada Bronze*</p>
+<p align="center">>*Evidência da ingestão arquivo RAW - Camada Bronze*</p>
 
 
 
