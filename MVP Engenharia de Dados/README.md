@@ -52,28 +52,24 @@ Ou seja, cada camada acrescenta um nível de qualidade dos dados.
 
 #### Camada Bronze 
 
-Carregamento dos Dados RAW - bronze_cyber_breaches.csv
+Os dados deste arquivo foram armazenados exatamente no formato original, sem qualquer alteração ou pré-processamento.
+O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
 
-Como mencionado anteriormente, esse conjunto de dados contém informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, incluindo quantidade de registros afetados, ano do incidente e método utilizado no ataque.
+Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze reflete exatamente as colunas do arquivo CSV:
 
-| Coluna              | Tipo    | Descrição |<br>
-| Unnamed: 0          | INT     | Índice original da fonte |<br>
-| entity              | STRING  | Empresa afetada pelo incidente. |<br>
-| year                | INT     | Ano do evento. |<br>
-| records             | BIGINT  | Registros expostos. |<br>
-| organization_type   | STRING  | Tipo/segmento da organização. |<br>
-| method              | STRING  | Método da violação. |<br>
-| sources             | STRING  | Fontes públicas do incidente. |<br><br>
+| Coluna               | Descrição |<br>
+| entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
+| year                 | Ano do incidente |<br>
+| records              | Quantidade de registros expostos ou comprometidos |<br>
+| organization_type    | Tipo da organização (ex.: Government, Healthcare, etc.)|<br>
+| method               | Método do ataque (ex.: Hacking, Insider, Loss, etc.) |<br>
+| sources              | Fonte de onde a informação foi obtida |<br><br>
+| Unnamed: 0           | Coluna técnica presente no arquivo original |<br>
 
-bronze_cyber_breaches
-├── Unnamed: 0
-├── Entity
-├── Year
-├── Records
-├── Organization type
-├── Method
-└── Sources
 
+
+
+<img width="1352" height="616" alt="Databricks_bronze_cyber_breaches" src="https://github.com/user-attachments/assets/348e181d-6007-46b4-b4d7-ac4676ecb94b" />
 
 #### Camada Silver
 
