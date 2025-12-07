@@ -50,6 +50,27 @@ Para a construção do pipeline de dados foi escolhido o modelo Medallion Archit
 
 Ou seja, cada camada acrescenta um nível de qualidade dos dados.
 
+### Camada Bronze 
+
+Carregamento dos Dados RAW - bronze_cyber_breaches.csv
+
+Como mencionado anteriormente, esse conjunto de dados contém informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, incluindo quantidade de registros afetados, ano do incidente e método utilizado no ataque.
+
+| Coluna              | Tipo    | Descrição |
+| Unnamed: 0          | INT     | Índice original da fonte |
+| entity              | STRING  | Empresa afetada pelo incidente. |
+| year                | INT     | Ano do evento. |
+| records             | BIGINT  | Registros expostos. |
+| organization_type   | STRING  | Tipo/segmento da organização. |
+| method              | STRING  | Método da violação. |
+| sources             | STRING  | Fontes públicas do incidente. |
+
+### Camada Silver
+
+
+### Camada Gold
+
+
  
 ## Carga dos dados processados
 
