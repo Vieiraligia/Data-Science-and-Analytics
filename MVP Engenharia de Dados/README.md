@@ -37,7 +37,7 @@ O conjunto de dados reúne informações sobre violações de segurança cibern�
 Arquivo utilizado: 
 ## 📎 Anexos
 
-- [Dados brutos](data/dados.csv)
+- [Dados brutos](https://github.com/Vieiraligia/Data-Science-and-Analytics/blob/main/MVP%20Engenharia%20de%20Dados/bronze_cyber_breaches.csv)
 
 # Coleta
 
