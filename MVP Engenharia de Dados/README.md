@@ -35,7 +35,6 @@ Os dados utilizados foram extraídos de fontes públicas e governamentais obtido
 O conjunto de dados reúne informações sobre violações de segurança cibernética envolvendo incidentes com mais de 30.000 registros. Os anos de 2011 e 2020 se destacam como os períodos com maior número de ocorrências registradas.
 
 Arquivo utilizado: 
-## 📎 Anexos
 
 - [Dados brutos](https://github.com/Vieiraligia/Data-Science-and-Analytics/blob/main/MVP%20Engenharia%20de%20Dados/bronze_cyber_breaches.csv)
 
