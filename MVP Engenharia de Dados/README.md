@@ -56,19 +56,19 @@ Carregamento dos Dados RAW - bronze_cyber_breaches.csv
 
 Como mencionado anteriormente, esse conjunto de dados contém informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, incluindo quantidade de registros afetados, ano do incidente e método utilizado no ataque.
 
-| Coluna              | Tipo    | Descrição |
-| Unnamed: 0          | INT     | Índice original da fonte |
-| entity              | STRING  | Empresa afetada pelo incidente. |
-| year                | INT     | Ano do evento. |
-| records             | BIGINT  | Registros expostos. |
-| organization_type   | STRING  | Tipo/segmento da organização. |
-| method              | STRING  | Método da violação. |
-| sources             | STRING  | Fontes públicas do incidente. |
+| Coluna              | Tipo    | Descrição |<br>
+| Unnamed: 0          | INT     | Índice original da fonte |<br>
+| entity              | STRING  | Empresa afetada pelo incidente. |<br>
+| year                | INT     | Ano do evento. |<br>
+| records             | BIGINT  | Registros expostos. |<br>
+| organization_type   | STRING  | Tipo/segmento da organização. |<br>
+| method              | STRING  | Método da violação. |<br>
+| sources             | STRING  | Fontes públicas do incidente. |<br><br>
 
-### Camada Silver
+#### Camada Silver
 
 
-### Camada Gold
+#### Camada Gold
 
 
  
