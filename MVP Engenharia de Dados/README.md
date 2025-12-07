@@ -76,6 +76,7 @@ Evidência de validação
 <p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
 
 #### Camada Silver
+A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
 
 
 #### Camada Gold
