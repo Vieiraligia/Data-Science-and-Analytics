@@ -50,6 +50,13 @@ Para a construção do pipeline de dados foi escolhido o modelo Medallion Archit
 
 Ou seja, cada camada acrescenta um nível de qualidade dos dados.
 
+<img width="1358" height="605" alt="image" src="https://github.com/user-attachments/assets/1abe1e89-be5a-4ae0-8a2c-74d364ca7456" />
+<p align="center"><em>Workspace integrado ao GitHub</em></p>
+
+<img width="1353" height="614" alt="image" src="https://github.com/user-attachments/assets/d7dea7c1-df7a-458e-bc34-e5fbc2975daf" />
+<p align="center"><em>Notebook MVP</em></p>
+
+<br><br><br><br>
 #### Camada Bronze 
 
 Os dados deste arquivo foram armazenados exatamente no formato original, sem qualquer alteração ou pré-processamento.
@@ -85,6 +92,7 @@ Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retorn
 <img width="1345" height="608" alt="image" src="https://github.com/user-attachments/assets/1002c1ae-1ca9-4ad4-9d15-c4e358d7f5df" />
 <p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
 
+<br> 
 
 Conserto de Tipagem - Exemplos: <br> 
 _c0 → breach_id (INT)<br>
@@ -101,13 +109,17 @@ Inclusão do Metadados<br>
 Exclusão do primeiro registro, pois foi inserido o header<br>
 <br><br><br>
 
+<img width="1363" height="606" alt="image" src="https://github.com/user-attachments/assets/d6e2e2ee-7e24-44eb-9252-cb48149093c9" />
+<p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
+
+
 
 Consulta da tabela ajustada<br><br>
-<img width="1358" height="611" alt="image" src="https://github.com/user-attachments/assets/aa18716f-7a2e-47ba-a87d-07ed37d47c6b" />
+<img width="1362" height="612" alt="image" src="https://github.com/user-attachments/assets/ebfbfa98-13a8-4d92-95d8-6fdb9c22b9f5" />
 <p align="center"><em>Camada Silver - Consulta da tabela I</em></p>
 
 Visualização do metadados<br><br>
-<img width="1361" height="609" alt="image" src="https://github.com/user-attachments/assets/8560f3dd-bc10-49c0-b1a4-d549234bccba" />
+<img width="1361" height="604" alt="image" src="https://github.com/user-attachments/assets/a6954df6-3f82-440d-9dbd-36bc7c12421a" />
 <p align="center"><em>Camada Silver - Consulta da tabela II</em></p>
 
 
