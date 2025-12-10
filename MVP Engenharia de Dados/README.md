@@ -85,42 +85,69 @@ Evidência de validação <br><br>
 
 #### Camada Silver
 A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
-
-Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retornado as colunas abaixo:
-
-
-<img width="1345" height="608" alt="image" src="https://github.com/user-attachments/assets/1002c1ae-1ca9-4ad4-9d15-c4e358d7f5df" />
-<p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
-
-<br> 
-
-Conserto de Tipagem - Exemplos: <br> 
-_c0 → breach_id (INT)<br>
-_c3 → year (INT)<br>
-_c4 → records_exposed (BIGINT)<br>
-Com TRY_CAST, para evitar erros de dados sujos.<br>
-<br><br>
-Limpeza e Padronização - Exemplos:<br>
-TRIM → remove espaços extras<br>
-INITCAP → primeira letra maiúscula (Industry, Breach Method)<br>
-REGEXP_REPLACE('[^0-9]', '') → remove letras e símbolos<br>
-<br>
-Inclusão do Metadados<br>
-Exclusão do primeiro registro, pois foi inserido o header<br>
-<br><br><br>
-
+<br> <br> 
+Para a Camada Silver foi criado a seguinte estrutura:<br> <br> 
 <img width="1363" height="606" alt="image" src="https://github.com/user-attachments/assets/d6e2e2ee-7e24-44eb-9252-cb48149093c9" />
 <p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
 
+<br> <br> 
+
+Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retornado as colunas abaixo:
+<br> <br> 
+
+<img width="1345" height="608" alt="image" src="https://github.com/user-attachments/assets/1002c1ae-1ca9-4ad4-9d15-c4e358d7f5df" />
+<p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
+<br> <br> <br>
+
+Após a etapa de limpeza, padronização e tipagem, a tabela Silver foi consolidada em um formato estruturado e consistente, adequado para processos analíticos e para a modelagem dimensional da Camada Gold.
+As transformações aplicadas incluem:
+- Conversão dos tipos de dados conforme o padrão definido para a Silver.
+- Tratamento de valores faltantes ou inválidos.
+- Padronização de formatos textuais e numéricos.
+- Criação de colunas técnicas para auditoria (como o silver_load_timestamp).
+- Garantia de que a tabela preservasse a granularidade original dos dados.
+<br> <br> 
+Tipagem explícita
+<br> <br> 
+As colunas foram convertidas para os tipos adequados, garantindo integridade e validação automática pelo próprio engine SQL:
+breach_id → INT
+year → INT
+records_exposed → BIGINT
+organization, organization_type, breach_method → STRING
+silver_load_timestamp → TIMESTAMP
+<br> <br>
+
+Trecho SQL utilizado:
+
+<img width="1364" height="1105" alt="camada silver_evidencia SQL" src="https://github.com/user-attachments/assets/d8ed4666-be0b-4119-9d87-7ceb4726ea0e" />
+<p align="center"><em>Camada Silver - Transformações Aplicadas</em></p>
+<br> <br><br> 
+
+Normalização de valores categóricos
+- Remoção de espaços extras
+- Conversão uniforme para evitar variações (ex.: "HACK" vs "Hack" vs "hack")
+- Padronização para o formato Title Case
+
+```sql
+INITCAP(TRIM(_c4)) AS organization_type
+```
 
 
-Consulta da tabela ajustada<br><br>
+Abaixo está a consulta da tabela resultante, já com todas as correções aplicadas:<br><br>
+
 <img width="1362" height="612" alt="image" src="https://github.com/user-attachments/assets/ebfbfa98-13a8-4d92-95d8-6fdb9c22b9f5" />
 <p align="center"><em>Camada Silver - Consulta da tabela I</em></p>
+<br> <br> 
 
-Visualização do metadados<br><br>
 <img width="1361" height="604" alt="image" src="https://github.com/user-attachments/assets/a6954df6-3f82-440d-9dbd-36bc7c12421a" />
 <p align="center"><em>Camada Silver - Consulta da tabela II</em></p>
+<br> <br> 
+
+
+
+
+
+
 
 
 
