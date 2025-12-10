@@ -71,9 +71,10 @@ Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze r
 <p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
 <br><br><br>
 
-Evidência de validação 
+Evidência de validação <br><br>
 <img width="1360" height="610" alt="image" src="https://github.com/user-attachments/assets/38693b1e-3d33-4804-b0fd-0824ab6d4a1c" />
 <p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
+<br><br>
 
 #### Camada Silver
 A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
@@ -85,20 +86,20 @@ Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retorn
 <p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
 
 
-Conserto de Tipagem
-_c0 → breach_id (INT)
-_c3 → year (INT)
-_c4 → records_exposed (BIGINT)
-Com TRY_CAST, para evitar erros de dados sujos.
-
-Limpeza e Padronização
-TRIM → remove espaços extras
-INITCAP → primeira letra maiúscula (Industry, Breach Method)
-REGEXP_REPLACE('[^0-9]', '') → remove letras e símbolos
-
-Inclusão do Metadados
-Exclusão do primeiro registro que foi inserido o header
-
+Conserto de Tipagem <br>
+_c0 → breach_id (INT)<br>
+_c3 → year (INT)<br>
+_c4 → records_exposed (BIGINT)<br>
+Com TRY_CAST, para evitar erros de dados sujos.<br>
+<br><br>
+Limpeza e Padronização<br>
+TRIM → remove espaços extras<br>
+INITCAP → primeira letra maiúscula (Industry, Breach Method)<br>
+REGEXP_REPLACE('[^0-9]', '') → remove letras e símbolos<br>
+<br>
+Inclusão do Metadados<br>
+Exclusão do primeiro registro que foi inserido o header<br>
+<br><br><br>
 
 #### Camada Gold
 
