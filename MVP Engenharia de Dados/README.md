@@ -86,19 +86,19 @@ Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retorn
 <p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
 
 
-Conserto de Tipagem <br>
+Conserto de Tipagem - Exemplos: <br> 
 _c0 → breach_id (INT)<br>
 _c3 → year (INT)<br>
 _c4 → records_exposed (BIGINT)<br>
 Com TRY_CAST, para evitar erros de dados sujos.<br>
 <br><br>
-Limpeza e Padronização<br>
+Limpeza e Padronização - Exemplos:<br>
 TRIM → remove espaços extras<br>
 INITCAP → primeira letra maiúscula (Industry, Breach Method)<br>
 REGEXP_REPLACE('[^0-9]', '') → remove letras e símbolos<br>
 <br>
 Inclusão do Metadados<br>
-Exclusão do primeiro registro que foi inserido o header<br>
+Exclusão do primeiro registro, pois foi inserido o header<br>
 <br><br><br>
 
 #### Camada Gold
