@@ -109,7 +109,7 @@ As transformações aplicadas incluem:
 <br> <br> 
 Tipagem explícita
 <br> <br> 
-As colunas foram convertidas para os tipos adequados, garantindo integridade e validação automática pelo próprio engine SQL:
+As colunas foram convertidas para os tipos adequados, garantindo integridade e validação automática pelo próprio engine SQL:<br> 
 breach_id → INT<br> 
 year → INT<br> 
 records_exposed → BIGINT<br> 
@@ -143,9 +143,7 @@ Essa coluna permite rastrear:
 - Processos de reprocessamento
 <br> <br><br>
 
-Preservação da granularidade original
-<br>
-Nenhuma agregação foi aplicada. Cada linha da Silver corresponde exatamente a um incidente de violação de dados, mantendo-se a granularidade linha a linha da Bronze.<br><br>
+Sobre a preservação da granularidade original, nenhuma agregação foi aplicada. Cada linha da Silver corresponde exatamente a um incidente de violação de dados, mantendo-se a granularidade linha a linha da Bronze.<br><br>
 Abaixo está a consulta da tabela resultante, já com todas as correções aplicadas:<br><br>
 <br> <br>
 <img width="1362" height="612" alt="image" src="https://github.com/user-attachments/assets/ebfbfa98-13a8-4d92-95d8-6fdb9c22b9f5" />
