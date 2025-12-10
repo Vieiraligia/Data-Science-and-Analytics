@@ -110,11 +110,11 @@ As transformações aplicadas incluem:
 Tipagem explícita
 <br> <br> 
 As colunas foram convertidas para os tipos adequados, garantindo integridade e validação automática pelo próprio engine SQL:
-breach_id → INT
-year → INT
-records_exposed → BIGINT
-organization, organization_type, breach_method → STRING
-silver_load_timestamp → TIMESTAMP
+breach_id → INT<br> 
+year → INT<br> 
+records_exposed → BIGINT<br> 
+organization, organization_type, breach_method → STRING<br> 
+silver_load_timestamp → TIMESTAMP<br> 
 <br> <br>
 
 Trecho SQL utilizado:
