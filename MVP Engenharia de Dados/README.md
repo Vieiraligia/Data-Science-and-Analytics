@@ -49,10 +49,10 @@ Para a construção do pipeline de dados foi escolhido o modelo Medallion Archit
  - A camada Gold apresenta dados prontos para análises, BI e machine learning
 
 Ou seja, cada camada acrescenta um nível de qualidade dos dados.
-
+<br><br><br>
 <img width="1358" height="605" alt="image" src="https://github.com/user-attachments/assets/1abe1e89-be5a-4ae0-8a2c-74d364ca7456" />
 <p align="center"><em>Workspace integrado ao GitHub</em></p>
-
+<br><br>
 <img width="1353" height="614" alt="image" src="https://github.com/user-attachments/assets/d7dea7c1-df7a-458e-bc34-e5fbc2975daf" />
 <p align="center"><em>Notebook MVP</em></p>
 
