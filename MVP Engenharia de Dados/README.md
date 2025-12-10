@@ -62,7 +62,7 @@ Ou seja, cada camada acrescenta um nível de qualidade dos dados.
 Os dados deste arquivo foram armazenados exatamente no formato original, sem qualquer alteração ou pré-processamento.
 O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
 
-Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze reflete exatamente as colunas do arquivo CSV:
+Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze reflete as colunas:
 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
