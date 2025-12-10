@@ -101,6 +101,17 @@ Inclusão do Metadados<br>
 Exclusão do primeiro registro, pois foi inserido o header<br>
 <br><br><br>
 
+
+Consulta da tabela ajustada<br><br>
+<img width="1358" height="611" alt="image" src="https://github.com/user-attachments/assets/aa18716f-7a2e-47ba-a87d-07ed37d47c6b" />
+<p align="center"><em>Camada Silver - Consulta da tabela I</em></p>
+
+Visualização do metadados<br><br>
+<img width="1361" height="609" alt="image" src="https://github.com/user-attachments/assets/8560f3dd-bc10-49c0-b1a4-d549234bccba" />
+<p align="center"><em>Camada Silver - Consulta da tabela II</em></p>
+
+
+
 #### Camada Gold
 
 
