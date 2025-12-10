@@ -78,6 +78,27 @@ Evidência de validação
 #### Camada Silver
 A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
 
+Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retornado esses dados
+
+
+<img width="1345" height="608" alt="image" src="https://github.com/user-attachments/assets/1002c1ae-1ca9-4ad4-9d15-c4e358d7f5df" />
+<p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
+
+
+Conserto de Tipagem
+_c0 → breach_id (INT)
+_c3 → year (INT)
+_c4 → records_exposed (BIGINT)
+Com TRY_CAST, para evitar erros de dados sujos.
+
+Limpeza e Padronização
+TRIM → remove espaços extras
+INITCAP → primeira letra maiúscula (Industry, Breach Method)
+REGEXP_REPLACE('[^0-9]', '') → remove letras e símbolos
+
+Inclusão do Metadados
+Exclusão do primeiro registro que foi inserido o header
+
 
 #### Camada Gold
 
