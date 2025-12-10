@@ -86,7 +86,7 @@ Evidência de validação <br><br>
 #### Camada Silver
 A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
 
-Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retornado esses dados
+Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retornado as colunas abaixo:
 
 
 <img width="1345" height="608" alt="image" src="https://github.com/user-attachments/assets/1002c1ae-1ca9-4ad4-9d15-c4e358d7f5df" />
