@@ -60,10 +60,13 @@ Inicialmente foi criado essa estrutura no [Workspace Databricks](https://dbc-eb6
 <br><br><br><br>
 #### Camada Bronze 
 
-Os dados deste arquivo foram armazenados exatamente no formato original, sem qualquer alteração ou pré-processamento.
+Os dados deste arquivo foram armazenados exatamente no formato original, sem ajustes ou pré-processamento.
 O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
 
 Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze reflete as colunas:
+
+<img width="1347" height="610" alt="image" src="https://github.com/user-attachments/assets/51e9b143-98fc-45a0-bfcf-3bafd763d84a" />
+<p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
