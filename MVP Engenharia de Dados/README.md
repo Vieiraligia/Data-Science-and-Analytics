@@ -111,15 +111,17 @@ As transformações aplicadas incluem:
 - Tratamento de valores faltantes ou inválidos.
 - Padronização de formatos textuais e numéricos.
 - Criação de colunas técnicas para auditoria (como o silver_load_timestamp).
+- Exclusão da coluna <i>sources</i> — por se tratar da fonte de onde a informação foi obtida, porém esses dados não foram
+  disponibilizados no arquivo original.
 - Garantia de que a tabela preservasse a granularidade original dos dados.
-<br> <br> 
+<br> <br>
 Tipagem explícita
-<br> <br> 
-As colunas foram convertidas para os tipos adequados, garantindo integridade e validação automática pelo próprio engine SQL:<br> 
-breach_id → INT<br> 
-year → INT<br> 
-records_exposed → BIGINT<br> 
-organization, organization_type, breach_method → STRING<br> 
+<br> <br>
+As colunas foram convertidas para os tipos adequados, garantindo integridade e validação automática pelo próprio engine SQL:<br>
+breach_id → INT<br>
+year → INT<br>
+records_exposed → BIGINT<br>
+organization, organization_type, breach_method → STRING<br>
 silver_load_timestamp → TIMESTAMP<br> 
 <br> <br>
 
