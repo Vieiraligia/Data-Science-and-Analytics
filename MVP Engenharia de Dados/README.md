@@ -100,6 +100,7 @@ Com essa percepção, é possível extrair um dicionário de dados contendo as c
 Com a ingestão inicial na Camada Bronze, os dados foram submetidos a procedimentos de limpeza, validação e padronização. Esses tratamentos asseguram que o conjunto esteja íntegro, consistente e pronto para consumo analítico na Camada Gold.
 <br> <br> 
 A Camada Silver foi organizada na seguinte estrutura:
+<br> <br> 
 <img width="1363" height="606" alt="image" src="https://github.com/user-attachments/assets/d6e2e2ee-7e24-44eb-9252-cb48149093c9" />
 <p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
 
