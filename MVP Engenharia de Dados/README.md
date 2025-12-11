@@ -93,7 +93,6 @@ Com essa percepção, é possível extrair um dicionário de dados contendo as c
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
 <br> <br> 
-<br> <br> 
 
 
 #### Camada Silver <br> 
@@ -112,7 +111,7 @@ As transformações aplicadas incluem:
 - Padronização de formatos textuais e numéricos.
 - Criação de colunas técnicas para auditoria (como o silver_load_timestamp).
 - Exclusão da coluna <i>sources</i> — por se tratar da fonte de onde a informação foi obtida, porém esses dados não foram
-  disponibilizados no arquivo original.
+  disponibilizados no dataset.
 - Garantia de que a tabela preservasse a granularidade original dos dados.
 <br> <br>
 Tipagem explícita
@@ -160,18 +159,16 @@ Abaixo está a consulta da tabela resultante, já com todas as correções aplic
 
 <img width="1361" height="604" alt="image" src="https://github.com/user-attachments/assets/a6954df6-3f82-440d-9dbd-36bc7c12421a" />
 <p align="center"><em>Camada Silver - Consulta da tabela II</em></p>
+
 <br> <br> 
 
 
+#### Camada Gold <br> 
 
-
-
-
-
-
-
-#### Camada Gold
-
+Conforme a estrutura resultante da Camada Silver, definiu-se a adoção do modelo estrela para esta camada.<br><br>
+<img width="1345" height="606" alt="image" src="https://github.com/user-attachments/assets/dc1eb49f-2c36-4f0a-806b-f064db6d7833" />
+<p align="center"><em>Camada Gold - Estrutura do Catalog</em></p>
+<br> <br> 
 
  
 ## Carga dos dados processados
