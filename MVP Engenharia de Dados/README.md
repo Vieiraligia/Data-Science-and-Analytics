@@ -47,7 +47,7 @@ Para a construção do pipeline de dados foi escolhido o modelo Medallion Archit
 
 Ou seja, cada camada acrescenta um nível de qualidade dos dados.
 <br><br>
-Inicialmente foi criado somente um Notebook dentro de um Workspace vinculado ao meu usuário integrado com o GitHub.
+A etapa inicial consistiu na criação de um único Notebook dentro de um Workspace vinculado ao meu usuário, já integrado ao GitHub. A carga do arquivo e todas as operações de transformação e análise foram realizadas utilizando a linguagem SQL.
 <br><br>
 <img width="1358" height="605" alt="image" src="https://github.com/user-attachments/assets/1abe1e89-be5a-4ae0-8a2c-74d364ca7456" />
 <p align="center"><em>Workspace integrado ao GitHub</em></p>
