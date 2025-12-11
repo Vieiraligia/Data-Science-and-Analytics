@@ -68,6 +68,8 @@ Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze r
 <img width="1347" height="610" alt="image" src="https://github.com/user-attachments/assets/51e9b143-98fc-45a0-bfcf-3bafd763d84a" />
 <p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
 
+Percebe-se que a importação foi realizada sem o header, fazendo com que o cabeçalho fosse inserido como o primeiro registro da tabela.
+
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
 | year                 | Ano do incidente |<br>
@@ -87,7 +89,7 @@ Evidência de validação <br><br>
 <p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
 <br><br>
 
-#### Camada Silver
+#### Camada Silver <br> 
 A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
 <br> <br> 
 Para a Camada Silver foi criado a seguinte estrutura:<br> <br> 
@@ -95,13 +97,6 @@ Para a Camada Silver foi criado a seguinte estrutura:<br> <br>
 <p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
 
 <br> <br> 
-
-Ao realizar uma consulta com a descrição da tabela da Camada Bronze foi retornado as colunas abaixo:
-<br> <br> 
-
-<img width="1345" height="608" alt="image" src="https://github.com/user-attachments/assets/1002c1ae-1ca9-4ad4-9d15-c4e358d7f5df" />
-<p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
-<br> <br> <br>
 
 Após a etapa de limpeza, padronização e tipagem, a tabela Silver foi consolidada em um formato estruturado e consistente, adequado para processos analíticos e para a modelagem dimensional da Camada Gold.
 As transformações aplicadas incluem:
