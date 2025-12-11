@@ -63,7 +63,16 @@ Inicialmente foi criado essa estrutura no [Workspace Databricks](https://dbc-eb6
 Os dados deste arquivo foram armazenados exatamente no formato original, sem ajustes ou pré-processamento.
 O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
 
-Com o carregamento do arquivo RAW - bronze_cyber_breaches.csv, a tabela Bronze reflete as colunas:
+<img width="1357" height="610" alt="image" src="https://github.com/user-attachments/assets/9ad25c4c-05e9-4353-8132-8790f3c2b009" />
+<p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
+<br><br><br>
+
+Evidência de validação <br><br>
+<img width="1360" height="610" alt="image" src="https://github.com/user-attachments/assets/38693b1e-3d33-4804-b0fd-0824ab6d4a1c" />
+<p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
+<br><br>
+
+Com o carregamento do arquivo RAW (bronze_cyber_breaches.csv), a tabela Bronze passa a refletir as seguintes colunas:
 
 <img width="1347" height="610" alt="image" src="https://github.com/user-attachments/assets/51e9b143-98fc-45a0-bfcf-3bafd763d84a" />
 <p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
@@ -79,15 +88,10 @@ Percebe-se que a importação foi realizada sem o header, fazendo com que o cabe
 | sources              | Fonte de onde a informação foi obtida |<br>
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
-
-<img width="1357" height="610" alt="image" src="https://github.com/user-attachments/assets/9ad25c4c-05e9-4353-8132-8790f3c2b009" />
+<img width="1358" height="607" alt="image" src="https://github.com/user-attachments/assets/64388369-57b9-490d-a999-c770e0eb65b9" />
 <p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
-<br><br><br>
 
-Evidência de validação <br><br>
-<img width="1360" height="610" alt="image" src="https://github.com/user-attachments/assets/38693b1e-3d33-4804-b0fd-0824ab6d4a1c" />
-<p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
-<br><br>
+
 
 #### Camada Silver <br> 
 A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
