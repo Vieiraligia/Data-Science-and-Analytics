@@ -69,7 +69,7 @@ A seguir, sÃ£o apresentadas as estruturas do Catalog e do Workspace referentes Ã
 <br><br><br>
 
  <br><br>
-<img width="1360" height="610" alt="image" src="https://github.com/user-attachments/assets/38693b1e-3d33-4804-b0fd-0824ab6d4a1c" />
+<img width="1358" height="822" alt="camada bronze_evidencia SQL" src="https://github.com/user-attachments/assets/bf29f480-0f2f-43c8-b7ed-b1bcda370eec" />
 <p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
 <br><br>
 
