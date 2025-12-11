@@ -67,18 +67,24 @@ O conjunto reúne informações públicas sobre incidentes de violação de dado
 <p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
 <br><br><br>
 
-Evidência de validação <br><br>
+ <br><br>
 <img width="1360" height="610" alt="image" src="https://github.com/user-attachments/assets/38693b1e-3d33-4804-b0fd-0824ab6d4a1c" />
 <p align="center"><em>Camada Bronze - Estrutura do Workspace</em></p>
 <br><br>
 
 Com o carregamento do arquivo RAW (bronze_cyber_breaches.csv), a tabela Bronze passa a refletir as seguintes colunas:
-
+<br> <br> 
 <img width="1347" height="610" alt="image" src="https://github.com/user-attachments/assets/51e9b143-98fc-45a0-bfcf-3bafd763d84a" />
 <p align="center"><em>Camada Bronze - Consulta da Descrição da tabela</em></p>
-
+<br> <br> 
 Percebe-se que a importação foi realizada sem o header, fazendo com que o cabeçalho fosse inserido como o primeiro registro da tabela.
+<br> <br> 
+<img width="1358" height="607" alt="image" src="https://github.com/user-attachments/assets/64388369-57b9-490d-a999-c770e0eb65b9" />
+<p align="center"><em>Camada Bronze - Consulta da tabela</em></p>
+<br> <br> 
 
+Com essa percepção, é possível extrair um dicionário de dados contendo as colunas extraídas do arquivo RAW e seu significado:
+<br> <br> 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
 | year                 | Ano do incidente |<br>
@@ -88,9 +94,8 @@ Percebe-se que a importação foi realizada sem o header, fazendo com que o cabe
 | sources              | Fonte de onde a informação foi obtida |<br>
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
-<img width="1358" height="607" alt="image" src="https://github.com/user-attachments/assets/64388369-57b9-490d-a999-c770e0eb65b9" />
-<p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
-
+<br> <br> 
+<br> <br> 
 
 
 #### Camada Silver <br> 
