@@ -62,7 +62,8 @@ Inicialmente foi criado essa estrutura no [Workspace Databricks](https://dbc-eb6
 
 Os dados deste arquivo foram armazenados exatamente no formato original, sem ajustes ou pré-processamento.
 O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
-
+<br>
+A seguir, são apresentadas as estruturas do Catalog e do Workspace referentes à Camada Bronze: <br> <br>
 <img width="1357" height="610" alt="image" src="https://github.com/user-attachments/assets/9ad25c4c-05e9-4353-8132-8790f3c2b009" />
 <p align="center"><em>Camada Bronze - Estrutura do Catalog</em></p>
 <br><br><br>
