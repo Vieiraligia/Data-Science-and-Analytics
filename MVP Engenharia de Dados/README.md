@@ -100,15 +100,15 @@ Com essa percepção, é possível extrair um dicionário de dados contendo as c
 
 
 #### Camada Silver <br> 
-A partir da ingestão dos dados por meio da camada Bronze, os dados passaram por processos específicos de limpeza, validação e padronização. Com isso, os dados estão consistentes para uso.
+Com a ingestão inicial na Camada Bronze, os dados foram submetidos a procedimentos de limpeza, validação e padronização. Esses tratamentos asseguram que o conjunto esteja íntegro, consistente e pronto para consumo analítico na Camada Gold.
 <br> <br> 
-Para a Camada Silver foi criado a seguinte estrutura:<br> <br> 
+Para a Camada Silver foi criada a seguinte estrutura:<br> <br> 
 <img width="1363" height="606" alt="image" src="https://github.com/user-attachments/assets/d6e2e2ee-7e24-44eb-9252-cb48149093c9" />
 <p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
 
 <br> <br> 
 
-Após a etapa de limpeza, padronização e tipagem, a tabela Silver foi consolidada em um formato estruturado e consistente, adequado para processos analíticos e para a modelagem dimensional da Camada Gold.
+
 As transformações aplicadas incluem:
 - Conversão dos tipos de dados conforme o padrão definido para a Silver.
 - Tratamento de valores faltantes ou inválidos.
