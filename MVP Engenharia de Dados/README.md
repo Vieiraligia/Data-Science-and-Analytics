@@ -47,7 +47,7 @@ Para a construção do pipeline de dados foi escolhido o modelo Medallion Archit
 <br>
 Ou seja, cada camada acrescenta um nível de qualidade dos dados.
 <br><br><br>
-Inicialmente foi criado essa estrutura no [Databricks](https://dbc-eb614924-6ff5.cloud.databricks.com/browse/folders/2622341114230165?o=4039119411220696)
+Inicialmente foi criado somente um Notebook dentro de um Workspace vinculado ao meu usuário integrado com o GitHub.
 
 <br><br>
 <img width="1358" height="605" alt="image" src="https://github.com/user-attachments/assets/1abe1e89-be5a-4ae0-8a2c-74d364ca7456" />
