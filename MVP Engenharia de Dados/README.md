@@ -44,11 +44,10 @@ Para a construção do pipeline de dados foi escolhido o modelo Medallion Archit
  - A camada Bronze apresenta os dados 'crus'
  - A camada Silver apresenta dados limpos e refinados
  - A camada Gold apresenta dados prontos para análises, BI e machine learning
-<br>
-Ou seja, cada camada acrescenta um nível de qualidade dos dados.
-<br><br><br>
-Inicialmente foi criado somente um Notebook dentro de um Workspace vinculado ao meu usuário integrado com o GitHub.
 
+Ou seja, cada camada acrescenta um nível de qualidade dos dados.
+<br><br>
+Inicialmente foi criado somente um Notebook dentro de um Workspace vinculado ao meu usuário integrado com o GitHub.
 <br><br>
 <img width="1358" height="605" alt="image" src="https://github.com/user-attachments/assets/1abe1e89-be5a-4ae0-8a2c-74d364ca7456" />
 <p align="center"><em>Workspace integrado ao GitHub</em></p>
