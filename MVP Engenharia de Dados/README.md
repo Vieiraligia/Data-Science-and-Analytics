@@ -165,10 +165,11 @@ Abaixo está a consulta da tabela resultante, já com todas as correções aplic
 
 #### Camada Gold <br> 
 
-Conforme a estrutura resultante da Camada Silver, definiu-se a adoção do modelo estrela para esta camada.<br><br>
+Conforme a estrutura resultante da Camada Silver, definiu-se a adoção do Modelo Analítico Estrela para esta camada, com a sepaação entre dimensões (atributos) e fato ()eventos medidos.<br><br>
 <img width="1345" height="606" alt="image" src="https://github.com/user-attachments/assets/dc1eb49f-2c36-4f0a-806b-f064db6d7833" />
 <p align="center"><em>Camada Gold - Estrutura do Catalog</em></p>
 <br> <br> 
+
 
  
 ## Carga dos dados processados
