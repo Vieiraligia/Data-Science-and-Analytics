@@ -171,7 +171,117 @@ Conforme a estrutura resultante da Camada Silver, definiu-se a adoção do Model
 <br> <br> 
 
 
- 
+*Durante a aplicação de CHECK constraints na Camada Gold, foram identificados registros com valores nulos no campo records_exposed. Como valores nulos representam ausência de informação e não inconsistência, a constraint foi ajustada para permitir NULL, mantendo a integridade da métrica sem distorção dos resultados analíticos.
+✔ Mantém todas as linhas
+✔ Preserva métricas
+✔ Modelo estrela correto
+✔ Melhor prática DW
+
+*Durante a validação da integridade referencial da Camada Gold, foi identificado um registro sem correspondência na dimensão de método de ataque. Para preservar o histórico e manter a consistência do modelo estrela, foi criado um membro técnico “Unknown” na dimensão dim_breach_method, ao qual o registro foi corretamente associado.
+
+*Durante a validação da integridade referencial da Camada Gold, foram identificados registros sem correspondência na dimensão de tempo. Para preservar o histórico e garantir consistência do modelo estrela, foi criado um membro técnico “Desconhecido” na dimensão dim_year, para o qual esses registros foram corretamente associados. Durante a validação da integridade referencial da Camada Gold, foram identificados registros na tabela fato sem correspondência na dimensão de tempo (dim_year), resultando em valores nulos na chave estrangeira year_key.Para tratar esse cenário de forma consistente com boas práticas de Data Warehouse, foi adotada a estratégia de criação de um membro técnico “Desconhecido” na dimensão, conforme descrito a seguir.
+
+✔ Mantém 100% dos registros históricos
+✔ Preserva a integridade das métricas analíticas
+✔ Garante consistência do modelo estrela
+✔ Facilita auditoria e rastreabilidade
+✔ Segue as melhores práticas de Data Warehouse
+
+🛡 Governança e Qualidade da Camada Gold
+
+A Camada Gold foi projetada para fornecer dados confiáveis, consistentes e prontos para consumo analítico, seguindo princípios de governança de dados, qualidade e modelagem dimensional.
+
+Todas as validações e correções descritas nesta seção garantem a integridade do modelo estrela e a confiabilidade das métricas utilizadas em análises e relatórios.
+
+🔐 Integridade Referencial (PK / FK)
+
+Durante o processo de validação, foram identificados registros na tabela fato sem correspondência em algumas dimensões.
+Para tratar esse cenário de forma consistente, foi adotada a estratégia de membros técnicos “Desconhecidos”, prática recomendada em Data Warehouses.
+
+Dimensões com membro técnico Unknown
+Dimensão	Chave técnica	Valor
+dim_year	year_key = -1	Ano não informado
+dim_breach_method	breach_method_key = -1	Método não informado
+
+Esses registros garantem que:
+
+Nenhuma linha da fato seja descartada
+
+O modelo estrela permaneça navegável
+
+As métricas não sejam distorcidas
+
+🧩 Tratamento de Chaves Estrangeiras Nulas
+
+Os registros da tabela fato com chaves estrangeiras nulas foram associados aos respectivos membros técnicos:
+
+UPDATE main.gold.fact_cyber_breaches
+SET year_key = -1
+WHERE year_key IS NULL;
+
+UPDATE main.gold.fact_cyber_breaches
+SET breach_method_key = -1
+WHERE breach_method_key IS NULL;
+
+✔ Regras de Qualidade de Dados (Constraints)
+
+Após o tratamento dos dados, foram aplicadas CHECK constraints para impedir a introdução de inconsistências futuras.
+
+Métrica válida
+CHECK (records_exposed >= 0 OR records_exposed IS NULL)
+
+Integridade das chaves
+CHECK (year_key IS NOT NULL)
+CHECK (breach_method_key IS NOT NULL)
+
+
+Essas regras asseguram que:
+
+Valores negativos não sejam permitidos
+
+Chaves obrigatórias estejam sempre preenchidas
+
+O modelo permaneça consistente ao longo do tempo
+
+🧪 Validações Operacionais
+
+As seguintes consultas foram utilizadas para validar a consistência da Camada Gold:
+
+-- Tabela fato não vazia
+SELECT COUNT(*) FROM main.gold.fact_cyber_breaches;
+
+-- Verificação de FKs nulas
+SELECT COUNT(*) FROM main.gold.fact_cyber_breaches WHERE year_key IS NULL;
+SELECT COUNT(*) FROM main.gold.fact_cyber_breaches WHERE breach_method_key IS NULL;
+
+📊 Garantia de Consistência Analítica
+
+As métricas da Camada Gold foram comparadas com a Silver para assegurar consistência:
+
+SELECT SUM(records_exposed)
+FROM main.gold.fact_cyber_breaches;
+
+SELECT SUM(records_exposed)
+FROM main.silver.silver_cyber_breaches;
+
+
+Os valores obtidos foram compatíveis, confirmando que o processo de modelagem não introduziu perdas ou distorções.
+
+🏆 Boas Práticas Adotadas
+
+✔ Modelo estrela com chaves surrogate
+✔ Preservação de histórico
+✔ Uso de membros técnicos para dados ausentes
+✔ Validações explícitas de qualidade
+✔ Governança alinhada ao Unity Catalog
+✔ Dados prontos para BI e Analytics
+
+📌 Considerações Finais
+
+A Camada Gold reflete um modelo analítico governado, robusto e confiável, adequado para exploração de dados, visualizações e tomada de decisão.
+Todas as decisões de modelagem e qualidade foram documentadas e seguem práticas consolidadas de Engenharia de Dados e Data Warehouse.
+
+
 ## Carga dos dados processados
 
 
