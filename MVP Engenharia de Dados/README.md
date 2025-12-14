@@ -48,17 +48,15 @@ A arquitetura adotada é composta por três camadas:<br>
 - Camada Gold: disponibiliza dados prontos para análises analíticas, BI e Machine Learning.<br>
 
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
-
 <br> <br> <br> 
 <b><i>Modelagem da Camada Bronze</b></i>
 <br> <br> 
 A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.<br> 
 O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, os métodos de ataque, o ano do incidente e a quantidade de registros de incidentes. 
 
-
-Dicionário de Dados - Conceitual
-
 A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais juntamente com o seu significado:
+
+Dicionário de Dados Conceitual
 <br> 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
@@ -68,15 +66,14 @@ A partir do arquivo RAW, é possível identificar os seguintes atributos conceit
 | method               | Método do ataque (ex.: Hacking, Insider, Loss, etc.) |<br>
 | sources              | Fonte de onde a informação foi obtida |<br>
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
-
-<br> <br> 
+<br> <br> <br> 
 <b><i>Modelagem da Camada Silver</b></i>
 <br> <br> 
 Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, preservando a granularidade original das informações. O principal objetivo é disponibilizar um conjunto de dados íntegro, consistente e semanticamente padronizado para servir como base confiável à modelagem analítica da Camada Gold.<br> 
 Nesta etapa, foi mantida uma estrutura conceitual em modelo flat, na qual todas as informações permanecem consolidadas em uma única tabela, facilitando a rastreabilidade, o controle de qualidade e a preparação para o processo de modelagem dimensional.
 <br> 
-
-Tipagem dos dados:
+Dicionário de Dados Lógico
+<br> 
 breach_id → INT -> Identificador Numérico<br>
 year → INT -> ano (numérico)<br>
 records_exposed → BIGINT -> devido ao volume numérico grande<br>
