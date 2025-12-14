@@ -48,16 +48,16 @@ A arquitetura adotada é composta por três camadas:<br>
 - Camada Gold: disponibiliza dados prontos para análises analíticas, BI e Machine Learning.<br>
 
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
-<br> <br> 
+<br> <br> <br> 
 <b><i>Modelagem da Camada Bronze</b></i>
 <br> <br> 
-A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.
+A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.<br> 
 O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, os métodos de ataque, o ano do incidente e a quantidade de registros de incidentes. 
 
 Dicionário de Dados - Conceitual
 <br> <br> 
-A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais:
-Com essa percepção, é possível extrair um dicionário de dados contendo as colunas extraídas do arquivo RAW e seu significado:
+A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais juntamente com o seu significado:
+
 <br> <br> 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
@@ -69,43 +69,26 @@ Com essa percepção, é possível extrair um dicionário de dados contendo as c
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
 <br> <br> 
-Modelagem da Camada Silver
+<b><i>Modelagem da Camada Silver</b></i>
 <br> <br> 
-Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, mantendo a granularidade original do conjunto.
+Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, mantendo a granularidade original, com o objetivo de disponibilizar um conjunto de dados íntegro, consistente, tipado e semanticamente padronizado para apoiar como base confiável para a modelagem analítica da Camada Gold. 
+Foi mantida a estrutura conceitual com o modelo flat, onde todas as informações ficam concentradas em uma única tabela.
 <br> 
-O objetivo da Camada Silver é disponibilizar um conjunto de dados:<br> 
-- íntegro;<br> 
-- consistente;<br> 
-- tipado;<br> 
-- semanticamente padronizado.<br> 
-servindo como base confiável para a modelagem analítica da Camada Gold
 
-Estrutura conceitual da Camada Silver
-A Camada Silver mantém um modelo flat, com uma única tabela, porém com:
-- nomes de colunas semânticos,
-- tipos de dados explícitos,
-- remoção de atributos não utilizados,
-- inclusão de colunas técnicas para auditoria.
+Foi realizado a seguinte transfomação da tipagem lógica:
 
-Cada registro da Camada Silver representa exatamente um incidente de violação de dados, preservando a granularidade linha a linha da Camada Bronze.
+breach_id → INT<br>
+year → INT<br>
+records_exposed → BIGINT<br>
+organization → STRING<br>
+organization_type → STRING<br>
+breach_method → STRING<br>
+silver_load_timestamp → TIMESTAMP<br>
 
-Tipagem lógica dos atributos
-
-Na modelagem da Camada Silver, foi definida a seguinte tipagem lógica:
-
-breach_id → INT
-year → INT
-records_exposed → BIGINT
-organization → STRING
-organization_type → STRING
-breach_method → STRING
-silver_load_timestamp → TIMESTAMP
-
-A escolha dos tipos visa garantir a integridade dos dados, validações automáticas pelo engine SQL, compatibilidade com análises futuras.
-
-
-Durante o processo de modelagem foi decidido excluir a coluna 'Sources' por não estar disponível de forma consistente no dataset e não contribuir para análises analíticas. Não foram aplicadas agregações, garantindo a preservação da granularidade original.
-Foi definida a inclusão de uma coluna técnica de auditoria para rastreabilidade da carga.
+Durante o processo de modelagem as decisões mais relevantes foram
+- Exclusão da coluna 'Sources' por não estar disponível de forma consistente no dataset e não contribuir para análises analíticas.
+- Não aplicação de agregações, garantindo a preservação da granularidade original.
+- Inclusão de uma coluna técnica de auditoria para rastreabilidade da carga.
 
 <br> <br> 
 Modelagem da Camada Gold
