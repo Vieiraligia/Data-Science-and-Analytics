@@ -40,7 +40,7 @@ Arquivo utilizado:
  
 ## Modelagem<br>
 
-Para a construção do pipeline de dados foi escolhido o modelo Medallion Architecture. Essa arquitetura, desenvolvida pela Databricks, padroniza a organização dos dados em ambientes de Data Lakehouse, promovendo evolução progressiva da qualidade da informação.<br>
+Para a construção do pipeline de dados foi escolhido o modelo <b><i>Medallion Architecture</b></i>. Essa arquitetura, desenvolvida pela Databricks, padroniza a organização dos dados em ambientes de Data Lakehouse, promovendo evolução progressiva da qualidade da informação.<br>
 
 A arquitetura adotada é composta por três camadas:<br>
 - Camada Bronze: armazena os dados em seu formato original (raw), preservando integralmente a fonte.<br>
@@ -49,7 +49,7 @@ A arquitetura adotada é composta por três camadas:<br>
 
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
 <br> <br> 
-<i>Modelagem da Camada Bronze</i>
+<b><i>Modelagem da Camada Bronze</b></i>
 <br> <br> 
 A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.
 O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, os métodos de ataque, o ano do incidente e a quantidade de registros de incidentes. 
