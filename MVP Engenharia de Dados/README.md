@@ -46,6 +46,7 @@ A arquitetura adotada é composta por três camadas:<br>
 - Camada Bronze: armazena os dados em seu formato original (raw), preservando integralmente a fonte.<br>
 - Camada Silver: concentra dados limpos, padronizados e com tipagem adequada.<br>
 - Camada Gold: disponibiliza dados prontos para análises analíticas, BI e Machine Learning.<br>
+
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
 <br> <br> 
 Modelagem da Camada Bronze
@@ -73,9 +74,9 @@ Com essa percepção, é possível extrair um dicionário de dados contendo as c
 | sources              | Fonte de onde a informação foi obtida |<br>
 | Unnamed: 0           | Coluna técnica presente no arquivo original |<br><br>
 
-<b><b><br> <br> 
-Modelagem – Camada Silver
-<b><b><br> <br> 
+<br> <br> 
+Modelagem da Camada Silver
+<br> <br> 
 Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, mantendo a granularidade original do conjunto.
 <br> 
 O objetivo da Camada Silver é disponibilizar um conjunto de dados:<br> 
@@ -112,10 +113,9 @@ A escolha dos tipos visa garantir a integridade dos dados, validações automát
 Durante o processo de modelagem foi decidido excluir a coluna 'Sources' por não estar disponível de forma consistente no dataset e não contribuir para análises analíticas. Não foram aplicadas agregações, garantindo a preservação da granularidade original.
 Foi definida a inclusão de uma coluna técnica de auditoria para rastreabilidade da carga.
 
-<b><b><br> <br> 
-Modelagem – Camada Gold
-<b><b><br> <br> 
-
+<br> <br> 
+Modelagem da Camada Gold
+<br> <br> 
 Com base na estrutura consolidada da Camada Silver, foi adotado para a Camada Gold o Modelo Analítico Estrela, com separação clara entre tabelas dimensão (atributos descritivos) e tabela fato (eventos mensuráveis).
 
 Esse modelo foi escolhido por:
