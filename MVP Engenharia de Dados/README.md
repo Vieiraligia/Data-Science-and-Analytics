@@ -55,11 +55,11 @@ Cada camada adiciona um nível incremental de qualidade, governança e estrutura
 A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.<br> 
 O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, os métodos de ataque, o ano do incidente e a quantidade de registros de incidentes. 
 
-Dicionário de Dados - Conceitual
-<br> <br> 
-A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais juntamente com o seu significado:
 
-<br> <br> 
+Dicionário de Dados - Conceitual
+
+A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais juntamente com o seu significado:
+<br> 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
 | year                 | Ano do incidente |<br>
