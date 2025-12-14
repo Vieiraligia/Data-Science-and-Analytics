@@ -56,7 +56,7 @@ O conjunto de dados reúne informações públicas sobre incidentes de violaçã
 
 A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais juntamente com o seu significado:
 
-Dicionário de Dados Conceitual
+<b>Dicionário de Dados Conceitual</b>
 <br> <br> 
 | Coluna               | Descrição |<br>
 | entity               | Empresa ou organização afetada pelo incidente de cibersegurança |<br>
@@ -72,7 +72,7 @@ Dicionário de Dados Conceitual
 Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, preservando a granularidade original das informações. O principal objetivo é disponibilizar um conjunto de dados íntegro, consistente e semanticamente padronizado para servir como base confiável à modelagem analítica da Camada Gold.<br> 
 Nesta etapa, foi mantida uma estrutura conceitual em modelo flat, na qual todas as informações permanecem consolidadas em uma única tabela, facilitando a rastreabilidade, o controle de qualidade e a preparação para o processo de modelagem dimensional.
 <br> 
-Dicionário de Dados Lógico
+<b>Dicionário de Dados Lógico<b>
 <br> <br> 
 breach_id → INT -> Identificador Numérico<br>
 year → INT -> ano (numérico)<br>
