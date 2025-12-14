@@ -70,6 +70,7 @@ A partir do arquivo RAW, é possível identificar os seguintes atributos conceit
 <b><i>Modelagem da Camada Silver</b></i>
 <br> <br> 
 Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, preservando a granularidade original das informações. O principal objetivo é disponibilizar um conjunto de dados íntegro, consistente e semanticamente padronizado para servir como base confiável à modelagem analítica da Camada Gold.<br> 
+
 Nesta etapa, foi mantida uma estrutura conceitual em modelo flat, na qual todas as informações permanecem consolidadas em uma única tabela, facilitando a rastreabilidade, o controle de qualidade e a preparação para o processo de modelagem dimensional.
 <br> <br> 
 
@@ -88,9 +89,9 @@ Durante o processo de modelagem as decisões mais relevantes foram:
 - Não aplicação de agregações, garantindo a preservação da granularidade original.
 - Inclusão de uma coluna técnica de auditoria para rastreabilidade da carga.
 
-<br> <br> 
-Modelagem da Camada Gold
-<br> <br> 
+<br> <br> <br> 
+<b><i>Modelagem da Camada Gold</b></i>
+<br> <br>  
 Com base na estrutura consolidada da Camada Silver, foi adotado para a Camada Gold o Modelo Analítico Estrela, com separação clara entre tabelas dimensão (atributos descritivos) e tabela fato (eventos mensuráveis).
 
 Esse modelo foi escolhido por:
