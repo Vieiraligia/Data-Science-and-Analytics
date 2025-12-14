@@ -49,18 +49,12 @@ A arquitetura adotada é composta por três camadas:<br>
 
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
 <br> <br> 
-Modelagem da Camada Bronze
+<i>Modelagem da Camada Bronze</i>
 <br> <br> 
-A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, mantendo fidelidade total ao arquivo original.
-Trata-se de um modelo flat, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.
-O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores. Entre os principais atributos conceituais do conjunto estão:
-- organização afetada;<br>
-- ano do incidente;<br>
-- quantidade de registros expostos;<br>
-- tipo de organização;<br>
-- método do ataque.<br>
+A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.
+O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores, os métodos de ataque, o ano do incidente e a quantidade de registros de incidentes. 
 
-Dicionário de Dados (Camada Bronze – Conceitual)
+Dicionário de Dados - Conceitual
 <br> <br> 
 A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais:
 Com essa percepção, é possível extrair um dicionário de dados contendo as colunas extraídas do arquivo RAW e seu significado:
