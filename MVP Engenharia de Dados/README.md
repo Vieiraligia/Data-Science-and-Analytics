@@ -46,9 +46,9 @@ A arquitetura adotada é composta por três camadas:<br>
 - Camada Silver: concentra dados limpos, padronizados e com tipagem adequada.<br>
 - Camada Gold: disponibiliza dados prontos para análises analíticas, BI e Machine Learning.<br>
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
-<b><b><br> <br> 
+<br> <br> 
 Modelagem da Camada Bronze
-<b><b><br> <br> 
+<br> <br> 
 A Camada Bronze foi modelada para armazenar os dados sem qualquer transformação, mantendo fidelidade total ao arquivo original.
 Trata-se de um modelo flat, composto por uma única tabela, sem aplicação de regras de negócio, normalização ou criação de chaves substitutas.
 O conjunto de dados reúne informações públicas sobre incidentes de violação de dados envolvendo empresas de diferentes setores. Entre os principais atributos conceituais do conjunto estão:
