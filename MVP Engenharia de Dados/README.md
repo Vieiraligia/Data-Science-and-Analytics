@@ -43,11 +43,12 @@ Arquivo utilizado:
 Para a construção do pipeline de dados foi escolhido o modelo <b><i>Medallion Architecture</b></i>. Essa arquitetura, desenvolvida pela Databricks, padroniza a organização dos dados em ambientes de Data Lakehouse, promovendo evolução progressiva da qualidade da informação.<br>
 
 A arquitetura adotada é composta por três camadas:<br>
-- Camada Bronze: armazena os dados em seu formato original (raw), preservando integralmente a fonte.<br>
-- Camada Silver: concentra dados limpos, padronizados e com tipagem adequada.<br>
+- Camada Bronze: armazena os dados em seu formato original (raw).<br>
+- Camada Silver: concentra dados limpos, padronizados e refinados.<br>
 - Camada Gold: disponibiliza dados prontos para análises analíticas, BI e Machine Learning.<br>
 
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
+
 <br> <br> <br> 
 <b><i>Modelagem da Camada Bronze</b></i>
 <br> <br> 
@@ -71,21 +72,20 @@ A partir do arquivo RAW, é possível identificar os seguintes atributos conceit
 <br> <br> 
 <b><i>Modelagem da Camada Silver</b></i>
 <br> <br> 
-Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, mantendo a granularidade original, com o objetivo de disponibilizar um conjunto de dados íntegro, consistente, tipado e semanticamente padronizado para apoiar como base confiável para a modelagem analítica da Camada Gold. 
-Foi mantida a estrutura conceitual com o modelo flat, onde todas as informações ficam concentradas em uma única tabela.
+Após a ingestão inicial na Camada Bronze, foi definida a Camada Silver como responsável pela padronização, limpeza e validação dos dados, preservando a granularidade original das informações. O principal objetivo é disponibilizar um conjunto de dados íntegro, consistente e semanticamente padronizado para servir como base confiável à modelagem analítica da Camada Gold.<br> 
+Nesta etapa, foi mantida uma estrutura conceitual em modelo flat, na qual todas as informações permanecem consolidadas em uma única tabela, facilitando a rastreabilidade, o controle de qualidade e a preparação para o processo de modelagem dimensional.
 <br> 
 
-Foi realizado a seguinte transfomação da tipagem lógica:
+Tipagem dos dados:
+breach_id → INT -> Identificador Numérico<br>
+year → INT -> ano (numérico)<br>
+records_exposed → BIGINT -> devido ao volume numérico grande<br>
+organization → STRING -> texto<br>
+organization_type → STRING -> categoria textual<br>
+breach_method → STRING -> descrição do método<br>
+silver_load_timestamp → TIMESTAMP ->data/hora de carga<br>
 
-breach_id → INT<br>
-year → INT<br>
-records_exposed → BIGINT<br>
-organization → STRING<br>
-organization_type → STRING<br>
-breach_method → STRING<br>
-silver_load_timestamp → TIMESTAMP<br>
-
-Durante o processo de modelagem as decisões mais relevantes foram
+Durante o processo de modelagem as decisões mais relevantes foram:
 - Exclusão da coluna 'Sources' por não estar disponível de forma consistente no dataset e não contribuir para análises analíticas.
 - Não aplicação de agregações, garantindo a preservação da granularidade original.
 - Inclusão de uma coluna técnica de auditoria para rastreabilidade da carga.
