@@ -59,7 +59,7 @@ O conjunto de dados reúne informações públicas sobre incidentes de violaçã
 - quantidade de registros expostos;<br>
 - tipo de organização;<br>
 - método do ataque.<br>
-<br> <br> 
+
 Dicionário de Dados (Camada Bronze – Conceitual)
 <br> <br> 
 A partir do arquivo RAW, é possível identificar os seguintes atributos conceituais:
