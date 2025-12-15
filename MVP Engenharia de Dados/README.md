@@ -17,7 +17,7 @@ recursos do ecossistema  [Databricks](https://databricks.com) que é uma platafo
 ## Objetivo<br>
 Este MVP aborda o tema cibersegurança, com foco em violação de dados. A partir das análises realizadas, busca-se identificar percepções sobre a segurança cibernética e entender quais tipos de empresas são mais vulneráveis.
 <br>
-O principal objetivo é identificar tendências e padrões relacionados ao aumento dos ataques de violação de dados, respondendo às seguintes questões: 
+O principal objetivo é possibilitar a identificação de tendências e padrões relacionados ao aumento dos ataques de violação de dados, respondendo às seguintes questões: 
  <br>
 1.	Quais são os tipos de ataques mais comuns?
 2.	Por que os ataques às empresas estão aumentando?
