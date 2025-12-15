@@ -4,7 +4,7 @@ Este primeiro MVP está associado à disciplina de Engenharia de Dados. <br>
 
 A proposta é desenvolver um pipeline de dados aplicando boas práticas de engenharia de dados e utilizando os
 recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> 
-<br>O pipeline deve contemplar as seguintes etapas:
+<br>O pipeline contempla as seguintes etapas:
 <br><br>
 
 📥 Coleta / ingestão<br>
