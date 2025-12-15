@@ -78,7 +78,7 @@ Nesta etapa, foi mantida uma estrutura conceitual em modelo flat, na qual todas 
 <br> <br> 
 breach_id → INT -> Identificador Numérico<br>
 year → INT -> ano (numérico)<br>
-records_exposed → BIGINT -> devido ao volume numérico grande<br>
+records_exposed → BIGINT -> devido ao grande volume numérico<br>
 organization → STRING -> texto<br>
 organization_type → STRING -> categoria textual<br>
 breach_method → STRING -> descrição do método<br>
