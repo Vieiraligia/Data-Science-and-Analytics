@@ -98,13 +98,13 @@ Esse modelo foi escolhido por simplificar as consultas analíticas e facilitar o
 A Camada Gold é composta por:
 
 Dimensões:<br>
-- dim_organization<br>
-- dim_organization_type<br>
-- dim_breach_method<br>
-- dim_year<br>
+- dim_organization → quem foi atacado <br>
+- dim_organization_type → qual setor <br>
+- dim_breach_method → como ocorreu o ataque<br>
+- dim_year → quando ocorreu<br>
 
 Tabela Fato:<br>
-- fact_cyber_breaches<br>
+- fact_cyber_breaches → o evento medido<br>
 
 A tabela fato centraliza as métricas do negócio, enquanto as dimensões fornecem o contexto analítico necessário para análise temporal, organizacional e por método de ataque.
 
