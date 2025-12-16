@@ -88,7 +88,6 @@ Durante o processo de modelagem as decisões mais relevantes foram:
 - Exclusão da coluna 'Sources' por não estar disponível a fonte da informação no dataset e não contribuir para análises analíticas.
 - Não aplicação de agregações, garantindo a preservação da granularidade original.
 - Inclusão de uma coluna técnica de auditoria para rastreabilidade da carga.
-
 <br> <br> <br> 
 <b><i>Modelagem da Camada Gold</b></i>
 <br> <br>  
