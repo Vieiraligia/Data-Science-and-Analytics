@@ -372,3 +372,65 @@ Com isso, evidencia-se que o processo de carga da Camada Gold contempla um conju
 
 A 
 
+--- ESBOÇO
+
+Discussão dos Resultados
+
+A análise foi conduzida a partir da Camada Gold, estruturada em modelo estrela, após validações rigorosas de integridade referencial, qualidade dos dados e consistência métrica. Essa abordagem assegurou que os resultados obtidos refletissem fielmente o conjunto de dados original, sem perdas ou distorções introduzidas pelo processo de transformação.
+
+Tipos de ataques mais comuns
+
+Os resultados indicam que determinados métodos de ataque concentram a maior parte dos incidentes registrados. Ataques associados a falhas de configuração, exposição acidental de dados e comprometimentos por hackers aparecem com maior frequência, sugerindo que vulnerabilidades técnicas e erros humanos continuam sendo vetores relevantes de risco em ambientes corporativos.
+
+Evolução temporal dos ataques
+
+A análise por ano evidencia uma tendência de crescimento no número de incidentes ao longo do tempo. Esse comportamento pode estar relacionado a múltiplos fatores externos ao dataset, como:
+
+aumento da digitalização dos serviços;
+
+maior volume de dados sensíveis armazenados;
+
+crescimento da superfície de ataque;
+
+maior transparência e obrigatoriedade de notificação de incidentes.
+
+É importante ressaltar que o conjunto de dados permite identificar correlações temporais, mas não possibilita inferir causalidade direta.
+
+Setores mais impactados
+
+A análise por tipo de organização demonstra que setores estratégicos, como governo, saúde e serviços financeiros, concentram maior número de incidentes. Esses setores tendem a armazenar dados altamente sensíveis e críticos, tornando-se alvos prioritários para diferentes tipos de ataques cibernéticos.
+
+Prevenção e mitigação
+
+Embora o dataset não contenha informações explícitas sobre medidas de segurança, a associação entre tipos de ataque e boas práticas de cibersegurança permite inferir estratégias de mitigação adequadas, como:
+
+fortalecimento de controles de acesso;
+
+monitoramento contínuo;
+
+revisão de configurações;
+
+políticas de conscientização e treinamento de usuários.
+
+Essa análise reforça a importância de alinhar dados históricos de incidentes com conhecimento de domínio para apoiar decisões estratégicas em segurança da informação.
+
+Possibilidade de previsão de cenários futuros
+
+Os dados analisados permitem identificar padrões históricos e tendências, mas não são suficientes para previsões determinísticas. A ausência de variáveis adicionais e a natureza discreta dos registros limitam o uso do dataset para modelos preditivos avançados. Ainda assim, os resultados oferecem subsídios relevantes para análises exploratórias e projeções iniciais.
+
+🏁 Conclusão Geral
+
+Este trabalho apresentou a construção de um pipeline de dados baseado na arquitetura Medallion (Bronze, Silver e Gold), utilizando a plataforma Databricks e o Unity Catalog para governança e organização dos dados. A Camada Gold foi modelada segundo o esquema estrela, garantindo eficiência analítica, integridade referencial e consistência das métricas.
+
+As validações aplicadas asseguraram:
+
+preservação do histórico dos dados;
+
+ausência de chaves estrangeiras nulas;
+
+tratamento adequado de valores ausentes;
+
+alinhamento com boas práticas de Data Warehouse.
+
+A etapa de análise demonstrou que o conjunto de dados é adequado para responder às perguntas propostas, fornecendo insights relevantes sobre padrões de ataques cibernéticos, setores mais afetados e tendências temporais. Apesar das limitações inerentes ao dataset, os resultados obtidos reforçam o valor de pipelines bem estruturados e governados para apoiar análises confiáveis e tomadas de decisão baseadas em dados
+
