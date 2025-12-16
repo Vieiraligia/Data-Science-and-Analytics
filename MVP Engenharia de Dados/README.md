@@ -219,7 +219,7 @@ Essa coluna permite rastrear a data e hora da carga, identificar execuções sub
 <br><br>
 
 Trecho SQL utilizado:
-
+<img width="1364" height="1105" alt="camada silver_evidencia SQL" src="https://github.com/user-attachments/assets/d8ed4666-be0b-4119-9d87-7ceb4726ea0e" /> <p align="center"><em>Camada Silver - Transformações Aplicadas</em></p> <br> <br><br>
 
 Sobre a preservação da granularidade original, nenhuma agregação foi aplicada. Cada linha da Silver corresponde exatamente a um incidente de violação de dados, mantendo-se a granularidade linha a linha da Bronze.<br><br>
 Abaixo está a consulta da tabela resultante, já com todas as correções aplicadas:<br><br>
