@@ -152,6 +152,7 @@ A etapa inicial consistiu na criação de um único Notebook dentro de um Worksp
 <br><br>
 
 <b><i>Carga na Camada Bronze</b></i>
+<br><br>
 Os dados deste arquivo foram armazenados exatamente no formato original, sem ajustes ou pré-processamento.
 O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
 <br><br>
