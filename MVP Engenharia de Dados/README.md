@@ -230,10 +230,13 @@ Após a correção dos nomes das colunas, foi realizado um simples consulta de c
 <img width="1333" height="610" alt="image" src="https://github.com/user-attachments/assets/08a52b73-4f0c-4470-8b80-e9fdcf506d50" />
 <p align="center"><em>Consulta da Camada Silver II</em></p>
 <br><br>
-<img width="1333" height="610" alt="image" src="https://github.com/user-attachments/assets/ba97c0dc-6c57-4d43-8a51-34905bd4129f" />
+<img width="1353" height="612" alt="image" src="https://github.com/user-attachments/assets/bcc79a0d-9ce7-42c4-bce8-d37894ca3a07" />
+<p align="center"><em>Descrição da tabela Silver</em></p>
+<br><br>
 
-Trecho SQL utilizado:
-
+A coluna 'records_exposed' é do tipo BIGINT devido a volumetría do dado.
+<img width="1348" height="604" alt="image" src="https://github.com/user-attachments/assets/af6506ae-2906-4247-b733-5c766ef0288d" />
+<p align="center"><em>Consulta coluna 'Records_exposed'</em></p>
 
 Sobre a preservação da granularidade original, nenhuma agregação foi aplicada. Cada linha da Silver corresponde exatamente a um incidente de violação de dados, mantendo-se a granularidade linha a linha da Bronze.<br><br>
 Abaixo está a consulta da tabela resultante, já com todas as correções aplicadas:<br><br>
