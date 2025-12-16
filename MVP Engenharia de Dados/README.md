@@ -296,76 +296,52 @@ Seguem, a seguir, as evidências do processo de criação das tabelas dimensão 
 <br><br>
 
 <img width="1365" height="608" alt="image" src="https://github.com/user-attachments/assets/699803fd-c5c4-400a-b10b-75408712cd6a" />
-<p align="center"><em>Camada Gold - Consulta às tabela dimensão e fato</em></p>
+<p align="center"><em>Camada Gold - Consulta às tabelas dimensão e fato</em></p>
 <br><br>
 
-Validação da existência e da eompletude da tabela fato na Camada Gold.
+Validação da existência e da completude da tabela fato na Camada Gold.
 <br>
+
 <img width="1357" height="582" alt="image" src="https://github.com/user-attachments/assets/dbf6cc7c-3ef1-4f9b-a583-c9eafd29072c" />
 <p align="center"><em>Camada Gold - Consulta tabela fato</em></p>
 <br><br>
 
 Foi realizada uma consulta comparativa entre as tabelas das Camadas Silver e Gold, com o objetivo de validar a consistência da quantidade de registros, a qual se mostrou equivalente em ambas as camadas.
 <br>
+
 <img width="1365" height="611" alt="image" src="https://github.com/user-attachments/assets/c8065860-f466-4df2-b69b-67f5bc2be56d" />
 <p align="center"><em>Camada Gold -Comparativo quantitativo com a Camada Silver</em></p>
 <br><br>
 
 
+Evidência da validação da integridade referencial das chaves primária (PK) e estrangeira (FK) por meio das consultas abaixo.
+
+<img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" />
+<p align="center"><em>Camada Gold - Comparativo quantitativo com a Camada Silver</em></p>
+<br><br>
+
+Diante da identificação de valores nulos em determinadas consultas, foram adotadas medidas corretivas com a aplicação de constraints, incluindo a criação de membros técnicos "Unknown Members" na tabela dimensão <i>dim_breach_method</i>, com o objetivo de preservar a integridade referencial do modelo dimensional. 
+
+<img width="1353" height="519" alt="image" src="https://github.com/user-attachments/assets/78cfd4ba-1c7b-4212-9f3a-2815436417c6" />
+<p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato I</em></p>
+<br><br>
+
+<img width="1364" height="606" alt="image" src="https://github.com/user-attachments/assets/1f390233-9185-4da4-9f75-e268a74942fc" />
+<p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato II</em></p>
+<br><br>
+
+Foi realizada uma consulta com viés analítico, com o objetivo de explorar os dados consolidados na Camada Gold e validar a consistência das métricas agregadas. As consultas a seguir apresentam análises que permitem a avaliação do total de registros comprometidos por ano e por método de ataque, respectivamente.
+
+<img width="1363" height="615" alt="image" src="https://github.com/user-attachments/assets/94b75c23-6005-4d81-a7df-e9f81963d46e" />
+<p align="center"><em>Camada Gold - Consulta total de registros por ano e ataque</em></p>
+<br><br>
 
 
+Aplicação de Constraints 
 
-Validação de métricas e constraints
-
-Durante a aplicação de CHECK constraints, foram identificados registros com valores nulos no campo records_exposed.
-
-Como valores nulos representam ausência de informação, e não inconsistência, a constraint foi ajustada para permitir valores NULL, evitando distorção de métricas analíticas e preservando todas as linhas da tabela fato.
-
-Tratamento de integridade referencial — Método de ataque
-
-Durante a validação da integridade referencial, foi identificado um registro na tabela fato sem correspondência na dimensão dim_breach_method.
-
-Para tratar esse cenário:
-foi criado um membro técnico “Unknown” na dimensão, o registro foi corretamente associado a esse membro.
-
-Essa abordagem garante:
-
-preservação do histórico,
-consistência do modelo estrela,
-alinhamento com boas práticas de DW.
-
-Tratamento de integridade referencial — Dimensão tempo
-
-Também foram identificados registros sem correspondência na dimensão dim_year, resultando em chaves estrangeiras nulas.
-
-Para tratar o problema, foi adotada a criação de um membro técnico “Desconhecido” na dimensão de tempo, ao qual os registros sem correspondência foram associados.
-
-Essa estratégia:
-
-mantém 100% dos registros históricos,
-preserva a integridade das métricas,
-facilita auditoria e rastreabilidade,
-garante consistência do modelo estrela.
-
-Conforme a estrutura resultante da Camada Silver, definiu-se a adoção do Modelo Analítico Estrela para esta camada, com a sepaação entre dimensões (atributos) e fato ()eventos medidos.<br><br>
-<img width="1345" height="606" alt="image" src="https://github.com/user-attachments/assets/dc1eb49f-2c36-4f0a-806b-f064db6d7833" />
-<p align="center"><em>Camada Gold - Estrutura do Catalog</em></p>
-<br> <br> 
-
-Tratamento de Chaves Estrangeiras Nulas — Execução
-
-Durante o processo de carga, foram identificados registros na tabela fato com chaves estrangeiras nulas.
-Conforme definido na modelagem, esses registros foram associados aos respectivos membros técnicos por meio de comandos de atualização:
-
-UPDATE main.gold.fact_cyber_breaches
-SET year_key = -1
-WHERE year_key IS NULL;
-
-UPDATE main.gold.fact_cyber_breaches
-SET breach_method_key = -1
-WHERE breach_method_key IS NULL;
-
-Aplicação de Constraints — Execução
+<img width="1345" height="609" alt="image" src="https://github.com/user-attachments/assets/a6613206-4c7f-496b-a0b3-2d78f4bc66ae" />
+<p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato</em></p>
+<br><br>
 
 Após o tratamento dos dados, foram aplicadas CHECK constraints para impedir a introdução de inconsistências futuras:
 
