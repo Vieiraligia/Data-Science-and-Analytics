@@ -365,7 +365,7 @@ Com isso, evidencia-se que o processo de carga da Camada Gold contempla um conju
 - Validação das métricas (sanidade dos dados). <br>
 - Validação da integridade referencial (relacionamento entre chaves estrangeiras e tabelas dimensão).  <br>
 - Validação estrutural (existência e volumetria das tabelas) e validação das chaves primárias (unicidade dos registros). <br>
-<br><br><br><br>
+<br><br>
 <br>
 
 ## Análise e validação<br>
