@@ -250,8 +250,9 @@ A coluna 'records_exposed' foi tipada como BIGINT, considerando a potencial magn
 
 Sobre a preservação da granularidade original, nenhuma agregação foi aplicada. Cada linha da Silver corresponde exatamente a um incidente de violação de dados, mantendo-se a granularidade linha a linha da Bronze.<br><br>
 
+
 Abaixo está a consulta da tabela resultante, já com todas as correções aplicadas:<br><br>
-<br> <br>
+<br> 
 <img width="1362" height="612" alt="image" src="https://github.com/user-attachments/assets/ebfbfa98-13a8-4d92-95d8-6fdb9c22b9f5" />
 <p align="center"><em>Camada Silver - Consulta da tabela Silver ajustada I</em></p>
 <br> <br> 
