@@ -218,34 +218,34 @@ current_timestamp() AS silver_load_timestamp
 Essa coluna permite rastrear a data e hora da carga, identificar execuções subsequentes e apoiar processos de auditoria e reprocessamento.
 <br><br>
 
-Após a correção dos nomes das colunas, foi realizado um simples consulta de conferência e após isso, uma exclusão do primeiro registro
+Após a correção dos nomes das colunas, foi realizado um simples consulta de conferência e após isso, uma exclusão do primeiro registro.
 
 <img width="1355" height="610" alt="image" src="https://github.com/user-attachments/assets/de8344a3-cae4-4b07-accb-3d9054bbd57b" />
-<p align="center"><em>Consulta da Camada Silver</em></p>
+<p align="center"><em>Camada Silver - Consulta à tabela</em></p>
 <br><br>
 
 Query aplicada para exclusão do primeiro registro.
 
 <img width="1365" height="570" alt="image" src="https://github.com/user-attachments/assets/b70f91de-1427-4526-a69d-5b75ebb7978b" />
-<p align="center"><em>Query de exclusão</em></p>
+<p align="center"><em>Camada Silver - Comando de Exclusão</em></p>
 <br><br>
 
 Nova consulta a tabela
 
 <img width="1333" height="610" alt="image" src="https://github.com/user-attachments/assets/08a52b73-4f0c-4470-8b80-e9fdcf506d50" />
-<p align="center"><em>Consulta da Camada Silver II</em></p>
+<p align="center"><em>Camada Silver - Consulta à tabela ajustada</em></p>
 <br><br>
 
 Descrição de todas as colunas da tabela Silver
 
 <img width="1353" height="612" alt="image" src="https://github.com/user-attachments/assets/bcc79a0d-9ce7-42c4-bce8-d37894ca3a07" />
-<p align="center"><em>Descrição da tabela Silver</em></p>
+<p align="center"><em>Camada Silver - Descrição da tabela Silver</em></p>
 <br><br>
 
 A coluna 'records_exposed' é do tipo BIGINT devido a volumetría do dado.
 
 <img width="1348" height="604" alt="image" src="https://github.com/user-attachments/assets/af6506ae-2906-4247-b733-5c766ef0288d" />
-<p align="center"><em>Consulta coluna 'Records_exposed'</em></p>
+<p align="center"><em>Camada Silver - Consulta na coluna 'Records_exposed'</em></p>
 <br><br>
 
 Sobre a preservação da granularidade original, nenhuma agregação foi aplicada. Cada linha da Silver corresponde exatamente a um incidente de violação de dados, mantendo-se a granularidade linha a linha da Bronze.<br><br>
@@ -253,14 +253,14 @@ Sobre a preservação da granularidade original, nenhuma agregação foi aplicad
 Abaixo está a consulta da tabela resultante, já com todas as correções aplicadas:<br><br>
 <br> <br>
 <img width="1362" height="612" alt="image" src="https://github.com/user-attachments/assets/ebfbfa98-13a8-4d92-95d8-6fdb9c22b9f5" />
-<p align="center"><em>Camada Silver - Consulta da tabela I</em></p>
+<p align="center"><em>Camada Silver - Consulta da tabela Silver ajustada I</em></p>
 <br> <br> 
 
 <img width="1361" height="604" alt="image" src="https://github.com/user-attachments/assets/a6954df6-3f82-440d-9dbd-36bc7c12421a" />
-<p align="center"><em>Camada Silver - Consulta da tabela II</em></p>
+<p align="center"><em>Camada Silver - Consulta da tabela Silver ajustada II</em></p>
 <br> <br> 
 
-<b><i>Carga na Camada Silver</b></i>
+<b><i>Carga na Camada Gold</b></i>
 <br><br>
 A carga da Camada Gold foi realizada a partir dos dados previamente tratados na Camada Silver, por meio da construção das tabelas dimensão e da tabela fato, utilizando pipelines desenvolvidos em SQL no ambiente Databricks.
 
@@ -273,21 +273,20 @@ Em decorrência dessas definições, a estrutura da Camada Gold foi organizada c
 Seguem, a seguir, as evidências do processo de criação das tabelas dimensão e da tabela fato na Camada Gold.
 
 
-
 <img width="1362" height="952" alt="camada gold_evidencia SQL1" src="https://github.com/user-attachments/assets/df654188-4e27-4d23-82bb-d6d21939780a" />
-<p align="center"><em>Camada Gold </em></p>
+<p align="center"><em>Camada Gold - Criação da tabela dimensão</em></p>
 <br><br>
 
 <img width="1364" height="1038" alt="camada gold_evidencia SQL2" src="https://github.com/user-attachments/assets/e6769d01-0b87-45db-bb8e-25d27bb13882" />
-<p align="center"><em>Camada Gold </em></p>
+<p align="center"><em>Camada Gold - Criação da tabela dimensão II</em></p>
 <br><br>
 
 <img width="1364" height="718" alt="camada gold_evidencia SQL3" src="https://github.com/user-attachments/assets/b2d36729-f87d-4558-b2e9-c95170fd14b5" />
-<p align="center"><em>Camada Gold </em></p>
+<p align="center"><em>Camada Gold - Criação da tabela dimensão III</em></p>
 <br><br>
 
 <img width="1364" height="918" alt="camada gold_evidencia tabela fato" src="https://github.com/user-attachments/assets/40c3fca0-dbc8-4a29-a6c3-b783986bb9e8" />
-<p align="center"><em>Camada Gold </em></p>
+<p align="center"><em>Camada Gold - Criação da tabela fato</em></p>
 <br><br>
 
 Validação de métricas e constraints
