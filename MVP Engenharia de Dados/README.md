@@ -195,6 +195,8 @@ As transformações aplicadas incluem:
 <br> <br>
 
 Os campos categóricos passaram por padronização para evitar variações semânticas, incluindo:
+ <br>
+ 
 <img width="1364" height="1105" alt="camada silver_evidencia SQL" src="https://github.com/user-attachments/assets/d8ed4666-be0b-4119-9d87-7ceb4726ea0e" />
 <p align="center"><em>Camada Silver - Transformações Aplicadas</em></p>
 <br> <br><br> 
