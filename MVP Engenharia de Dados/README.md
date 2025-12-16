@@ -242,7 +242,7 @@ Descrição de todas as colunas da tabela Silver
 <p align="center"><em>Camada Silver - Descrição da tabela Silver</em></p>
 <br><br>
 
-A coluna 'records_exposed' é do tipo BIGINT devido a volumetría do dado.
+A coluna 'records_exposed' foi tipada como BIGINT, considerando a potencial magnitude dos valores numéricos associados à volumetria dos dados. 
 
 <img width="1348" height="604" alt="image" src="https://github.com/user-attachments/assets/af6506ae-2906-4247-b733-5c766ef0288d" />
 <p align="center"><em>Camada Silver - Consulta na coluna 'Records_exposed'</em></p>
