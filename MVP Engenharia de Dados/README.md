@@ -140,17 +140,17 @@ FROM main.silver.silver_cyber_breaches;<br>
 <br>
 
 ## Carga dos dados processados<br>
-<br><br>
 
-<br><br>
 A etapa inicial consistiu na criação de um único Notebook dentro de um Workspace vinculado ao meu usuário, já integrado ao GitHub. A carga do arquivo e todas as operações de transformação e análise foram realizadas utilizando a linguagem SQL.
 <br><br>
+
 <img width="1358" height="605" alt="image" src="https://github.com/user-attachments/assets/1abe1e89-be5a-4ae0-8a2c-74d364ca7456" />
 <p align="center"><em>Workspace integrado ao GitHub</em></p>
 <br><br>
 <img width="1353" height="614" alt="image" src="https://github.com/user-attachments/assets/d7dea7c1-df7a-458e-bc34-e5fbc2975daf" />
 <p align="center"><em>Notebook MVP</em></p>
 <br><br>
+
 <b><i>Carga na Camada Bronze</b></i>
 Os dados deste arquivo foram armazenados exatamente no formato original, sem ajustes ou pré-processamento.
 O conjunto reúne informações públicas sobre incidentes de violação de dados, abrangendo empresas de diversos setores. Entre os principais dados registrados estão: quantidade de registros comprometidos, ano do incidente e método utilizado no ataque.
