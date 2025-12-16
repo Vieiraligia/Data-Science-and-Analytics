@@ -336,43 +336,37 @@ Foi realizada uma consulta com viés analítico, com o objetivo de explorar os d
 <p align="center"><em>Camada Gold - Consulta total de registros por ano e ataque</em></p>
 <br><br>
 
-
 Aplicação de Constraints 
 
 <img width="1345" height="609" alt="image" src="https://github.com/user-attachments/assets/a6613206-4c7f-496b-a0b3-2d78f4bc66ae" />
 <p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato</em></p>
 <br><br>
 
-Após o tratamento dos dados, foram aplicadas CHECK constraints para impedir a introdução de inconsistências futuras:
+Após as transfomações e ajustes foram realizadda as seguintes validações:
 
-CHECK (records_exposed >= 0 OR records_exposed IS NULL)
-CHECK (year_key IS NOT NULL)
-CHECK (breach_method_key IS NOT NULL)
+<img width="1358" height="612" alt="image" src="https://github.com/user-attachments/assets/0d6df193-366c-4bf9-b908-51b5284f53cf" />
+<p align="center"><em>Camada Gold - Consulta tabelas PK não vazias</em></p>
+<br><br>
 
+<img width="1354" height="616" alt="image" src="https://github.com/user-attachments/assets/fab40546-2f3a-423c-96f6-03b95a2be04e" />
+<p align="center"><em>Camada Gold - Consulta tabelas FK não nulas </em></p>
+<br><br>
 
-Validações Operacionais
+<img width="1353" height="615" alt="image" src="https://github.com/user-attachments/assets/4e093331-c64f-4ede-a5b6-95eca1198882" />
+<p align="center"><em>Camada Gold - Consulta tabelas sem correspondência na dimensão </em></p>
+<br><br> 
 
-Foram executadas consultas para validar a consistência da Camada Gold:
-
--- Tabela fato não vazia
-SELECT COUNT(*) FROM main.gold.fact_cyber_breaches;
-
--- Verificação de FKs nulas
-SELECT COUNT(*) FROM main.gold.fact_cyber_breaches WHERE year_key IS NULL;
-SELECT COUNT(*) FROM main.gold.fact_cyber_breaches WHERE breach_method_key IS NULL;
-
-
-Garantia de Consistência Analítica — Execução
-
-As métricas da Camada Gold foram comparadas com a Camada Silver para assegurar que o processo de carga não introduziu perdas ou distorções:
-
-SELECT SUM(records_exposed)
-FROM main.gold.fact_cyber_breaches;
-
-SELECT SUM(records_exposed)
-FROM main.silver.silver_cyber_breaches;
-
-
-
+Com isso, evidencia-se que o processo de carga da Camada Gold contempla um conjunto abrangente de validações e boas práticas de Data Warehousing, incluindo: 
+- Validação analítica básica (teste de uso em cenários reais). <br>
+- Consistência entre as Camadas Silver e Gold (regra de ouro). <br>
+- Governança de dados por meio do Unity Catalog, com metadados acessíveis. <br>
+- Validação das métricas (sanidade dos dados). <br>
+- Validação da integridade referencial (relacionamento entre chaves estrangeiras e tabelas dimensão).  <br>
+- Validação estrutural (existência e volumetria das tabelas) e validação das chaves primárias (unicidade dos registros). <br>
 <br><br><br><br>
-## Análise e validação
+<br>
+
+## Análise e validação<br>
+
+A 
+
