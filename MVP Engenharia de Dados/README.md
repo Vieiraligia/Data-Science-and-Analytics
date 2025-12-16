@@ -184,14 +184,14 @@ A Camada Silver foi organizada na seguinte estrutura:
 <img width="1363" height="606" alt="image" src="https://github.com/user-attachments/assets/d6e2e2ee-7e24-44eb-9252-cb48149093c9" />
 <p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
 <br> <br> 
-As transformações aplicadas incluem:
-- Conversão dos tipos de dados conforme o padrão definido para a Silver.
-- Tratamento de valores faltantes ou inválidos.
-- Padronização de formatos textuais e numéricos.
-- Criação de colunas técnicas para auditoria (como o silver_load_timestamp).
+As transformações aplicadas incluem:<br> 
+- Conversão dos tipos de dados conforme o padrão definido para a Silver.<br> 
+- Tratamento de valores faltantes ou inválidos.<br> 
+- Padronização de formatos textuais e numéricos.<br> 
+- Criação de colunas técnicas para auditoria (como o silver_load_timestamp).<br> 
 - Exclusão da coluna <i>sources</i> — por se tratar da fonte de onde a informação foi obtida, porém esses dados não foram
-  disponibilizados no dataset.
-- Garantia de que a tabela preservasse a granularidade original dos dados.
+  disponibilizados no dataset.<br> 
+- Garantia de que a tabela preservasse a granularidade original dos dados.<br> 
 <br> <br>
 
 Os campos categóricos passaram por padronização para evitar variações semânticas, incluindo:
