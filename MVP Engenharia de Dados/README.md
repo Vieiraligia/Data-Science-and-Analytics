@@ -97,14 +97,14 @@ Esse modelo foi escolhido por simplificar as consultas analíticas e facilitar o
 
 A Camada Gold é composta por:
 
-Dimensões:
-- dim_organization
-- dim_organization_type
-- dim_breach_method
-- dim_year
+Dimensões:<br>
+- dim_organization<br>
+- dim_organization_type<br>
+- dim_breach_method<br>
+- dim_year<br>
 
-Tabela Fato:
-- fact_cyber_breaches
+Tabela Fato:<br>
+- fact_cyber_breaches<br>
 
 A tabela fato centraliza as métricas do negócio, enquanto as dimensões fornecem o contexto analítico necessário para análise temporal, organizacional e por método de ataque.
 
@@ -117,16 +117,16 @@ Todas as decisões adotadas nesta camada têm como objetivo garantir a integrida
 
 Segue abaixo alguns exemplos de tratamentos e criação de terminologias técnicas:
 
-dim_year	year_key = -1	Ano não informado
-dim_breach_method	breach_method_key = -1	Método não informado
+dim_year	year_key = -1	Ano não informado<br>
+dim_breach_method	breach_method_key = -1	Método não informado<br>
 
-UPDATE main.gold.fact_cyber_breaches
-SET year_key = -1
-WHERE year_key IS NULL;
+UPDATE main.gold.fact_cyber_breaches<br>
+SET year_key = -1<br>
+WHERE year_key IS NULL;<br>
 
-UPDATE main.gold.fact_cyber_breaches
-SET breach_method_key = -1
-WHERE breach_method_key IS NULL;
+UPDATE main.gold.fact_cyber_breaches<br>
+SET breach_method_key = -1<br>
+WHERE breach_method_key IS NULL;<br>
 
 Adicionalmente, foi realizada uma verificação das métricas, com a finalidade de assegurar a consistência dos resultados quando comparados aos dados consolidados da Camada Gold, confirmando que o processo de modelagem não resultou em perdas ou distorções.
 
