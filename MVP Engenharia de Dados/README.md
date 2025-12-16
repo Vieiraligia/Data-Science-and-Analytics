@@ -230,7 +230,7 @@ Query aplicada para exclusão do primeiro registro.
 <p align="center"><em>Camada Silver - Comando de Exclusão</em></p>
 <br><br>
 
-Nova consulta a tabela
+Nova consulta à tabela
 
 <img width="1333" height="610" alt="image" src="https://github.com/user-attachments/assets/08a52b73-4f0c-4470-8b80-e9fdcf506d50" />
 <p align="center"><em>Camada Silver - Consulta à tabela ajustada</em></p>
@@ -297,7 +297,7 @@ Seguem, a seguir, as evidências do processo de criação das tabelas dimensão 
 <p align="center"><em>Camada Gold - Consulta às tabela dimensão e fato</em></p>
 <br><br>
 
-Validação da Existência e da Completude da Tabela Fato na Camada Gold.
+Validação da existência e da eompletude da tabela fato na Camada Gold.
 <br>
 <img width="1357" height="582" alt="image" src="https://github.com/user-attachments/assets/dbf6cc7c-3ef1-4f9b-a583-c9eafd29072c" />
 <p align="center"><em>Camada Gold - Consulta tabela fato</em></p>
@@ -306,7 +306,7 @@ Validação da Existência e da Completude da Tabela Fato na Camada Gold.
 Foi realizada uma consulta comparativa entre as tabelas das Camadas Silver e Gold, com o objetivo de validar a consistência da quantidade de registros, a qual se mostrou equivalente em ambas as camadas.
 <br>
 <img width="1365" height="611" alt="image" src="https://github.com/user-attachments/assets/c8065860-f466-4df2-b69b-67f5bc2be56d" />
-<p align="center"><em>Camada Gold -Comparativo Quantitativo com a Camada Silver</em></p>
+<p align="center"><em>Camada Gold -Comparativo quantitativo com a Camada Silver</em></p>
 <br><br>
 
 
