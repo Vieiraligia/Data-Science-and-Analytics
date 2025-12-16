@@ -114,8 +114,8 @@ Na modelagem da Camada Gold, foram definidas as seguintes regras:
 - Casos sem correspondência dimensional devem ser tratados por meio de (“Desconhecido”), para evitar a perda de registros históricos.
 
 Todas as decisões adotadas nesta camada têm como objetivo garantir a integridade do modelo dimensional em estrela e a confiabilidade das métricas utilizadas em análises e relatórios. Nesse sentido, foi estabelecida uma definição conceitual de Integridade Referencial, fundamentada na utilização de chaves primárias (PK – Primary Key) e chaves estrangeiras (FK – Foreign Key). 
-
-Segue abaixo alguns exemplos de tratamentos e criação de terminologias técnicas:
+<br>
+Segue abaixo alguns exemplos de tratamentos e criação de terminologias técnicas:<br>
 <br>
 dim_year	year_key = -1	Ano não informado<br>
 dim_breach_method	breach_method_key = -1	Método não informado<br>
