@@ -218,6 +218,20 @@ current_timestamp() AS silver_load_timestamp
 Essa coluna permite rastrear a data e hora da carga, identificar execuções subsequentes e apoiar processos de auditoria e reprocessamento.
 <br><br>
 
+Após a correção dos nomes das colunas, foi realizado um simples consulta de conferência e após isso, uma exclusão do primeiro registro
+
+<img width="1355" height="610" alt="image" src="https://github.com/user-attachments/assets/de8344a3-cae4-4b07-accb-3d9054bbd57b" />
+<p align="center"><em>Consulta da Camada Silver</em></p>
+<br><br>
+<img width="1365" height="570" alt="image" src="https://github.com/user-attachments/assets/b70f91de-1427-4526-a69d-5b75ebb7978b" />
+<p align="center"><em>Query de exclusão</em></p>
+<br><br>
+
+<img width="1333" height="610" alt="image" src="https://github.com/user-attachments/assets/08a52b73-4f0c-4470-8b80-e9fdcf506d50" />
+<p align="center"><em>Consulta da Camada Silver II</em></p>
+<br><br>
+<img width="1333" height="610" alt="image" src="https://github.com/user-attachments/assets/ba97c0dc-6c57-4d43-8a51-34905bd4129f" />
+
 Trecho SQL utilizado:
 
 
