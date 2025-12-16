@@ -175,8 +175,7 @@ Percebe-se que a importação foi realizada sem o header, fazendo com que o cabe
 <p align="center"><em>Camada Bronze - Consulta da tabela</em></p>
 <br> <br> 
 
-
-Carga – Camada Silver
+<b><i>Carga na Camada Bronze</b></i>
 <br><br>
 Com a ingestão inicial na Camada Bronze, os dados foram submetidos a procedimentos de limpeza, validação e padronização. Esses tratamentos asseguram que o conjunto esteja íntegro, consistente e pronto para consumo analítico na Camada Gold.
 <br> <br> 
