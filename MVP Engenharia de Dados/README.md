@@ -313,13 +313,6 @@ Foi realizada uma consulta comparativa entre as tabelas das Camadas Silver e Gol
 <p align="center"><em>Camada Gold -Comparativo quantitativo com a Camada Silver</em></p>
 <br><br>
 
-
-Evidência da validação da integridade referencial das chaves primária (PK) e estrangeira (FK) por meio das consultas abaixo.
-
-<img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" />
-<p align="center"><em>Camada Gold - Comparativo quantitativo com a Camada Silver</em></p>
-<br><br>
-
 Diante da identificação de valores nulos em determinadas consultas, foram adotadas medidas corretivas com a aplicação de constraints, incluindo a criação de membros técnicos "Unknown Members" na tabela dimensão <i>dim_breach_method</i>, com o objetivo de preservar a integridade referencial do modelo dimensional. 
 
 <img width="1353" height="519" alt="image" src="https://github.com/user-attachments/assets/78cfd4ba-1c7b-4212-9f3a-2815436417c6" />
@@ -342,7 +335,18 @@ Aplicação de Constraints
 <p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato</em></p>
 <br><br>
 
+
 Após as transfomações e ajustes foram realizadda as seguintes validações:
+
+Evidência da validação da integridade referencial das chaves primária (PK) e estrangeira (FK) por meio das consultas abaixo.
+
+<img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" />
+<p align="center"><em>Camada Gold - Integridade Referencial PK e FK</em></p>
+<br><br>
+
+<img width="1364" height="607" alt="image" src="https://github.com/user-attachments/assets/4a265f0c-77f4-4e3b-8ca8-d3c364c67ffc" />
+<p align="center"><em>Camada Gold - Integridade Referencial PK e FK</em></p>
+<br><br>
 
 <img width="1358" height="612" alt="image" src="https://github.com/user-attachments/assets/0d6df193-366c-4bf9-b908-51b5284f53cf" />
 <p align="center"><em>Camada Gold - Consulta tabelas PK não vazias</em></p>
