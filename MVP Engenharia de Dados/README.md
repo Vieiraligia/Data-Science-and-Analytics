@@ -289,6 +289,30 @@ Seguem, a seguir, as evidências do processo de criação das tabelas dimensão 
 <p align="center"><em>Camada Gold - Criação da tabela fato</em></p>
 <br><br>
 
+<img width="1365" height="467" alt="image" src="https://github.com/user-attachments/assets/37f85d6d-b3fb-4098-821c-9710da138808" />
+<p align="center"><em>Camada Gold - Consulta a estrutura de tabelas</em></p>
+<br><br>
+
+<img width="1365" height="608" alt="image" src="https://github.com/user-attachments/assets/699803fd-c5c4-400a-b10b-75408712cd6a" />
+<p align="center"><em>Camada Gold - Consulta às tabela dimensão e fato</em></p>
+<br><br>
+
+Validação da Existência e da Completude da Tabela Fato na Camada Gold.
+<br>
+<img width="1357" height="582" alt="image" src="https://github.com/user-attachments/assets/dbf6cc7c-3ef1-4f9b-a583-c9eafd29072c" />
+<p align="center"><em>Camada Gold - Consulta tabela fato</em></p>
+<br><br>
+
+Foi realizada uma consulta comparativa entre as tabelas das Camadas Silver e Gold, com o objetivo de validar a consistência da quantidade de registros, a qual se mostrou equivalente em ambas as camadas.
+<br>
+<img width="1365" height="611" alt="image" src="https://github.com/user-attachments/assets/c8065860-f466-4df2-b69b-67f5bc2be56d" />
+<p align="center"><em>Camada Gold -Comparativo Quantitativo com a Camada Silver</em></p>
+<br><br>
+
+
+
+
+
 Validação de métricas e constraints
 
 Durante a aplicação de CHECK constraints, foram identificados registros com valores nulos no campo records_exposed.
