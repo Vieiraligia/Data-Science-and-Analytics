@@ -184,7 +184,8 @@ A Camada Silver foi organizada na seguinte estrutura:
 <img width="1363" height="606" alt="image" src="https://github.com/user-attachments/assets/d6e2e2ee-7e24-44eb-9252-cb48149093c9" />
 <p align="center"><em>Camada Silver - Estrutura do Catalog</em></p>
 <br> <br> 
-As transformações aplicadas incluem:<br> 
+
+As transformações aplicadas incluem: 
 - Conversão dos tipos de dados conforme o padrão definido para a Silver.<br> 
 - Tratamento de valores faltantes ou inválidos.<br> 
 - Padronização de formatos textuais e numéricos.<br> 
