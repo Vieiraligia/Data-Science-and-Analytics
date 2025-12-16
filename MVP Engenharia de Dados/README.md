@@ -115,9 +115,7 @@ Na modelagem da Camada Gold, foram definidas as seguintes regras:
 
 Todas as decisões adotadas nesta camada têm como objetivo garantir a integridade do modelo dimensional em estrela e a confiabilidade das métricas utilizadas em análises e relatórios. Nesse sentido, foi estabelecida uma definição conceitual de Integridade Referencial, fundamentada na utilização de chaves primárias (PK – Primary Key) e chaves estrangeiras (FK – Foreign Key). 
 
-Além disso, os registros da tabela fato que apresentavam chaves estrangeiras nulas foram associados a membros técnicos nas respectivas tabelas dimensão, de modo a assegurar que nenhum registro da tabela fato fosse descartado durante o processo de carga, preservando a completude dos dados e evitando distorções nas métricas analíticas.
-
-Segue abaixo alguns exemplos de tratamentos e criação de membros técnicos:
+Segue abaixo alguns exemplos de tratamentos e criação de terminologias técnicas:
 
 dim_year	year_key = -1	Ano não informado
 dim_breach_method	breach_method_key = -1	Método não informado
