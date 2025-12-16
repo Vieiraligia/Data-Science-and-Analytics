@@ -338,8 +338,6 @@ Aplicação de Constraints
 
 Após as transfomações e ajustes foram realizadda as seguintes validações:
 
-Evidência da validação da integridade referencial das chaves primária (PK) e estrangeira (FK) por meio das consultas abaixo.
-
 <img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" />
 <p align="center"><em>Camada Gold - Integridade Referencial PK e FK</em></p>
 <br><br>
