@@ -11,7 +11,6 @@ A proposta é desenvolver um pipeline de dados aplicando boas práticas de engen
 recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> 
 <br>O pipeline contempla as seguintes etapas:
 <br><br>
-
 📥 Coleta / ingestão  
 🧱 Modelagem  
 📦 Carga  
