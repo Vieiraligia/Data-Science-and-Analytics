@@ -465,11 +465,21 @@ Embora o conjunto de dados não contenha informações diretas sobre mecanismos 
 <i><b>5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?</b></i>
 
 ```sql
-
+SELECT
+  y.year,
+  COUNT(*) AS total_incidentes
+FROM main.gold.fact_cyber_breaches f
+JOIN main.gold.dim_year y
+  ON f.year_key = y.year_key
+WHERE y.year <> -1
+GROUP BY y.year
+ORDER BY y.year;
 ```
-A partir da análise da evolução temporal dos incidentes registrados na Camada Gold, observa-se uma tendência de crescimento no número de violações de dados ao longo dos anos, especialmente a partir da década de 2010. Embora o conjunto de dados não permita a construção de modelos preditivos formais, os padrões históricos identificados fornecem indícios relevantes sobre o comportamento futuro da segurança cibernética.
+
+<img width="748" height="358" alt="image" src="https://github.com/user-attachments/assets/34f81e9c-704b-496a-b3ff-d16870a18632" />
+<br>
+A partir da análise da evolução temporal dos incidentes, observa-se uma tendência de crescimento no número de violações de dados ao longo dos anos, especialmente a partir da década de 2010. Embora o conjunto de dados não permita a construção de modelos preditivos formais, os padrões históricos identificados fornecem indícios relevantes sobre o comportamento futuro da segurança cibernética.
 
 A persistência de métodos como Hacked e Poor Security ao longo do tempo indica que vulnerabilidades técnicas e falhas de governança continuam sendo exploradas de forma recorrente. Além disso, a diversificação dos métodos de ataque nos anos mais recentes sugere um cenário de aumento na sofisticação e na superfície de ataque das organizações.
 
-Dessa forma, as análises permitem inferir que, na ausência de investimentos contínuos em segurança da informação, governança e controles técnicos, a tendência é de manutenção ou crescimento dos incidentes de segurança. Como perspectiva futura, espera-se um aumento na complexidade dos ataques, reforçando a necessidade de estratégias preventivas baseadas em monitoramento contínuo, políticas de segurança robustas e capacitação organizacional.
-
+Dessa forma, as análises permitem deduzir que na ausência de investimentos contínuos em segurança da informação, governança e controles técnicos, a tendência é de manutenção ou crescimento dos incidentes de segurança. Como perspectiva futura, espera-se um aumento na complexidade dos ataques, reforçando a necessidade mencionada na sessão de 'Objetivo' sobre ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados dentro das oganizações.
