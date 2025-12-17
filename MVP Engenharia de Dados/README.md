@@ -483,3 +483,19 @@ A partir da análise da evolução temporal dos incidentes, observa-se uma tend�
 A persistência de métodos como Hacked e Poor Security ao longo do tempo indica que vulnerabilidades técnicas e falhas de governança continuam sendo exploradas de forma recorrente. Além disso, a diversificação dos métodos de ataque nos anos mais recentes sugere um cenário de aumento na sofisticação e na superfície de ataque das organizações.
 
 Dessa forma, as análises permitem deduzir que na ausência de investimentos contínuos em segurança da informação, governança e controles técnicos, a tendência é de manutenção ou crescimento dos incidentes de segurança. Como perspectiva futura, espera-se um aumento na complexidade dos ataques, reforçando a necessidade mencionada na sessão de 'Objetivo' sobre ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados dentro das oganizações.
+
+
+## Autoavaliação <br>
+
+
+Ao decorrer deste trabalho, foi possível vivenciar um amadurecimento acadêmico significativo na área de dados, especialmente por se tratar de uma disciplina que ainda não domino plenamente. A construção deste projeto representou um passo fundamental para a consolidação dos conceitos estudados ao longo das disciplinas.
+
+O resultado final alcançado foi satisfatório para mim e acredito que esteja alinhado aos objetivos propostos, evidenciando a capacidade de estruturar um pipeline de dados funcional. 
+
+A principal dificuldade enfrentada esteve relacionada à aplicação prática do conhecimento teórico, uma vez que este projeto é o meu primeiro pipeline de dados. Além disso, o fator tempo foi muito desafiador, pois foi necessário conciliar o desenvolvimento do projeto com demandas pessoais e profissionais, exigindo organização, priorização e disciplina ao longo do processo.
+
+Apesar desses desafios, o trabalho proporcionou uma experiência de aprendizado consistente e enriquecedora. Ao final, permanece a sensação de dever cumprido, resultado do esforço empregado e da superação das dificuldades encontradas.
+
+Como trabalhos futuros, pretendo aprofundar o domínio técnico na área, explorar ferramentas e arquiteturas, além de ampliar a complexidade das análises realizadas, de forma a enriquecer tanto o aprendizado acadêmico quanto o meu portfólio profissional.
+
+De modo geral, este projeto contribuiu significativamente para o desenvolvimento de competências práticas em engenharia de dados, reforçando o meu interesse em continuar evoluindo e me especializar cada vez mais nesta área.
