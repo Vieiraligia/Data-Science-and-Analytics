@@ -368,11 +368,12 @@ Com isso, evidencia-se que o processo de carga da Camada Gold contempla um conju
 <br><br>
 <br>
 
-## Análise e validação<br>
+## Análise <br>
 
-A 
+A etapa de análise foi conduzida a partir da Camada Gold, previamente validada quanto à integridade, qualidade e consistência dos dados. Em atendimento aos objetivos do projeto, esta etapa foi dividida em duas partes: Qualidade de Dados e Solução do Problema.
 
---- ESBOÇO
+### Qualidade de dados <br>
+
 
 Discussão dos Resultados
 
