@@ -215,14 +215,14 @@ Normalização de valores categóricos
 ```sql
 INITCAP(TRIM(_c4)) AS organization_type
 ```
-<br> <br><br> 
+<br> <br>
 Durante a carga, foi adicionada a coluna silver_load_timestamp, preenchida automaticamente com o timestamp da execução:<br> 
 ```sql
 current_timestamp() AS silver_load_timestamp
 ```
 <br>
 Essa coluna permite rastrear a data e hora da carga, identificar execuções subsequentes e apoiar processos de auditoria e reprocessamento.
-<br><br>
+<br>
 
 Após a correção dos nomes das colunas, foi realizado um simples consulta de conferência e após isso, uma exclusão do primeiro registro.
 
