@@ -9,8 +9,10 @@ recursos do ecossistema  [Databricks](https://databricks.com) que é uma platafo
 
 📥 Coleta / ingestão<br>
 🧱 Modelagem<br>
-📦 Carga dos dados processados<br>
-📊 Análise exploratória e validação<br>
+📦 Carga<br>
+📊 Análise 
+      Qualidade de dados<br>
+      Solução do problema
 <br><br><br>
 
 
@@ -28,7 +30,7 @@ O principal objetivo é possibilitar a identificação de tendências e padrões
 Ao concluir este projeto, espera-se que as análises ofereçam insights confiáveis sobre as tendências em segurança cibernética, apoiando ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados.
 <br><br>
 
-## Coleta <br>
+## Coleta /ingestão <br>
 Os dados utilizados foram extraídos de fontes públicas e governamentais obtidos por meio do site [Opendatabay](https://www.opendatabay.com/data/government/45f61e06-1d21-44f5-a159-92d4ae086f65). Esse Dataset também encontra-se disponível no compilado de datasets da [Kaggle](https://www.kaggle.com/datasets/thedevastator/data-breaches-a-comprehensive-list).
 <br>
 O conjunto de dados reúne informações sobre violações de segurança cibernética envolvendo incidentes com mais de 30.000 registros. Os anos de 2011 e 2020 se destacam como os períodos com maior número de ocorrências registradas.
