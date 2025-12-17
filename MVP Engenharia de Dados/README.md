@@ -1,6 +1,11 @@
-🚀 **MVP 1 — Engenharia de Dados**
+**Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)**  
+**Autora:** Ligia R. Vieira  
+**Matrícula:** 1200158  
+**Data:** Dezembro/2025
+<br><br>
+<br><br>
 
-Este primeiro MVP está associado à disciplina de Engenharia de Dados. <br>
+🚀 **MVP — Engenharia de Dados**
 
 A proposta é desenvolver um pipeline de dados aplicando boas práticas de engenharia de dados e utilizando os
 recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> 
@@ -10,7 +15,8 @@ recursos do ecossistema  [Databricks](https://databricks.com) que é uma platafo
 📥 Coleta / ingestão  
 🧱 Modelagem  
 📦 Carga  
-📊 Análise  
+📊 Análise 
+
 <br><br><br>
 
 
