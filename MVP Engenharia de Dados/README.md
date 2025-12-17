@@ -110,6 +110,9 @@ Dimensões:<br>
 Tabela Fato:<br>
 - fact_cyber_breaches → o evento medido<br>
 
+<img width="948" height="488" alt="MER_Estrela" src="https://github.com/user-attachments/assets/c4ab6386-865a-480e-aaab-7645a05dbb14" />
+<p align="center"><em>Modelo dimensional Estrela da Camada Gold</em></p>
+
 A tabela fato centraliza as métricas do negócio, enquanto as dimensões fornecem o contexto analítico necessário para análise temporal, organizacional e por método de ataque.
 
 Na modelagem da Camada Gold, foram definidas as seguintes regras:
