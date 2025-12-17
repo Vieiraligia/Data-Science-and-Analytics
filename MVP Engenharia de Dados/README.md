@@ -381,7 +381,28 @@ Por fim, a categoria “Unknown”, embora menos representativa em volume, sinal
 
 A identificação dos métodos de ataque mais frequentes fornece subsídios diretos para a definição de estratégias prioritárias de prevenção, evidenciando que investimentos em segurança perimetral, boas práticas de configuração e capacitação interna são fundamentais para mitigar os principais riscos observados. Dessa forma, a análise responde de maneira objetiva à pergunta proposta.
 
+<i><b>2 - Por que os ataques às empresas estão aumentando?</b></i>
 
+```sql
+SELECT
+  y.year,
+  COUNT(*) AS total_incidentes
+FROM main.gold.fact_cyber_breaches f
+JOIN main.gold.dim_year y
+  ON f.year_key = y.year_key
+GROUP BY y.year
+ORDER BY y.year;
+```
+<img width="790" height="346" alt="image" src="https://github.com/user-attachments/assets/e5d5c142-f9c5-4c83-a2b8-f3f4215b006e" />
 
+A análise da distribuição temporal dos incidentes de violação de dados, com base na dimensão de tempo (dim_year), apresentou a evolução do número de incidentes ao longo dos anos. Observa-se um crescimento progressivo a partir de 2004, com maior concentração de ocorrências a partir da década de 2010.
 
+Destacam-se os seguintes pontos:
+- Crescimento gradual entre 2004 e 2011, passando de 2 para 34 incidentes anuais.
+- Manutenção de um patamar elevado entre 2012 e 2016, com valores variando entre 22 e 28 incidentes.
+- Novo aumento a partir de 2018, atingindo picos em 2019 (30) e 2020 (31).
+- Redução aparente em 2021 e 2022, com 13 e 5 registros, respectivamente.
+- Existência de 6 registros associados ao ano desconhecido (-1), preservados no modelo para manter a integridade histórica.
+
+![Uploading image.png…]()
 
