@@ -49,7 +49,7 @@ Para a construção do pipeline de dados foi escolhido o modelo <b><i>Medallion 
 A arquitetura adotada é composta por três camadas:<br>
 - Camada Bronze: armazena os dados em seu formato original (raw).<br>
 - Camada Silver: concentra dados limpos, padronizados e refinados.<br>
-- Camada Gold: disponibiliza dados prontos para análises analíticas, BI e Machine Learning.<br>
+- Camada Gold: disponibiliza dados prontos para análises.<br>
 
 Cada camada adiciona um nível incremental de qualidade, governança e estrutura aos dados, permitindo rastreabilidade e reprocessamento quando necessário.
 <br> <br> <br> 
