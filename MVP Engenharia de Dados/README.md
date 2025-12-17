@@ -404,5 +404,55 @@ Destacam-se os seguintes pontos:
 - Redução aparente em 2021 e 2022, com 13 e 5 registros, respectivamente.
 - Existência de 6 registros associados ao ano desconhecido (-1), preservados no modelo para manter a integridade histórica.
 
-![Uploading image.png…]()
+Os resultados sugerem que o aumento dos ataques não está associado a eventos pontuais, mas a um processo estrutural e contínuo, impulsionado pela evolução tecnológica e pela crescente complexidade dos ambientes digitais. Essa análise reforça a necessidade de políticas de segurança dinâmicas e adaptáveis, alinhadas ao crescimento e à transformação digital das organizações.
 
+<i><b>3 - Quais tipos de empresas são mais visadas de ataques?</b></i>
+```sql
+SELECT
+  ot.organization_type,
+  COUNT(*) AS total_incidentes
+FROM main.gold.fact_cyber_breaches f
+JOIN main.gold.dim_organization_type ot
+  ON f.organization_type_key = ot.organization_type_key
+GROUP BY ot.organization_type
+ORDER BY total_incidentes DESC
+LIMIT 10;
+```
+<img width="782" height="357" alt="image" src="https://github.com/user-attachments/assets/87b16aba-0f4f-4e7c-8235-84579826a857" />
+
+A análise dos dados da Camada Gold evidencia que organizações do tipo Web, Healthcare e Financial concentram o maior número de incidentes de segurança cibernética.
+
+Empresas Web lideram o ranking de ataques, refletindo sua elevada exposição pública e a dependência de aplicações acessíveis via internet. O setor de Healthcare aparece como um dos mais afetados, possivelmente devido ao alto valor de dados sensíveis e, historicamente, menores investimentos em segurança da informação.
+
+Organizações dos setores Financeiro e Governamental também se destacam, o que é consistente com o interesse de agentes maliciosos em dados críticos e estratégicos. Esses resultados reforçam que setores com maior exposição digital e maior valor informacional tendem a ser mais visados.
+
+
+<i><b>4 - Para cada tipo de ataque, qual é a forma mais eficiente de prevenção?</b></i>
+
+```sql
+SELECT
+  bm.breach_method,
+  COUNT(*) AS total_incidentes
+FROM main.gold.fact_cyber_breaches f
+JOIN main.gold.dim_breach_method bm
+  ON f.breach_method_key = bm.breach_method_key
+GROUP BY bm.breach_method;
+```
+
+Com base nos resultados obtidos na análise da Camada Gold, foi possível identificar os principais vetores de ataque e associá-los a medidas preventivas adequadas. A Tabela X sintetiza essa relação entre evidência empírica e ações recomendadas.
+
+| Tipo de ataque           | Evidência nos dados                                   | Medidas de prevenção recomendadas |
+|--------------------------|-------------------------------------------------------|-----------------------------------|
+| **Hacked**               | Maior número de incidentes registrados (192)          | Hardening de sistemas, patch management, autenticação multifator (MFA), monitoramento contínuo e testes de invasão |
+| **Poor Security**        | Segundo tipo mais frequente (44)                       | Políticas formais de segurança, revisão de permissões, criptografia de dados e auditorias periódicas |
+| **Lost / Stolen Media**  | Incidentes relevantes envolvendo mídia física (33)    | Criptografia de dispositivos, controle de ativos e políticas de backup |
+| **Accidentally Published** | Falhas operacionais recorrentes (21)                | Revisão de processos, controle de acesso e validações antes da publicação de dados |
+| **Inside Job**           | Risco interno significativo (19)                       | Segregação de funções, monitoramento de atividades, programas de conscientização e compliance |
+
+
+A análise quantitativa dos dados da Camada Gold permitiu identificar os tipos de ataques mais recorrentes ao longo do período analisado. A Tabela X apresenta a distribuição dos incidentes por método de ataque, destacando Hacked, Poor Security, Lost / Stolen Media, Accidentally Published e Inside Job como os vetores mais frequentes.
+
+Com base nesses resultados, é possível discutir medidas preventivas adequadas para cada categoria de ataque, conforme descrito a seguir:
+
+
+Embora o conjunto de dados não contenha informações diretas sobre mecanismos de prevenção, a frequência dos métodos de ataque permite inferir estratégias preventivas amplamente adotadas na literatura de Segurança da Informação.
