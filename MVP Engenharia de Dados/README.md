@@ -118,25 +118,27 @@ Todas as decisões adotadas nesta camada têm como objetivo garantir a integrida
 
 Segue abaixo alguns exemplos de tratamentos e criação de terminologias técnicas:<br>
 <br>
+´´´sql
 dim_year	year_key = -1	Ano não informado<br>
 dim_breach_method	breach_method_key = -1	Método não informado<br>
 
 UPDATE main.gold.fact_cyber_breaches<br>
 SET year_key = -1<br>
-WHERE year_key IS NULL;<br>
+WHERE year_key IS NULL;
 
 UPDATE main.gold.fact_cyber_breaches<br>
 SET breach_method_key = -1<br>
-WHERE breach_method_key IS NULL;<br>
+WHERE breach_method_key IS NULL;
+´´´
 <br>
 Adicionalmente, foi realizada uma verificação das métricas, com a finalidade de assegurar a consistência dos resultados quando comparados aos dados consolidados da Camada Gold, confirmando que o processo de modelagem não resultou em perdas ou distorções.
-
+´´´sql
 SELECT SUM(records_exposed)<br>
 FROM main.gold.fact_cyber_breaches;<br>
 
 SELECT SUM(records_exposed)<br>
 FROM main.silver.silver_cyber_breaches;<br>
-
+´´´
 <br>
 
 ## Carga dos dados processados<br>
