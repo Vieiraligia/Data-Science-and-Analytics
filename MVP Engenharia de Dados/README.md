@@ -129,16 +129,17 @@ WHERE year_key IS NULL;
 UPDATE main.gold.fact_cyber_breaches<br>
 SET breach_method_key = -1<br>
 WHERE breach_method_key IS NULL;
-´´´
+```
 <br>
 Adicionalmente, foi realizada uma verificação das métricas, com a finalidade de assegurar a consistência dos resultados quando comparados aos dados consolidados da Camada Gold, confirmando que o processo de modelagem não resultou em perdas ou distorções.
-´´´sql
-SELECT SUM(records_exposed)<br>
-FROM main.gold.fact_cyber_breaches;<br>
 
+```sql
 SELECT SUM(records_exposed)<br>
-FROM main.silver.silver_cyber_breaches;<br>
-´´´
+FROM main.gold.fact_cyber_breaches;
+<br>
+SELECT SUM(records_exposed)<br>
+FROM main.silver.silver_cyber_breaches;
+```
 <br>
 
 ## Carga dos dados processados<br>
@@ -458,3 +459,15 @@ Com base nesses resultados, é possível discutir medidas preventivas adequadas 
 
 
 Embora o conjunto de dados não contenha informações diretas sobre mecanismos de prevenção, a frequência dos métodos de ataque permite inferir estratégias preventivas amplamente adotadas na literatura de Segurança da Informação.
+
+<i><b>5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?</b></i>
+
+```sql
+
+```
+A partir da análise da evolução temporal dos incidentes registrados na Camada Gold, observa-se uma tendência de crescimento no número de violações de dados ao longo dos anos, especialmente a partir da década de 2010. Embora o conjunto de dados não permita a construção de modelos preditivos formais, os padrões históricos identificados fornecem indícios relevantes sobre o comportamento futuro da segurança cibernética.
+
+A persistência de métodos como Hacked e Poor Security ao longo do tempo indica que vulnerabilidades técnicas e falhas de governança continuam sendo exploradas de forma recorrente. Além disso, a diversificação dos métodos de ataque nos anos mais recentes sugere um cenário de aumento na sofisticação e na superfície de ataque das organizações.
+
+Dessa forma, as análises permitem inferir que, na ausência de investimentos contínuos em segurança da informação, governança e controles técnicos, a tendência é de manutenção ou crescimento dos incidentes de segurança. Como perspectiva futura, espera-se um aumento na complexidade dos ataques, reforçando a necessidade de estratégias preventivas baseadas em monitoramento contínuo, políticas de segurança robustas e capacitação organizacional.
+
