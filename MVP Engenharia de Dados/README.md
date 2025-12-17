@@ -344,8 +344,44 @@ Com base nos resultados obtidos nas consultas analíticas, procedeu-se à aplica
 Após a aplicação das transformações corretivas e das regras de qualidade, foram realizadas validações finais de integridade, com foco na verificação das chaves primárias e estrangeiras (PK/FK). Essas validações confirmaram a inexistência de chaves nulas ou sem correspondência nas dimensões, assegurando a consistência do modelo estrela e a confiabilidade dos dados para análise.
 
 <br> <img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" /> <p align="center"><em>Camada Gold – Validação da integridade referencial (PK e FK)</em></p>
-
+<br><br>
 ### Solução do problema <br>
+
+Nesta etapa, os dados consolidados na Camada Gold foram utilizados para responder às perguntas definidas nos objetivos do projeto. As análises foram realizadas exclusivamente por meio de consultas SQL, explorando o modelo dimensional em esquema estrela, que permite a clareza na interpretação dos resultados.
+
+Cada subseção a seguir apresenta:
+- A pergunta de pesquisa.
+- A abordagem analítica adotada (consulta SQL).
+- A discussão dos resultados obtidos, conectando os valores observados ao problema investigado.
+
+
+<i><b>1 - Quais são os tipos de ataques mais comuns?</b></i>
+
+
+```sql
+SELECT 
+    y.year,
+    SUM(f.records_exposed) AS total_records
+FROM main.gold.fact_cyber_breaches f
+JOIN main.gold.dim_year y
+    ON f.year_key = y.year_key
+GROUP BY y.year
+ORDER BY y.year;
+```
+A consulta retornou a distribuição de incidentes por método de ataque, conforme apresentado a seguir. Os demais métodos apresentam ocorrência pontual igual a 1, representando uma parcela residual do conjunto de dados:
+<img width="736" height="419" alt="image" src="https://github.com/user-attachments/assets/07e60404-6b66-4fb6-a4da-f9a819aa4256" />
+
+Os resultados evidenciam que ataques do tipo “Hacked” representam, de forma significativa, o método mais recorrente, concentrando a maior parte dos incidentes registrados no conjunto de dados. Esse comportamento indica que explorações externas de sistemas continuam sendo o principal vetor de violação de dados, reforçando a criticidade de controles como autenticação forte, gestão de vulnerabilidades e monitoramento contínuo.
+
+Na sequência, métodos associados a falhas de segurança interna ou operacional, como Poor Security, Lost / Stolen Media e Accidentally Published, também apresentam números expressivos. Esses incidentes sugerem que uma parcela relevante das violações não decorre apenas de ataques sofisticados, mas de deficiências em processos, políticas de segurança e conscientização dos usuários.
+
+A presença de categorias combinadas (por exemplo, Improper Setting, Hacked ou Poor Security / Hacked) indica que, em diversos casos, múltiplos fatores contribuem simultaneamente para o incidente, combinando falhas de configuração com exploração ativa por agentes externos.
+
+Por fim, a categoria “Unknown”, embora menos representativa em volume, sinaliza limitações inerentes ao conjunto de dados, nas quais o método de ataque não foi claramente identificado. A preservação dessa categoria no modelo analítico permite manter a integridade histórica dos registros, sem introduzir suposições que poderiam distorcer as análises.
+
+A identificação dos métodos de ataque mais frequentes fornece subsídios diretos para a definição de estratégias prioritárias de prevenção, evidenciando que investimentos em segurança perimetral, boas práticas de configuração e capacitação interna são fundamentais para mitigar os principais riscos observados. Dessa forma, a análise responde de maneira objetiva à pergunta proposta.
+
+
 
 
 
