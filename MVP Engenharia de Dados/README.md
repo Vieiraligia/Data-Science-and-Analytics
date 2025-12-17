@@ -299,21 +299,25 @@ Seguem, a seguir, as evidências do processo de criação das tabelas dimensão 
 <p align="center"><em>Camada Gold - Consulta às tabelas dimensão e fato</em></p>
 <br><br>
 
-Validação da existência e da completude da tabela fato na Camada Gold.
-<br>
 
-<img width="1357" height="582" alt="image" src="https://github.com/user-attachments/assets/dbf6cc7c-3ef1-4f9b-a583-c9eafd29072c" />
-<p align="center"><em>Camada Gold - Consulta tabela fato</em></p>
-<br><br>
+## Análise <br>
 
-Foi realizada uma consulta comparativa entre as tabelas das Camadas Silver e Gold, com o objetivo de validar a consistência da quantidade de registros, a qual se mostrou equivalente em ambas as camadas.
-<br>
+A etapa de análise foi conduzida a partir da Camada Gold, previamente validada quanto à integridade, qualidade e consistência dos dados. Em atendimento aos objetivos do projeto, esta etapa foi dividida em duas partes: Qualidade de Dados e Solução do Problema.
 
-<img width="1365" height="611" alt="image" src="https://github.com/user-attachments/assets/c8065860-f466-4df2-b69b-67f5bc2be56d" />
-<p align="center"><em>Camada Gold -Comparativo quantitativo com a Camada Silver</em></p>
-<br><br>
+### Qualidade de dados <br>
 
-Diante da identificação de valores nulos em determinadas consultas, foram adotadas medidas corretivas com a aplicação de constraints, incluindo a criação de membros técnicos "Unknown Members" na tabela dimensão <i>dim_breach_method</i>, com o objetivo de preservar a integridade referencial do modelo dimensional. 
+Após a conclusão da carga da Camada Gold, foram conduzidas análises de qualidade de dados com o objetivo de validar a consistência estrutural, a integridade referencial e a confiabilidade das métricas analíticas disponibilizadas para consumo.
+
+Como etapa inicial dessa validação, foi verificada a existência e a completude da tabela fato na Camada Gold, assegurando que a carga tenha sido realizada com sucesso e que os dados estivessem efetivamente disponíveis para análise.
+
+<br> <img width="1357" height="582" alt="image" src="https://github.com/user-attachments/assets/dbf6cc7c-3ef1-4f9b-a583-c9eafd29072c" /> <p align="center"><em>Camada Gold – Consulta da tabela fato</em></p>
+
+Em seguida, foi realizada uma análise comparativa entre as Camadas Silver e Gold, com o objetivo de verificar a consistência quantitativa dos registros ao longo do pipeline. Essa verificação confirmou que a quantidade de registros se manteve equivalente entre as duas camadas, indicando que o processo de modelagem e carga não introduziu perdas ou duplicidades.
+
+<br> <img width="1365" height="611" alt="image" src="https://github.com/user-attachments/assets/c8065860-f466-4df2-b69b-67f5bc2be56d" /> <p align="center"><em>Camada Gold – Comparativo quantitativo com a Camada Silver</em></p>
+
+Por fim, a partir da identificação de valores nulos em determinadas consultas analíticas, foram adotadas medidas corretivas visando preservar a integridade do modelo dimensional. Essas ações incluíram a aplicação de constraints e a criação de membros técnicos do tipo “Unknown” na tabela dimensão <i>dim_breach_method</i>, garantindo a manutenção do histórico dos dados e a integridade referencial do esquema estrela.
+
 
 <img width="1353" height="519" alt="image" src="https://github.com/user-attachments/assets/78cfd4ba-1c7b-4212-9f3a-2815436417c6" />
 <p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato I</em></p>
@@ -323,115 +327,25 @@ Diante da identificação de valores nulos em determinadas consultas, foram adot
 <p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato II</em></p>
 <br><br>
 
-Foi realizada uma consulta com viés analítico, com o objetivo de explorar os dados consolidados na Camada Gold e validar a consistência das métricas agregadas. As consultas a seguir apresentam análises que permitem a avaliação do total de registros comprometidos por ano e por método de ataque, respectivamente.
+Dando continuidade às análises de qualidade e consistência da Camada Gold, foram realizadas consultas com viés analítico, com o objetivo de explorar os dados consolidados e validar a coerência das métricas agregadas resultantes do modelo dimensional. Essas consultas permitiram avaliar o comportamento dos dados sob uma perspectiva de uso real, simulando cenários típicos de consumo analítico.
 
-<img width="1363" height="615" alt="image" src="https://github.com/user-attachments/assets/94b75c23-6005-4d81-a7df-e9f81963d46e" />
-<p align="center"><em>Camada Gold - Consulta total de registros por ano e ataque</em></p>
+As análises a seguir apresentam, respectivamente, a avaliação do total de registros comprometidos por ano e por método de ataque, possibilitando verificar se os resultados agregados estão alinhados com a granularidade e os valores esperados a partir da Camada Silver.
+
+<br> <img width="1363" height="615" alt="image" src="https://github.com/user-attachments/assets/94b75c23-6005-4d81-a7df-e9f81963d46e" /> <p align="center"><em>Camada Gold – Consulta do total de registros comprometidos por ano e por método de ataque</em></p>
+
 <br><br>
 
-Aplicação de Constraints 
+Com base nos resultados obtidos nas consultas analíticas, procedeu-se à aplicação de constraints de qualidade de dados, com o objetivo de reforçar a integridade do modelo e impedir a introdução de inconsistências em cargas futuras. Essas restrições foram aplicadas tanto às tabelas dimensão quanto à tabela fato, assegurando regras mínimas de validade e consistência estrutural.
 
-<img width="1345" height="609" alt="image" src="https://github.com/user-attachments/assets/a6613206-4c7f-496b-a0b3-2d78f4bc66ae" />
-<p align="center"><em>Camada Gold - Transformações nas tabelas dimensão e fato</em></p>
+<br> <img width="1345" height="609" alt="image" src="https://github.com/user-attachments/assets/a6613206-4c7f-496b-a0b3-2d78f4bc66ae" /> <p align="center"><em>Camada Gold – Aplicação de constraints nas tabelas dimensão e fato</em></p>
+
 <br><br>
 
+Após a aplicação das transformações corretivas e das regras de qualidade, foram realizadas validações finais de integridade, com foco na verificação das chaves primárias e estrangeiras (PK/FK). Essas validações confirmaram a inexistência de chaves nulas ou sem correspondência nas dimensões, assegurando a consistência do modelo estrela e a confiabilidade dos dados para análise.
 
-Após as transfomações e ajustes foram realizadda as seguintes validações:
+<br> <img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" /> <p align="center"><em>Camada Gold – Validação da integridade referencial (PK e FK)</em></p>
 
-<img width="1360" height="609" alt="image" src="https://github.com/user-attachments/assets/b36d449c-e55a-4474-955f-69561c673b48" />
-<p align="center"><em>Camada Gold - Integridade Referencial PK e FK</em></p>
-<br><br>
-
-<img width="1364" height="607" alt="image" src="https://github.com/user-attachments/assets/4a265f0c-77f4-4e3b-8ca8-d3c364c67ffc" />
-<p align="center"><em>Camada Gold - Integridade Referencial PK e FK</em></p>
-<br><br>
-
-<img width="1358" height="612" alt="image" src="https://github.com/user-attachments/assets/0d6df193-366c-4bf9-b908-51b5284f53cf" />
-<p align="center"><em>Camada Gold - Consulta tabelas PK não vazias</em></p>
-<br><br>
-
-<img width="1354" height="616" alt="image" src="https://github.com/user-attachments/assets/fab40546-2f3a-423c-96f6-03b95a2be04e" />
-<p align="center"><em>Camada Gold - Consulta tabelas FK não nulas </em></p>
-<br><br>
-
-<img width="1353" height="615" alt="image" src="https://github.com/user-attachments/assets/4e093331-c64f-4ede-a5b6-95eca1198882" />
-<p align="center"><em>Camada Gold - Consulta tabelas sem correspondência na dimensão </em></p>
-<br><br> 
-
-Com isso, evidencia-se que o processo de carga da Camada Gold contempla um conjunto abrangente de validações e boas práticas de Data Warehousing, incluindo: 
-- Validação analítica básica (teste de uso em cenários reais). <br>
-- Consistência entre as Camadas Silver e Gold (regra de ouro). <br>
-- Governança de dados por meio do Unity Catalog, com metadados acessíveis. <br>
-- Validação das métricas (sanidade dos dados). <br>
-- Validação da integridade referencial (relacionamento entre chaves estrangeiras e tabelas dimensão).  <br>
-- Validação estrutural (existência e volumetria das tabelas) e validação das chaves primárias (unicidade dos registros). <br>
-<br><br>
-<br>
-
-## Análise <br>
-
-A etapa de análise foi conduzida a partir da Camada Gold, previamente validada quanto à integridade, qualidade e consistência dos dados. Em atendimento aos objetivos do projeto, esta etapa foi dividida em duas partes: Qualidade de Dados e Solução do Problema.
-
-### Qualidade de dados <br>
+### Solução do problema <br>
 
 
-Discussão dos Resultados
-
-A análise foi conduzida a partir da Camada Gold, estruturada em modelo estrela, após validações rigorosas de integridade referencial, qualidade dos dados e consistência métrica. Essa abordagem assegurou que os resultados obtidos refletissem fielmente o conjunto de dados original, sem perdas ou distorções introduzidas pelo processo de transformação.
-
-Tipos de ataques mais comuns
-
-Os resultados indicam que determinados métodos de ataque concentram a maior parte dos incidentes registrados. Ataques associados a falhas de configuração, exposição acidental de dados e comprometimentos por hackers aparecem com maior frequência, sugerindo que vulnerabilidades técnicas e erros humanos continuam sendo vetores relevantes de risco em ambientes corporativos.
-
-Evolução temporal dos ataques
-
-A análise por ano evidencia uma tendência de crescimento no número de incidentes ao longo do tempo. Esse comportamento pode estar relacionado a múltiplos fatores externos ao dataset, como:
-
-aumento da digitalização dos serviços;
-
-maior volume de dados sensíveis armazenados;
-
-crescimento da superfície de ataque;
-
-maior transparência e obrigatoriedade de notificação de incidentes.
-
-É importante ressaltar que o conjunto de dados permite identificar correlações temporais, mas não possibilita inferir causalidade direta.
-
-Setores mais impactados
-
-A análise por tipo de organização demonstra que setores estratégicos, como governo, saúde e serviços financeiros, concentram maior número de incidentes. Esses setores tendem a armazenar dados altamente sensíveis e críticos, tornando-se alvos prioritários para diferentes tipos de ataques cibernéticos.
-
-Prevenção e mitigação
-
-Embora o dataset não contenha informações explícitas sobre medidas de segurança, a associação entre tipos de ataque e boas práticas de cibersegurança permite inferir estratégias de mitigação adequadas, como:
-
-fortalecimento de controles de acesso;
-
-monitoramento contínuo;
-
-revisão de configurações;
-
-políticas de conscientização e treinamento de usuários.
-
-Essa análise reforça a importância de alinhar dados históricos de incidentes com conhecimento de domínio para apoiar decisões estratégicas em segurança da informação.
-
-Possibilidade de previsão de cenários futuros
-
-Os dados analisados permitem identificar padrões históricos e tendências, mas não são suficientes para previsões determinísticas. A ausência de variáveis adicionais e a natureza discreta dos registros limitam o uso do dataset para modelos preditivos avançados. Ainda assim, os resultados oferecem subsídios relevantes para análises exploratórias e projeções iniciais.
-
-🏁 Conclusão Geral
-
-Este trabalho apresentou a construção de um pipeline de dados baseado na arquitetura Medallion (Bronze, Silver e Gold), utilizando a plataforma Databricks e o Unity Catalog para governança e organização dos dados. A Camada Gold foi modelada segundo o esquema estrela, garantindo eficiência analítica, integridade referencial e consistência das métricas.
-
-As validações aplicadas asseguraram:
-
-preservação do histórico dos dados;
-
-ausência de chaves estrangeiras nulas;
-
-tratamento adequado de valores ausentes;
-
-alinhamento com boas práticas de Data Warehouse.
-
-A etapa de análise demonstrou que o conjunto de dados é adequado para responder às perguntas propostas, fornecendo insights relevantes sobre padrões de ataques cibernéticos, setores mais afetados e tendências temporais. Apesar das limitações inerentes ao dataset, os resultados obtidos reforçam o valor de pipelines bem estruturados e governados para apoiar análises confiáveis e tomadas de decisão baseadas em dados
 
