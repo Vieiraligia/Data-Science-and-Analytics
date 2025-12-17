@@ -148,7 +148,7 @@ FROM main.silver.silver_cyber_breaches;
 ```
 <br>
 
-## Carga dos dados processados<br>
+## Carga dos dados <br>
 
 A etapa inicial consistiu na criação de um único Notebook dentro de um Workspace vinculado ao meu usuário, já integrado ao GitHub. A carga do arquivo e todas as operações de transformação e análise foram realizadas utilizando a linguagem SQL.
 <br><br>
