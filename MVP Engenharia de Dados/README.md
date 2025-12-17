@@ -16,7 +16,6 @@ recursos do ecossistema  [Databricks](https://databricks.com) que é uma platafo
 🧱 Modelagem  
 📦 Carga  
 📊 Análise 
-
 <br><br><br>
 
 
