@@ -7,12 +7,12 @@ recursos do ecossistema  [Databricks](https://databricks.com) que é uma platafo
 <br>O pipeline contempla as seguintes etapas:
 <br><br>
 
-📥 Coleta / ingestão<br>
-🧱 Modelagem<br>
-📦 Carga<br>
-📊 Análise 
-      Qualidade de dados<br>
-      Solução do problema
+📥 Coleta / ingestão  
+🧱 Modelagem  
+📦 Carga  
+📊 Análise  
+- Qualidade de dados  
+- Solução do problema
 <br><br><br>
 
 
