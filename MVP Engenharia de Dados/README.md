@@ -5,7 +5,7 @@
 <br><br>
 <br><br>
 
-🚀 **MVP — Engenharia de Dados**
+**MVP — Engenharia de Dados**
 
 A proposta é desenvolver um pipeline de dados aplicando boas práticas de engenharia de dados e utilizando os
 recursos do ecossistema  [Databricks](https://databricks.com) que é uma plataforma unificada para análise de dados. <br> 
