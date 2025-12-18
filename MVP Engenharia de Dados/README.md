@@ -140,7 +140,7 @@ SET breach_method_key = -1
 WHERE breach_method_key IS NULL;
 ```
 <br>
-Adicionalmente, foi realizada uma verificação das métricas, com a finalidade de assegurar a consistência dos resultados quando comparados aos dados consolidados da Camada Gold, confirmando que o processo de modelagem não resultou em perdas ou distorções.
+Adicionalmente, foi realizada uma verificação das métricas, com a finalidade de assegurar a consistência dos resultados quando comparados aos dados consolidados da Camada Gold, confirmando que o processo de modelagem não resultou em perdas ou distorções.<br>
 <br>
 
 ```sql
