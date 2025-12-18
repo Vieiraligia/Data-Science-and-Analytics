@@ -114,7 +114,7 @@ Tabela Fato:<br>
 <p align="center"><em>Modelo Dimensional Estrela da Camada Gold</em></p>
 <br>
 A tabela fato centraliza as métricas do negócio, enquanto as dimensões fornecem o contexto analítico necessário para análise temporal, organizacional e por método de ataque.
-
+<br>
 Na modelagem da Camada Gold, foram definidas as seguintes regras:
 - A métrica records_exposed admite valores NULL, representando ausência de informação, e não inconsistência.
 - Todas as chaves estrangeiras da tabela fato devem apontar para dimensões válidas.
