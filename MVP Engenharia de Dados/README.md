@@ -142,6 +142,7 @@ WHERE breach_method_key IS NULL;
 <br>
 Adicionalmente, foi realizada uma verificação das métricas, com a finalidade de assegurar a consistência dos resultados quando comparados aos dados consolidados da Camada Gold, confirmando que o processo de modelagem não resultou em perdas ou distorções.
 <br>
+
 ```sql
 SELECT SUM(records_exposed)
 FROM main.gold.fact_cyber_breaches;
