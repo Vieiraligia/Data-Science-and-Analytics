@@ -452,7 +452,7 @@ JOIN main.gold.dim_breach_method bm
 GROUP BY bm.breach_method;
 ```
 
-Com base nos resultados obtidos na análise da Camada Gold, foi possível identificar os principais vetores de ataque e associá-los a medidas preventivas adequadas. A Tabela X sintetiza essa relação entre evidência empírica e ações recomendadas.
+O resultado obtido na análise fornece um indicativo relevante, entretanto, a resposta possui caráter subjetivo, fundamentada em boas práticas de cibersegurança. Foi possível identificar os principais vetores de ataque e associá-los a medidas preventivas adequadas, embasadas em fontes especializadas sobre o assunto. A tabela abaixo sintetiza essa relação entre evidência e possíveis ações recomendadas.
 
 | Tipo de ataque           | Evidência nos dados                                   | Medidas de prevenção recomendadas |
 |--------------------------|-------------------------------------------------------|-----------------------------------|
@@ -462,13 +462,6 @@ Com base nos resultados obtidos na análise da Camada Gold, foi possível identi
 | **Accidentally Published** | Falhas operacionais recorrentes (21)                | Revisão de processos, controle de acesso e validações antes da publicação de dados |
 | **Inside Job**           | Risco interno significativo (19)                       | Segregação de funções, monitoramento de atividades, programas de conscientização e compliance |
 
-
-A análise quantitativa dos dados da Camada Gold permitiu identificar os tipos de ataques mais recorrentes ao longo do período analisado. A Tabela X apresenta a distribuição dos incidentes por método de ataque, destacando Hacked, Poor Security, Lost / Stolen Media, Accidentally Published e Inside Job como os vetores mais frequentes.
-
-Com base nesses resultados, é possível discutir medidas preventivas adequadas para cada categoria de ataque, conforme descrito a seguir:
-
-
-Embora o conjunto de dados não contenha informações diretas sobre mecanismos de prevenção, a frequência dos métodos de ataque permite inferir estratégias preventivas amplamente adotadas na literatura de Segurança da Informação.
 
 <i><b>5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?</b></i>
 
