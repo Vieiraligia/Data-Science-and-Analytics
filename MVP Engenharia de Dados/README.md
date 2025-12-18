@@ -412,7 +412,7 @@ Destacam-se as seguintes observações:
 - Redução aparente em 2021 e 2022, com 13 e 5 registros, respectivamente.
 - Existência de 6 registros associados ao ano desconhecido (-1), preservados no modelo para manter a integridade histórica.
 
-Os resultados sugerem que o aumento dos ataques não está associado a eventos pontuais, mas a um processo estrutural e contínuo, impulsionado pela evolução tecnológica e pela crescente complexidade dos ambientes digitais. Essa análise reforça a necessidade de políticas de segurança dinâmicas e adaptáveis, alinhadas ao crescimento e à transformação digital das organizações.
+Os resultados sugerem que o aumento dos ataques não está associado a eventos pontuais, mas a um processo estrutural e contínuo, impulsionado pela evolução tecnológica e pela crescente complexidade dos ambientes digitais. Essa análise reforça a necessidade de políticas de segurança, alinhadas ao crescimento e à transformação digital das organizações.
 
 <br><br>
 <i><b>3 - Quais tipos de empresas são mais visadas de ataques?</b></i>
