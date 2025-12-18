@@ -359,14 +359,8 @@ Após a aplicação das transformações corretivas e das regras de qualidade, f
 <br><br>
 ### Solução do problema <br>
 
-Nesta etapa, os dados consolidados na Camada Gold foram utilizados para responder às perguntas definidas nos objetivos do projeto. As análises foram realizadas exclusivamente por meio de consultas SQL, explorando o modelo dimensional em esquema estrela, que permite a clareza na interpretação dos resultados.
-
-Cada subseção a seguir apresenta:
-- A pergunta de pesquisa.
-- A abordagem analítica adotada (consulta SQL).
-- A discussão dos resultados obtidos, conectando os valores observados ao problema investigado.
-
-
+Nesta etapa, os dados consolidados na Camada Gold foram utilizados para responder às perguntas definidas nos objetivos do projeto. As análises foram realizadas exclusivamente por meio de consultas SQL.
+<br><br>
 <i><b>1 - Quais são os tipos de ataques mais comuns?</b></i>
 
 
@@ -380,20 +374,18 @@ JOIN main.gold.dim_year y
 GROUP BY y.year
 ORDER BY y.year;
 ```
-A consulta retornou a distribuição de incidentes por método de ataque, conforme apresentado a seguir. Os demais métodos apresentam ocorrência pontual igual a 1, representando uma parcela residual do conjunto de dados:
+<br><br>
 <img width="736" height="419" alt="image" src="https://github.com/user-attachments/assets/07e60404-6b66-4fb6-a4da-f9a819aa4256" />
+<br>
+Os resultados evidenciam que ataques do tipo “Hacked” representam, de forma significativa, o método mais recorrente, concentrando a maior parte dos incidentes registrados no conjunto de dados. Esse comportamento indica que explorações externas de sistemas continuam sendo o principal vetor de violação de dados.
 
-Os resultados evidenciam que ataques do tipo “Hacked” representam, de forma significativa, o método mais recorrente, concentrando a maior parte dos incidentes registrados no conjunto de dados. Esse comportamento indica que explorações externas de sistemas continuam sendo o principal vetor de violação de dados, reforçando a criticidade de controles como autenticação forte, gestão de vulnerabilidades e monitoramento contínuo.
-
-Na sequência, métodos associados a falhas de segurança interna ou operacional, como Poor Security, Lost / Stolen Media e Accidentally Published, também apresentam números expressivos. Esses incidentes sugerem que uma parcela relevante das violações não decorre apenas de ataques sofisticados, mas de deficiências em processos, políticas de segurança e conscientização dos usuários.
-
-A presença de categorias combinadas (por exemplo, Improper Setting, Hacked ou Poor Security / Hacked) indica que, em diversos casos, múltiplos fatores contribuem simultaneamente para o incidente, combinando falhas de configuração com exploração ativa por agentes externos.
+Na sequência, métodos associados a falhas de segurança interna ou operacional, como <i>Poor Security</i>, <i>Lost / Stolen Media</i> e <i>Accidentally Published</i>, também apresentam números expressivos. Esses incidentes sugerem que uma parcela relevante das violações não decorre apenas de ataques, mas de deficiências em processos, políticas de segurança e conscientização dos usuários.
 
 Por fim, a categoria “Unknown”, embora menos representativa em volume, sinaliza limitações inerentes ao conjunto de dados, nas quais o método de ataque não foi claramente identificado. A preservação dessa categoria no modelo analítico permite manter a integridade histórica dos registros, sem introduzir suposições que poderiam distorcer as análises.
 
-A identificação dos métodos de ataque mais frequentes fornece subsídios diretos para a definição de estratégias prioritárias de prevenção, evidenciando que investimentos em segurança perimetral, boas práticas de configuração e capacitação interna são fundamentais para mitigar os principais riscos observados. Dessa forma, a análise responde de maneira objetiva à pergunta proposta.
-
+<br><br>
 <i><b>2 - Por que os ataques às empresas estão aumentando?</b></i>
+
 
 ```sql
 SELECT
@@ -405,12 +397,12 @@ JOIN main.gold.dim_year y
 GROUP BY y.year
 ORDER BY y.year;
 ```
-
+<br><br>
 <img width="783" height="359" alt="visualization (2)" src="https://github.com/user-attachments/assets/138c5dbe-5ec5-47af-98f1-c542a7f1d8b7" />
-
+<br>
 A análise da distribuição temporal dos incidentes de violação de dados, com base na dimensão de tempo (dim_year), apresentou a evolução do número de incidentes ao longo dos anos. Observa-se um crescimento progressivo a partir de 2004, com maior concentração de ocorrências a partir da década de 2010.
 
-Destacam-se os seguintes pontos:
+Destacam-se as seguintes observações:
 - Crescimento gradual entre 2004 e 2011, passando de 2 para 34 incidentes anuais.
 - Manutenção de um patamar elevado entre 2012 e 2016, com valores variando entre 22 e 28 incidentes.
 - Novo aumento a partir de 2018, atingindo picos em 2019 (30) e 2020 (31).
@@ -419,7 +411,10 @@ Destacam-se os seguintes pontos:
 
 Os resultados sugerem que o aumento dos ataques não está associado a eventos pontuais, mas a um processo estrutural e contínuo, impulsionado pela evolução tecnológica e pela crescente complexidade dos ambientes digitais. Essa análise reforça a necessidade de políticas de segurança dinâmicas e adaptáveis, alinhadas ao crescimento e à transformação digital das organizações.
 
+<br><br>
 <i><b>3 - Quais tipos de empresas são mais visadas de ataques?</b></i>
+
+
 ```sql
 SELECT
   ot.organization_type,
@@ -431,16 +426,18 @@ GROUP BY ot.organization_type
 ORDER BY total_incidentes DESC
 LIMIT 10;
 ```
+<br><br>
 <img width="782" height="357" alt="image" src="https://github.com/user-attachments/assets/87b16aba-0f4f-4e7c-8235-84579826a857" />
+<br>
+A análise evidencia que organizações do tipo <i>Web</i>, <i>Healthcare</i> e <i>Financial</i> concentram o maior número de incidentes de segurança cibernética.
 
-A análise dos dados da Camada Gold evidencia que organizações do tipo Web, Healthcare e Financial concentram o maior número de incidentes de segurança cibernética.
+As empresas do segmento Web lideram o ranking de ataques, o que evidencia uma relação direta entre a elevada exposição pública e a forte dependência de aplicações e serviços acessíveis via Internet, ampliando significativamente a superfície de ataque. O setor de Healthcare figura entre os mais impactados, possivelmente em função do alto valor agregado dos dados sensíveis que manipula e, historicamente, de níveis inferiores de investimento em segurança da informação quando comparados a outros setores. Um exemplo que reforça essa hipótese são os históricos de incidentes de segurança envolvendo o DATASUS — Departamento de Informática do Sistema Único de Saúde (SUS), registrados nos anos de 2019, 2021 e 2024.
 
-Empresas Web lideram o ranking de ataques, refletindo sua elevada exposição pública e a dependência de aplicações acessíveis via internet. O setor de Healthcare aparece como um dos mais afetados, possivelmente devido ao alto valor de dados sensíveis e, historicamente, menores investimentos em segurança da informação.
+Organizações dos setores Financeiro e Governamental também se destacam, o que é consistente com o interesse de agentes maliciosos em dados críticos e estratégicos. Esses resultados reforçam que setores com maior exposição digital e maior valor de informação de dados tendem a ser mais visados.
 
-Organizações dos setores Financeiro e Governamental também se destacam, o que é consistente com o interesse de agentes maliciosos em dados críticos e estratégicos. Esses resultados reforçam que setores com maior exposição digital e maior valor informacional tendem a ser mais visados.
-
-
+<br><br>
 <i><b>4 - Para cada tipo de ataque, qual é a forma mais eficiente de prevenção?</b></i>
+
 
 ```sql
 SELECT
@@ -451,8 +448,9 @@ JOIN main.gold.dim_breach_method bm
   ON f.breach_method_key = bm.breach_method_key
 GROUP BY bm.breach_method;
 ```
-
+<br>
 O resultado obtido na análise fornece um indicativo relevante, entretanto, a resposta possui caráter subjetivo, fundamentada em boas práticas de cibersegurança. Foi possível identificar os principais vetores de ataque e associá-los a medidas preventivas adequadas, embasadas em fontes especializadas sobre o assunto. A tabela abaixo sintetiza essa relação entre evidência e possíveis ações recomendadas.
+<br>
 
 | Tipo de ataque           | Evidência nos dados                                   | Medidas de prevenção recomendadas |
 |--------------------------|-------------------------------------------------------|-----------------------------------|
@@ -462,8 +460,9 @@ O resultado obtido na análise fornece um indicativo relevante, entretanto, a re
 | **Accidentally Published** | Falhas operacionais recorrentes (21)                | Revisão de processos, controle de acesso e validações antes da publicação de dados |
 | **Inside Job**           | Risco interno significativo (19)                       | Segregação de funções, monitoramento de atividades, programas de conscientização e compliance |
 
-
+<br><br>
 <i><b>5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?</b></i>
+
 
 ```sql
 SELECT
@@ -476,27 +475,22 @@ WHERE y.year <> -1
 GROUP BY y.year
 ORDER BY y.year;
 ```
-
+<br>
 <img width="748" height="358" alt="image" src="https://github.com/user-attachments/assets/34f81e9c-704b-496a-b3ff-d16870a18632" />
 <br>
-A partir da análise da evolução temporal dos incidentes, observa-se uma tendência de crescimento no número de violações de dados ao longo dos anos, especialmente a partir da década de 2010. Embora o conjunto de dados não permita a construção de modelos preditivos formais, os padrões históricos identificados fornecem indícios relevantes sobre o comportamento futuro da segurança cibernética.
+A análise, de forma semelhante à apresentada na Questão 2, incorpora também uma perspectiva preditiva sobre cenários futuros. Considerando a tendência de crescimento no número de violações de dados ao longo dos anos e seus padrões, torna-se possível delinear  comportamentos futuros no âmbito da segurança cibernética. Porém, o conjunto de dados analisado não é suficiente para a construção de modelos preditivos formais, limitando a análise a inferências qualitativas baseadas em boas práticas e evidências históricas. 
 
-A persistência de métodos como Hacked e Poor Security ao longo do tempo indica que vulnerabilidades técnicas e falhas de governança continuam sendo exploradas de forma recorrente. Além disso, a diversificação dos métodos de ataque nos anos mais recentes sugere um cenário de aumento na sofisticação e na superfície de ataque das organizações.
-
-Dessa forma, as análises permitem deduzir que na ausência de investimentos contínuos em segurança da informação, governança e controles técnicos, a tendência é de manutenção ou crescimento dos incidentes de segurança. Como perspectiva futura, espera-se um aumento na complexidade dos ataques, reforçando a necessidade mencionada na sessão de 'Objetivo' sobre ações de prevenção e a elaboração de planos de resposta a possíveis incidentes de violação de dados dentro das oganizações.
+Sendo assim, para esta questão, não é possível responder com propriedade acerca dos cenários futuros e de suas respectivas perspectivas, em razão das limitações de análises realizadas.
 
 
 ## Autoavaliação <br>
 
 
-Ao decorrer deste trabalho, foi possível vivenciar um amadurecimento acadêmico significativo na área de dados, especialmente por se tratar de uma disciplina que ainda não domino plenamente. A construção deste projeto representou um passo fundamental para a consolidação dos conceitos estudados ao longo das disciplinas.
+Na realização deste trabalho, foi possível vivenciar um amadurecimento acadêmico significativo na área de dados, especialmente por se tratar de uma disciplina, na qual não domino plenamente. A construção deste projeto representou um passo fundamental para a consolidação  dos conceitos estudados ao longo das disciplinas.
 
-O resultado final alcançado foi satisfatório para mim e acredito que esteja alinhado aos objetivos propostos, evidenciando a capacidade de estruturar um pipeline de dados funcional. 
-
-A principal dificuldade enfrentada esteve relacionada à aplicação prática do conhecimento teórico, uma vez que este projeto é o meu primeiro pipeline de dados. Além disso, o fator tempo foi muito desafiador, pois foi necessário conciliar o desenvolvimento do projeto com demandas pessoais e profissionais, exigindo organização, priorização e disciplina ao longo do processo.
+A principal dificuldade enfrentada esteve relacionada à aplicabilidade prática de todo o conhecimento teórico. Além disso, o fator tempo foi muito desafiador, pois foi necessário conciliar o desenvolvimento do projeto com demandas pessoais e profissionais, exigindo organização, priorização e disciplina ao longo do processo.
 
 Apesar desses desafios, o trabalho proporcionou uma experiência de aprendizado consistente e enriquecedora. Ao final, permanece a sensação de dever cumprido, resultado do esforço empregado e da superação das dificuldades encontradas.
 
-Como trabalhos futuros, pretendo aprofundar o domínio técnico na área, explorar ferramentas e arquiteturas, além de ampliar a complexidade das análises realizadas, de forma a enriquecer tanto o aprendizado acadêmico quanto o meu portfólio profissional.
-
-De modo geral, este projeto contribuiu significativamente para o desenvolvimento de competências práticas em engenharia de dados, reforçando o meu interesse em continuar evoluindo e me especializar cada vez mais nesta área.
+Para trabalhos futuros, pretendo aprofundar meu conhecimento teórico e prático, explorar ferramentas e arquiteturas mais avançadas, além de ampliar a complexidade das análises realizadas, à medida que consolido o domínio das linguagens SQL e Python, de forma a enriquecer tanto o aprendizado acadêmico quanto o desenvolvimento do meu portfólio profissional.
+ <br> <br>
