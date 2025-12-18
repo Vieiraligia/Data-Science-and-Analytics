@@ -378,6 +378,7 @@ ORDER BY y.year;
 <br><br>
 <img width="736" height="419" alt="image" src="https://github.com/user-attachments/assets/07e60404-6b66-4fb6-a4da-f9a819aa4256" />
 <br>
+
 Os resultados evidenciam que ataques do tipo “Hacked” representam, de forma significativa, o método mais recorrente, concentrando a maior parte dos incidentes registrados no conjunto de dados. Esse comportamento indica que explorações externas de sistemas continuam sendo o principal vetor de violação de dados.
 
 Na sequência, métodos associados a falhas de segurança interna ou operacional, como <i>Poor Security</i>, <i>Lost / Stolen Media</i> e <i>Accidentally Published</i>, também apresentam números expressivos. Esses incidentes sugerem que uma parcela relevante das violações não decorre apenas de ataques, mas de deficiências em processos, políticas de segurança e conscientização dos usuários.
@@ -401,6 +402,7 @@ ORDER BY y.year;
 <br><br>
 <img width="783" height="359" alt="visualization (2)" src="https://github.com/user-attachments/assets/138c5dbe-5ec5-47af-98f1-c542a7f1d8b7" />
 <br>
+
 A análise da distribuição temporal dos incidentes de violação de dados, com base na dimensão de tempo (dim_year), apresentou a evolução do número de incidentes ao longo dos anos. Observa-se um crescimento progressivo a partir de 2004, com maior concentração de ocorrências a partir da década de 2010.
 
 Destacam-se as seguintes observações:
@@ -430,6 +432,7 @@ LIMIT 10;
 <br><br>
 <img width="782" height="357" alt="image" src="https://github.com/user-attachments/assets/87b16aba-0f4f-4e7c-8235-84579826a857" />
 <br>
+
 A análise evidencia que organizações do tipo <i>Web</i>, <i>Healthcare</i> e <i>Financial</i> concentram o maior número de incidentes de segurança cibernética.
 
 As empresas do segmento Web lideram o ranking de ataques, o que evidencia uma relação direta entre a elevada exposição pública e a forte dependência de aplicações e serviços acessíveis via Internet, ampliando significativamente a superfície de ataque. O setor de Healthcare figura entre os mais impactados, possivelmente em função do alto valor agregado dos dados sensíveis que manipula e, historicamente, de níveis inferiores de investimento em segurança da informação quando comparados a outros setores. Um exemplo que reforça essa hipótese são os históricos de incidentes de segurança envolvendo o DATASUS — Departamento de Informática do Sistema Único de Saúde (SUS), registrados nos anos de 2019, 2021 e 2024.
@@ -479,6 +482,7 @@ ORDER BY y.year;
 <br>
 <img width="748" height="358" alt="image" src="https://github.com/user-attachments/assets/34f81e9c-704b-496a-b3ff-d16870a18632" />
 <br>
+
 A análise, de forma semelhante à apresentada na Questão 2, incorpora também uma perspectiva preditiva sobre cenários futuros. Considerando a tendência de crescimento no número de violações de dados ao longo dos anos e seus padrões, torna-se possível delinear  comportamentos futuros no âmbito da segurança cibernética. Porém, o conjunto de dados analisado não é suficiente para a construção de modelos preditivos formais, limitando a análise a inferências qualitativas baseadas em boas práticas e evidências históricas. 
 
 Sendo assim, para esta questão, não é possível responder com propriedade acerca dos cenários futuros e de suas respectivas perspectivas, em razão das limitações de análises realizadas.
