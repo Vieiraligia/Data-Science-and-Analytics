@@ -437,7 +437,7 @@ A análise evidencia que organizações do tipo <i>Web</i>, <i>Healthcare</i> e 
 
 As empresas do segmento Web lideram o ranking de ataques, o que evidencia uma relação direta entre a elevada exposição pública e a forte dependência de aplicações e serviços acessíveis via Internet, ampliando significativamente a superfície de ataque. 
 
-O setor de Healthcare figura entre os mais impactados, possivelmente em função do alto valor agregado dos dados sensíveis que manipula e, historicamente, de níveis inferiores de investimento em segurança da informação quando comparados a outros setores. Um exemplo que reforça essa hipótese são os históricos de incidentes de segurança envolvendo o DATASUS — Departamento de Informática do Sistema Único de Saúde (SUS), registrados nos anos de 2019, 2021 e 2024.
+O setor de Healthcare figura entre os mais impactados, possivelmente em função do alto valor agregado dos dados sensíveis que manipula. Um exemplo que reforça essa hipótese são os históricos de incidentes de segurança envolvendo o DATASUS — Departamento de Informática do Sistema Único de Saúde (SUS), registrados nos anos de 2019, 2021 e 2024.
 
 Organizações dos setores Financeiro e Governamental também se destacam, o que é consistente com o interesse de agentes maliciosos em dados críticos e estratégicos. Esses resultados reforçam que setores com maior exposição digital e maior valor de informação de dados tendem a ser mais visados.
 
