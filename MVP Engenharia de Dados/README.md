@@ -400,7 +400,8 @@ GROUP BY y.year
 ORDER BY y.year;
 ```
 <br><br>
-<img width="783" height="359" alt="visualization (2)" src="https://github.com/user-attachments/assets/138c5dbe-5ec5-47af-98f1-c542a7f1d8b7" />
+<img width="783" height="359" alt="visualization (2)" src="https://github.com/user-attachments/assets/263de134-ed41-4bf8-9e7e-27232ba4f828" />
+
 <br>
 
 A análise da distribuição temporal dos incidentes de violação de dados, com base na dimensão de tempo (dim_year), apresentou a evolução do número de incidentes ao longo dos anos. Observa-se um crescimento progressivo a partir de 2004, com maior concentração de ocorrências a partir da década de 2010.
