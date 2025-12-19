@@ -364,17 +364,6 @@ Nesta etapa, os dados consolidados na Camada Gold foram utilizados para responde
 <br><br>
 <i><b>1 - Quais são os tipos de ataques mais comuns?</b></i>
 
-
-```sql
-SELECT 
-    y.year,
-    SUM(f.records_exposed) AS total_records
-FROM main.gold.fact_cyber_breaches f
-JOIN main.gold.dim_year y
-    ON f.year_key = y.year_key
-GROUP BY y.year
-ORDER BY y.year;
-```
 <br><br>
 <img width="751" height="359" alt="visualization (3)" src="https://github.com/user-attachments/assets/6583cc77-9a6a-4d27-87d1-6569d8278ebb" />
 
@@ -389,17 +378,6 @@ Por fim, a categoria “Unknown”, embora menos representativa em volume, sinal
 <br><br>
 <i><b>2 - Por que os ataques às empresas estão aumentando?</b></i>
 
-
-```sql
-SELECT
-  y.year,
-  COUNT(*) AS total_incidentes
-FROM main.gold.fact_cyber_breaches f
-JOIN main.gold.dim_year y
-  ON f.year_key = y.year_key
-GROUP BY y.year
-ORDER BY y.year;
-```
 <br><br>
 <img width="783" height="359" alt="visualization (2)" src="https://github.com/user-attachments/assets/263de134-ed41-4bf8-9e7e-27232ba4f828" />
 
@@ -419,18 +397,6 @@ Os resultados sugerem que o aumento dos ataques não está associado a eventos p
 <br><br>
 <i><b>3 - Quais tipos de empresas são mais visadas de ataques?</b></i>
 
-
-```sql
-SELECT
-  ot.organization_type,
-  COUNT(*) AS total_incidentes
-FROM main.gold.fact_cyber_breaches f
-JOIN main.gold.dim_organization_type ot
-  ON f.organization_type_key = ot.organization_type_key
-GROUP BY ot.organization_type
-ORDER BY total_incidentes DESC
-LIMIT 10;
-```
 <br><br>
 <img width="782" height="357" alt="image" src="https://github.com/user-attachments/assets/87b16aba-0f4f-4e7c-8235-84579826a857" />
 <br>
@@ -446,17 +412,7 @@ Organizações dos setores Financeiro e Governamental também se destacam, o que
 <br><br>
 <i><b>4 - Para cada tipo de ataque, qual é a forma mais eficiente de prevenção?</b></i>
 
-
-```sql
-SELECT
-  bm.breach_method,
-  COUNT(*) AS total_incidentes
-FROM main.gold.fact_cyber_breaches f
-JOIN main.gold.dim_breach_method bm
-  ON f.breach_method_key = bm.breach_method_key
-GROUP BY bm.breach_method;
-```
-<br>
+<br><br>
 O resultado obtido na análise fornece um indicativo relevante, entretanto, a resposta possui caráter subjetivo, fundamentada em boas práticas de cibersegurança. Foi possível identificar os principais vetores de ataque e associá-los a medidas preventivas adequadas, embasadas em fontes especializadas sobre o assunto. A tabela abaixo sintetiza essa relação entre evidência e possíveis ações recomendadas.
 <br><br>
 
@@ -476,19 +432,7 @@ O resultado obtido na análise fornece um indicativo relevante, entretanto, a re
 <br><br>
 <i><b>5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?</b></i>
 
-
-```sql
-SELECT
-  y.year,
-  COUNT(*) AS total_incidentes
-FROM main.gold.fact_cyber_breaches f
-JOIN main.gold.dim_year y
-  ON f.year_key = y.year_key
-WHERE y.year <> -1
-GROUP BY y.year
-ORDER BY y.year;
-```
-<br>
+<br><br>
 <img width="751" height="359" alt="visualization (6)" src="https://github.com/user-attachments/assets/26624b27-eb2e-4774-b735-cb67751ebf22" />
 
 <br><br>
