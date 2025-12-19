@@ -469,6 +469,10 @@ O resultado obtido na análise fornece um indicativo relevante, entretanto, a re
 | **Accidentally Published** | Falhas operacionais recorrentes (21)                | Revisão de processos, controle de acesso e validações antes da publicação de dados |
 | **Inside Job**           | Risco interno significativo (19)                       | Segregação de funções, monitoramento de atividades, programas de conscientização e compliance |
 
+
+<img width="751" height="359" alt="visualization (8)" src="https://github.com/user-attachments/assets/22ba65da-867d-4577-bfd1-2790baf5bc35" />
+<p align="center"><em>Vetores de Ataque X Tipo de Organização</em></p>
+
 <br><br>
 <i><b>5.	As análises permitem prever cenários futuros de segurança cibernética? Quais são as perspectivas?</b></i>
 
