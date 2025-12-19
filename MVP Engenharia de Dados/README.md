@@ -485,7 +485,8 @@ GROUP BY y.year
 ORDER BY y.year;
 ```
 <br>
-<img width="748" height="358" alt="image" src="https://github.com/user-attachments/assets/34f81e9c-704b-496a-b3ff-d16870a18632" />
+<img width="751" height="359" alt="visualization (6)" src="https://github.com/user-attachments/assets/26624b27-eb2e-4774-b735-cb67751ebf22" />
+
 <br><br>
 
 A análise é apresentada de forma semelhante à Questão 2. Considerando a tendência de crescimento no número de violações de dados ao longo dos anos e seus padrões, torna-se possível delinear comportamentos futuros no âmbito da segurança cibernética. Porém, o conjunto de dados analisado não é suficiente para a construção de modelos preditivos formais, limitando a análise a inferências qualitativas baseadas em boas práticas e em evidências históricas. 
