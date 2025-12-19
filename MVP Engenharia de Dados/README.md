@@ -376,7 +376,8 @@ GROUP BY y.year
 ORDER BY y.year;
 ```
 <br><br>
-<img width="736" height="419" alt="image" src="https://github.com/user-attachments/assets/07e60404-6b66-4fb6-a4da-f9a819aa4256" />
+<img width="751" height="359" alt="visualization (3)" src="https://github.com/user-attachments/assets/6583cc77-9a6a-4d27-87d1-6569d8278ebb" />
+
 <br>
 
 Os resultados evidenciam que ataques do tipo “Hacked” representam, de forma significativa, o método mais recorrente, concentrando a maior parte dos incidentes registrados no conjunto de dados. Esse comportamento indica que explorações externas de sistemas continuam sendo o principal vetor de violação de dados.
