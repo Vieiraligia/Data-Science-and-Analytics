@@ -16,3 +16,6 @@ O objetivo é criar um pipeline de dados na plataforma [Databricks](https://data
 
 Este  MVP está associado à disciplina de Análise de Dados e Boas Práticas.
 O objetivo é produzir um <i>notebook em Python</i> para a realização de análises estatísticas descritivas, visualizações gráficas e pré-processamento de dados.
+
+
+🚀 <b>MVP 2 — Machine Learning & Analytics </b>
