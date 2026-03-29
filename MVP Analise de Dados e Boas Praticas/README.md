@@ -6,3 +6,5 @@
 <br><br>
 
 **MVP — Análise de Dados e Boas Práticas**
+
+A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de pré-processamento dos dados, por meio de um <i>Notebook</i> em linguagem Python.
