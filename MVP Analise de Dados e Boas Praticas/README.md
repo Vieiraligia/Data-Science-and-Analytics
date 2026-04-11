@@ -88,6 +88,8 @@ Após a divisão dos dados, será realizada a transformação das variáveis cat
 Além disso, será realizada a etapa de engenharia de atributos, onde novas variáveis derivadas poderão ser criadas a partir das informações originais do Dataset. Entre essas possíveis variáveis, destacam-se métricas agregadas das notas, como médias entre disciplinas e diferenças entre desempenhos específicos, com o objetivo de enriquecer o conjunto de atributos disponíveis para análise e validação das hipóteses.
 <br><br>
 Por fim, será aplicada a padronização Z-score, baseado na média e no desvio padrão, permitindo comparar variáveis em diferentes escalas. Apesar de não ser sempre obrigatória para todos os modelos, essa etapa poderá contribuir para o desempenho de algoritmos de aprendizado de máquina, especialmente modelos baseados em regressão.
+
+<b>Todo o código e visualizações desta seção estão dentro do notebook.<b>
 <br><br><br>
 ## Respostas das Hipóteses<br>
 
