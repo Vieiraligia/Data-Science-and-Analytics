@@ -123,4 +123,22 @@ Sim. Estudantes com melhor desempenho em leitura tendem a apresentar também mel
 Para essa validação, deve-se observar o desvio padrão, que indica a variabilidade em matemática é maior em relação às demais disciplinas. Esse comportamento se confirma por meio do gráfico Boxplot, onde as notas de matemática apresentam maior dispersão de valores. 
 
 
+## Conclusão <br>
+
+Esse projeto analisou o desempenho acadêmico dos estudantes com base em variáveis demográficas, sociais e educacionais, utilizando técnicas de análise exploratória de dados e pré-processamento. O conjunto de dados contém informações sobre notas em matemática, leitura e escrita, além de variáveis como gênero, raça/etnia, nível de escolaridade dos pais, tipo de almoço e participação em curso preparatório.
+
+Os resultados das análises por grupo evidenciaram padrões entre as variáveis. Em relação à raça/etnia, observou-se diferença de desempenho entre os grupos, com destaque para maiores médias no <b>grupo E</b> e menores no <b>grupo A</b>. Quanto ao tipo de almoço, estudantes com alimentação padrão apresentaram desempenho superior aos que recebem alimentação gratuita ou reduzida, sugerindo influência de fatores socioeconômicos. Esse resultado indica que essa variável pode representar um dos principais fatores associados às diferenças de desempenho observadas no conjunto de dados.
+<br>
+Ao analisar a escolaridade dos pais, identificou-se uma tendência positiva entre nível educacional e desempenho acadêmico. Estudantes com pais que possuem maior grau de escolaridade tendem a apresentar melhores resultados. Já a participação em curso preparatório também demonstrou associação positiva com o desempenho, especialmente nas disciplinas de leitura e escrita.
+<br>
+No decorrer dos testes das hipóteses, abriria a possibilidade de investigar mais duas hipóteses adicionais, como: 
+- <b><i>O nível de escolaridade dos pais pode ter maior impacto no desempenho em matemática do que nas demais disciplinas.</i> </b><br><br>
+- <b><i>Estudantes que realizam curso preparatório podem apresentar menor variação nas notas, indicando maior consistência de desempenho.</b></i>
+<br>
+Essas relações poderiam ser analisadas por meio da comparação de médias por disciplina e da avaliação da dispersão das notas entre os grupos. 
+<br>
+De forma geral, os resultados indicam que fatores sociais, econômicos e educacionais estão associados ao desempenho acadêmico dos estudantes, evidenciando padrões consistentes de desigualdade entre os grupos analisados. A conclusão do estudo reforça a influência do contexto social no desempenho escolar.
+<br>
+Por fim, as visualizações e análises exploratórias foram essenciais para a identificação desses padrões, permitindo uma compreensão clara e estruturada do comportamento dos dados.
+
 
