@@ -14,7 +14,7 @@ Para isso, será segmentado nas etapas:
 - Hipóteses;
 - Seleção de Dados e seus atributos;
 - Análise de Dados - EDA;
-- Pré-processamento de Dados;
+- Pré-Processamento de Dados;
 - Respostas das Hipóteses.
 
 ## Objetivo e Definição do problema<br>
@@ -73,7 +73,7 @@ A visualização de dados:
 -Além do objetivo de compreender os dados, a análise estatística e a visualização são orientadas para a validação das hipóteses levantadas.
 <br><br><br>
 
-## Pré-processamento de Dados<br>
+## Pré-Processamento de Dados<br>
 
 O Pré-Processamento de Dados tem como objetivo realizar as operações de limpeza de dados, tratamento e preparação dos dados. Essa etapa é essencial para o desenvolvimento de modelos de aprendizado supervisionado, especialmente em problemas de regressão, nos quais o objetivo é prever valores numéricos, a partir de um conjunto de variáveis explicativas.
 <br><br>
@@ -89,7 +89,7 @@ Além disso, será realizada a etapa de engenharia de atributos, onde novas vari
 <br><br>
 Por fim, será aplicada a padronização Z-score, baseado na média e no desvio padrão, permitindo comparar variáveis em diferentes escalas. Apesar de não ser sempre obrigatória para todos os modelos, essa etapa poderá contribuir para o desempenho de algoritmos de aprendizado de máquina, especialmente modelos baseados em regressão.
 
-<b>Todo o código e visualizações desta seção estão dentro do notebook.<b>
+<b>Todo o código e visualizações desta seção estão dentro do notebook.</b>
 <br><br><br>
 ## Respostas das Hipóteses<br>
 
