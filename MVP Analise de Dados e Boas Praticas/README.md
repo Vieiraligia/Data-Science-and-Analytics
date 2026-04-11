@@ -10,10 +10,29 @@
 A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de Pré-Processamento dos Dados, por meio de um <i>Notebook</i> em linguagem Python. 
 
 Para isso, será segmentado nas etapas:
-- Definição do problema;
+- Objetivo e Definição do problema;
 - Hipóteses;
 - Seleção de Dados e seus atributos;
 - Análise de Dados - EDA;
 - Pré-processamento de Dados;
 - Respostas das Hipóteses.
+
+## Objetivo e Definição do problema<br>
+O objetivo deste projeto é analisar os fatores que influenciam o desempenho acadêmico de estudantes nos exames, tendo como base de referência o <i>Dataset Students Performance in Exams</i>.
+<br>
+O dataset é composto por informações demográficas, sociais e educacionais dos estudantes, além de notas em matemática, leitura e escrita.
+
+A análise busca compreender padrões e relações entre as variáveis, com o objetivo de identificar quais fatores podem impactar de forma positiva ou negativa o desempenho dos alunos.
+<br>
+## Hipóteses<br>
+
+## Seleção de Dados e seus atributos<br>
+
+## Análise de Dados - EDA<br>
+
+## Pré-processamento de Dados<br>
+
+## Respostas das Hipóteses<br>
+
+
 
