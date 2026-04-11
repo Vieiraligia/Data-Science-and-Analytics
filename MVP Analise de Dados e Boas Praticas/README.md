@@ -33,7 +33,7 @@ A análise busca compreender padrões e relações entre as variáveis, com o ob
 <b>Hipótese 5 </b>- As notas de matemática apresentam maior variabilidade, indicando maior dispersão dos resultados em relação às disciplinas de leitura e escrita.<br><br>
 
 ## Seleção de Dados e seus atributos<br>
-O Dataset foi extraído do site Kaggle:[(https://www.kaggle.com/datasets/spscientist/students-performance-in-exams)].
+O Dataset foi extraído do site Kaggle: [(https://www.kaggle.com/datasets/spscientist/students-performance-in-exams)].
 <br><br>
 O conjunto de dados é composto por variáveis categóricas relacionadas a informações demográficas e socioeconômicas, gênero, grupo étnico, tipo de alimentação escolar, escolaridade dos pais e participação em curso preparatório. 
 <br>Além disso, contém variáveis numéricas correspondentes às notas obtidas nas disciplinas de matemática, leitura e escrita. O conjunto reúne 8 atributos.
@@ -74,7 +74,7 @@ A visualização de dados:
 <br><br><br>
 
 ## Pré-processamento de Dados<br>
-<br><br>
+
 O Pré-Processamento de Dados tem como objetivo realizar as operações de limpeza de dados, tratamento e preparação dos dados. Essa etapa é essencial para o desenvolvimento de modelos de aprendizado supervisionado, especialmente em problemas de regressão, nos quais o objetivo é prever valores numéricos, a partir de um conjunto de variáveis explicativas.
 <br><br>
 Em Análise de Dados, foi realizada a verificação da qualidade dos dados, incluindo a análise de valores ausentes e registros duplicados. O conjunto de dados não apresentou valores faltantes nem ocorrências de duplicidade, indicando boa qualidade inicial para as etapas subsequentes de análise.
@@ -90,6 +90,37 @@ Além disso, será realizada a etapa de engenharia de atributos, onde novas vari
 Por fim, será aplicada a padronização Z-score, baseado na média e no desvio padrão, permitindo comparar variáveis em diferentes escalas. Apesar de não ser sempre obrigatória para todos os modelos, essa etapa poderá contribuir para o desempenho de algoritmos de aprendizado de máquina, especialmente modelos baseados em regressão.
 <br><br><br>
 ## Respostas das Hipóteses<br>
+
+<b>Hipótese 1 - <i> Estudantes que realizaram curso preparatório tendem a apresentar melhores notas.</i></b>
+<br><br>
+
+Sim. Os estudantes que concluíram o curso obtiveram 69,69 pontos em matemática, 73,89 em leitura e 74,41 em escrita. Em contrapartida, aqueles que não participaram do curso apresentaram médias de 64,07 em matemática, 66,53 em leitura e 64,50 em escrita. A diferença positiva para o grupo que realizou o curso é de: 5.62 em matemática, 7.36 em leitura e 9.91. Esses resultados evidenciam que a realização de um curso preparatório está associada a um melhor desempenho acadêmico.
+<br><br>
+<b>Hipótese 2 - <i>Existe diferença de desempenho entre estudantes do sexo masculino e feminino.</i></b>
+<br><br>
+
+Sim. A média geral de todas as disciplinas apresenta 69.56 para o sexo feminino e 65.83 para o sexo masculino. Entretando, ao avaliar as médias das disciplinas separadamente, estudantes do sexo masculino apresentam melhor desempenho em matemática. Por outro lado, estudantes do sexo feminino apresentam médias maiores em leitura e escrita, com isso, elevam o desempenho médio geral.
+<br><br>
+
+<b>Hipótese 3 - <i>Fatores demográficos e sociais podem evidenciar algum tipo de desigualdade no desempenho acadêmico. </b></i>
+<br><br>
+Para a validação dessa hipótese, faz-se necessário uma análise particionada. Inicialmente, observa-se a relação entre raça/etnia e o desempenho nas disciplinas. Considerando a variável `race/ethnicity`, o <b>grupo A</b> apresenta as seguintes médias: matemática 61,63, leitura 64,67 e escrita 62,67. Já o <b>grupo E</b> apresenta médias de matemática 73,82, leitura 73,03 e escrita 71,41. Existe uma clara diferença de desempenho entre os grupos, o que sugere que características demográficas podem ter alguma interferência em desempenho acadêmico. 
+
+A análise sob a ótica da variável `lunch` traz um indicativo interessante. Estudantes que recebem almoço reduzido, associado a condição socioeconômica inferior, apresentam desempenho médio inferior em todas as disciplinas quando comparados aos estudantes com melhor condição socioeconômica, consequentemente um almoço padrão.
+
+No aspecto relacionado à variável parental level of education, um resultado 'óbvio': quanto maior o nível de escolaridade dos pais, maiores são as médias obtidas pelos estudantes nas disciplinas. O resultado reforça o que aponta nos estudos da área de educação, o ambiente familiar e o nível escolar dos pais influenciam no desempenho acadêmico dos filhos.
+
+Entre todos os fatores analisados, o tipo de almoço parece ser o indicador mais forte de desigualdade, pois apresenta as maiores diferença nas médias entre os grupo `race/ethnicity`.<i> <br><br>
+Sob uma perspectiva pessoal, esse resultado trouxe uma pausa reflexiva: o desempenho acadêmico pode ser comprometido por elementos ligados à desigualdade social e, por trás desses números, existem pessoas com realidades e oportunidades muito distintas.</i>
+<br><br>
+
+<b>Hipótese 4-  <i>Existe alguma correlação entre as notas de leitura e escrita.</i></b>
+<br><br>
+Sim. Estudantes com melhor desempenho em leitura tendem a apresentar também melhor desempenho em escrita. A Matriz de Correlação apresentou valor próximo de +1 entre as variáveis <b><i>Reading Score</i></b> e <i><b>Writing Score</i></b>, indicando uma forte correlação positiva. Além disso, o gráfico de dispersão entre essas variáveis, apresentado na seção <i>'Exploração Adicional'</i>, também reafirma esse comportamento, demonstrando um padrão linear crescente. 
+<br><br>
+<b>Hipótese 5 - <i>As notas de matemática apresentam maior variabilidade, indicando maior dispersão dos resultados em relação às disciplinas de leitura e escrita.</i></b>
+<br><br>
+Para essa validação, deve-se observar o desvio padrão, que indica a variabilidade em matemática é maior em relação às demais disciplinas. Esse comportamento se confirma por meio do gráfico Boxplot, onde as notas de matemática apresentam maior dispersão de valores. 
 
 
 
