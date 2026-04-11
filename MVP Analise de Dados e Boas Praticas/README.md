@@ -133,6 +133,7 @@ Os resultados das análises por grupo evidenciaram padrões entre as variáveis.
 <br>
 Ao analisar a escolaridade dos pais, identificou-se uma tendência positiva entre nível educacional e desempenho acadêmico. Estudantes com pais que possuem maior grau de escolaridade tendem a apresentar melhores resultados. Já a participação em curso preparatório também demonstrou associação positiva com o desempenho, especialmente nas disciplinas de leitura e escrita.
 <br>
+
 No decorrer dos testes das hipóteses, abriria a possibilidade de investigar mais duas hipóteses adicionais, como: 
 - <b><i>O nível de escolaridade dos pais pode ter maior impacto no desempenho em matemática do que nas demais disciplinas.</i> </b><br><br>
 - <b><i>Estudantes que realizam curso preparatório podem apresentar menor variação nas notas, indicando maior consistência de desempenho.</b></i>
