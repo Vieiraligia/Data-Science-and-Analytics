@@ -26,11 +26,11 @@ A análise busca compreender padrões e relações entre as variáveis, com o ob
 <br>
 ## Hipóteses<br>
 
-Hipótese 1 - Estudantes que realizaram curso preparatório tendem a apresentar melhores notas.
-Hipótese 2 - Existe diferença de desempenho entre estudantes do sexo masculino e feminino.
-Hipótese 3 - Fatores demográficos e sociais podem evidenciar algum tipo de desigualdade no desempenho acadêmico.
-Hipótese 4 - Existe alguma correlação entre as notas de leitura e escrita.
-Hipótese 5 - As notas de matemática apresentam maior variabilidade, indicando maior dispersão dos resultados em relação às disciplinas de leitura e escrita.
+Hipótese 1 - Estudantes que realizaram curso preparatório tendem a apresentar melhores notas.<br><br>
+Hipótese 2 - Existe diferença de desempenho entre estudantes do sexo masculino e feminino.<br><br>
+Hipótese 3 - Fatores demográficos e sociais podem evidenciar algum tipo de desigualdade no desempenho acadêmico.<br><br>
+Hipótese 4 - Existe alguma correlação entre as notas de leitura e escrita.<br><br>
+Hipótese 5 - As notas de matemática apresentam maior variabilidade, indicando maior dispersão dos resultados em relação às disciplinas de leitura e escrita.<br><br>
 
 ## Seleção de Dados e seus atributos<br>
 
