@@ -8,7 +8,7 @@
 **MVP — Análise de Dados e Boas Práticas**
 
 A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de Pré-Processamento dos Dados, por meio do <i>Notebook:</i>  🔗  
-[Abrir no Google Colab]([https://colab.research.google.com/drive/SEU_ID_AQUI](https://colab.research.google.com/drive/1jezFqrWCa4ycJT5wleFMXDP2QE9x-Fh4#scrollTo=PaORcmmwsrjj)) MVP_AnalisedeDadoseBoasPraticas.ipynb. 
+[Abrir no Google Colab]([https://colab.research.google.com/drive/1jezFqrWCa4ycJT5wleFMXDP2QE9x-Fh4#scrollTo=PaORcmmwsrjj]
 
 Para isso, será segmentado nas etapas:
 - Objetivo e Definição do problema;
