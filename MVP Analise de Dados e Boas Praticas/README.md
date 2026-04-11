@@ -33,6 +33,23 @@ A análise busca compreender padrões e relações entre as variáveis, com o ob
 <b>Hipótese 5 </b>- As notas de matemática apresentam maior variabilidade, indicando maior dispersão dos resultados em relação às disciplinas de leitura e escrita.<br><br>
 
 ## Seleção de Dados e seus atributos<br>
+O Dataset foi extraído do site [Kaggle][(https://www.kaggle.com/datasets/spscientist/students-performance-in-exams)].
+<br>
+O conjunto de dados é composto por variáveis categóricas relacionadas a informações demográficas e socioeconômicas, gênero, grupo étnico, tipo de alimentação escolar, escolaridade dos pais e participação em curso preparatório. Além disso, contém variáveis numéricas correspondentes às notas obtidas nas disciplinas de matemática, leitura e escrita. O conjunto reúne 8 atributos.
+
+Atributos categórico:
+
+gender<br>
+race/ethnicity<br>
+parental level of education<br>
+lunch<br>
+test preparation course<br><br>
+Atributos numérico:<br>
+<br>
+math score<br>
+reading score<br>
+writing score<br>
+<br>
 
 ## Análise de Dados - EDA<br>
 
