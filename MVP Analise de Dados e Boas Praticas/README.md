@@ -7,4 +7,14 @@
 
 **MVP — Análise de Dados e Boas Práticas**
 
-A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de pré-processamento dos dados, por meio de um <i>Notebook</i> em linguagem Python.
+A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de Pré-Processamento dos Dados, por meio de um <i>Notebook</i> em linguagem Python. 
+
+Para isso, realizará as etapas:
+Definição do problema
+Hipóteses
+Seleção de Dados
+Atributos
+Análise de Dados - EDA
+Pré-processamento de Dados
+Respostas das Hipóteses
+
