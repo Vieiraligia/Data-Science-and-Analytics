@@ -7,7 +7,7 @@
 
 **MVP — Análise de Dados e Boas Práticas**
 
-A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de Pré-Processamento dos Dados, por meio de um <i>Notebook</i> em linguagem Python. 
+A proposta consiste em desenvolver a análise no contexto estatístico, contemplando também a etapa de Pré-Processamento dos Dados, por meio do <i>Notebook:</i> MVP_AnalisedeDadoseBoasPraticas.ipynb desenvolvido em linguagem Python. 
 
 Para isso, será segmentado nas etapas:
 - Objetivo e Definição do problema;
@@ -46,7 +46,7 @@ Atributos categórico:
 - lunch<br>
 - test preparation course<br><br>
 
-Atributos numérico:<br>
+Atributos numérico:
 <br>
 - math score<br>
 - reading score<br>
@@ -59,17 +59,17 @@ A realização da Análise de Dados Exploratória (EDA) tem como objetivo compre
 <br><br>
 As análises descritivas e estatísticas:
 <br><br>
--Quantidade de atributos e instâncias presentes no dataset;
--Identificação dos tipos de dados de cada atributo;
--Análise das primeiras linhas do conjunto de dados, buscando identificar padrões iniciais ou possíveis inconsistências;
--Verificação da existência de valores nulos, outliers ou dados inconsistentes;
--Cálculo de estatísticas descritivas dos atributos numéricos, como mínimo, máximo, média, mediana, desvio-padrão, quartis e moda.
+-Quantidade de atributos e instâncias presentes no dataset;<br>
+-Identificação dos tipos de dados de cada atributo;<br>
+-Análise das primeiras linhas do conjunto de dados, buscando identificar padrões iniciais ou possíveis inconsistências;<br>
+-Verificação da existência de valores nulos, outliers ou dados inconsistentes;<br>
+-Cálculo de estatísticas descritivas dos atributos numéricos, como mínimo, máximo, média, mediana, desvio-padrão, quartis e moda.<br>
 <br><br>
 A visualização de dados:
 <br><br>
--Análise da distribuição dos atributos por meio de histogramas e gráficos de contagem;
--Avaliação da relação entre variáveis por meio de boxplots;
--Análise da correlação entre variáveis numéricas por meio de matriz de correlação.
+-Análise da distribuição dos atributos por meio de histogramas e gráficos de contagem;<br>
+-Avaliação da relação entre variáveis por meio de boxplots;<br>
+-Análise da correlação entre variáveis numéricas por meio de matriz de correlação.<br>
 -Além do objetivo de compreender os dados, a análise estatística e a visualização são orientadas para a validação das hipóteses levantadas.
 <br><br><br>
 
