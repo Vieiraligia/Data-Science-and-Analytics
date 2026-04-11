@@ -18,7 +18,7 @@ Para isso, será segmentado nas etapas:
 - Respostas das Hipóteses.
 
 ## Objetivo e Definição do problema<br>
-O objetivo deste projeto é analisar os fatores que influenciam o desempenho acadêmico de estudantes nos exames, tendo como base de referência o <i>Dataset Students Performance in Exams</i>.
+O objetivo deste projeto é analisar os fatores que influenciam o desempenho acadêmico de estudantes nos exames, tendo como base de referência o <i><b>Dataset Students Performance in Exams</b></i>.
 <br>
 O dataset é composto por informações demográficas, sociais e educacionais dos estudantes, além de notas em matemática, leitura e escrita.
 
