@@ -74,7 +74,21 @@ A visualização de dados:
 <br><br><br>
 
 ## Pré-processamento de Dados<br>
-
+<br><br>
+O Pré-Processamento de Dados tem como objetivo realizar as operações de limpeza de dados, tratamento e preparação dos dados. Essa etapa é essencial para o desenvolvimento de modelos de aprendizado supervisionado, especialmente em problemas de regressão, nos quais o objetivo é prever valores numéricos, a partir de um conjunto de variáveis explicativas.
+<br><br>
+Em Análise de Dados, foi realizada a verificação da qualidade dos dados, incluindo a análise de valores ausentes e registros duplicados. O conjunto de dados não apresentou valores faltantes nem ocorrências de duplicidade, indicando boa qualidade inicial para as etapas subsequentes de análise.
+<br><br>
+Em seguida, o conjunto de dados será dividido em variáveis explicativas (X) e variável alvo (y), sendo esta última definida como a nota de matemática math score, configurando um problema de regressão.
+<br><br>
+Posteriormente, os dados serão separados em conjuntos de treino e teste, com o objetivo de garantir a avaliação do modelo em dados não vistos e evitar o problema de vazamento de informação.
+<br><br>
+Após a divisão dos dados, será realizada a transformação das variáveis categóricas em representações numéricas, visto que os algoritmos de regressão trabalham exclusivamente com dados quantitativos. Para as variáveis categóricas binárias, como 'gender' e 'test preparation course', será aplicada a codificação binária. Já para as variáveis categóricas com múltiplas categorias, como 'race/ethnicity', 'lunch' e 'parental level of education', será empregada a técnica de One-Hot Encoding, permitindo representar cada categoria por meio de variáveis indicadoras.
+<br><br>
+Além disso, será realizada a etapa de engenharia de atributos, onde novas variáveis derivadas poderão ser criadas a partir das informações originais do Dataset. Entre essas possíveis variáveis, destacam-se métricas agregadas das notas, como médias entre disciplinas e diferenças entre desempenhos específicos, com o objetivo de enriquecer o conjunto de atributos disponíveis para análise e validação das hipóteses.
+<br><br>
+Por fim, será aplicada a padronização Z-score, baseado na média e no desvio padrão, permitindo comparar variáveis em diferentes escalas. Apesar de não ser sempre obrigatória para todos os modelos, essa etapa poderá contribuir para o desempenho de algoritmos de aprendizado de máquina, especialmente modelos baseados em regressão.
+<br><br><br>
 ## Respostas das Hipóteses<br>
 
 
