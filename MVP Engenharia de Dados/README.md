@@ -1,5 +1,5 @@
 **Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)**  
-**Autora:** Ligia R. Vieira  
+**Autora:** Ligia Vieira  
 **Matrícula:** 1200158  
 **Data:** Dezembro/2025
 <br><br>
